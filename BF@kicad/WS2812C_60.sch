@@ -1,0 +1,3574 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A3 16535 11693
+encoding utf-8
+Sheet 2 12
+Title "BF-025"
+Date "2021-01-30"
+Rev "V03L01"
+Comp "Copyright 2021 BotanicFields, Inc."
+Comment1 "RGB-LED Clock 276 for M5Atom"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L BF:WS2812C-2020 D?
+U 1 1 5FD45502
+P 1600 1500
+AR Path="/5FD45502" Ref="D?"  Part="1" 
+AR Path="/5FD4400D/5FD45502" Ref="D201"  Part="1" 
+AR Path="/6042312B/5FD45502" Ref="D?"  Part="1" 
+AR Path="/6046D3EE/5FD45502" Ref="D301"  Part="1" 
+AR Path="/6046D63C/5FD45502" Ref="D401"  Part="1" 
+F 0 "D201" H 1300 1750 50  0000 L CNN
+F 1 "WS2812C-2020" H 1650 1250 50  0000 L CNN
+F 2 "bf:BF@WS2812C-2020" H 1650 1200 50  0001 L TNN
+F 3 "http://www.world-semi.com/DownLoadFile/140" H 1700 1125 50  0001 L TNN
+	1    1600 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L BF:WS2812C-2020 D?
+U 1 1 5FD47B88
+P 2400 1500
+AR Path="/5FD47B88" Ref="D?"  Part="1" 
+AR Path="/5FD4400D/5FD47B88" Ref="D202"  Part="1" 
+AR Path="/6042312B/5FD47B88" Ref="D?"  Part="1" 
+AR Path="/6046D3EE/5FD47B88" Ref="D302"  Part="1" 
+AR Path="/6046D63C/5FD47B88" Ref="D402"  Part="1" 
+F 0 "D202" H 2100 1750 50  0000 L CNN
+F 1 "WS2812C-2020" H 2450 1250 50  0000 L CNN
+F 2 "bf:BF@WS2812C-2020" H 2450 1200 50  0001 L TNN
+F 3 "http://www.world-semi.com/DownLoadFile/140" H 2500 1125 50  0001 L TNN
+	1    2400 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C201
+U 1 1 5FD48DD3
+P 10500 1500
+AR Path="/5FD4400D/5FD48DD3" Ref="C201"  Part="1" 
+AR Path="/6042312B/5FD48DD3" Ref="C?"  Part="1" 
+AR Path="/6046D3EE/5FD48DD3" Ref="C301"  Part="1" 
+AR Path="/6046D63C/5FD48DD3" Ref="C401"  Part="1" 
+F 0 "C201" H 10615 1546 50  0000 L CNN
+F 1 "100n" H 10615 1455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 10538 1350 50  0001 C CNN
+F 3 "~" H 10500 1500 50  0001 C CNN
+	1    10500 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C202
+U 1 1 5FD4C60D
+P 11000 1500
+AR Path="/5FD4400D/5FD4C60D" Ref="C202"  Part="1" 
+AR Path="/6042312B/5FD4C60D" Ref="C?"  Part="1" 
+AR Path="/6046D3EE/5FD4C60D" Ref="C302"  Part="1" 
+AR Path="/6046D63C/5FD4C60D" Ref="C402"  Part="1" 
+F 0 "C202" H 11115 1546 50  0000 L CNN
+F 1 "100n" H 11115 1455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 11038 1350 50  0001 C CNN
+F 3 "~" H 11000 1500 50  0001 C CNN
+	1    11000 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L BF:WS2812C-2020 D?
+U 1 1 5FD4E59E
+P 3200 1500
+AR Path="/5FD4E59E" Ref="D?"  Part="1" 
+AR Path="/5FD4400D/5FD4E59E" Ref="D203"  Part="1" 
+AR Path="/6042312B/5FD4E59E" Ref="D?"  Part="1" 
+AR Path="/6046D3EE/5FD4E59E" Ref="D303"  Part="1" 
+AR Path="/6046D63C/5FD4E59E" Ref="D403"  Part="1" 
+F 0 "D203" H 2900 1750 50  0000 L CNN
+F 1 "WS2812C-2020" H 3250 1250 50  0000 L CNN
+F 2 "bf:BF@WS2812C-2020" H 3250 1200 50  0001 L TNN
+F 3 "http://www.world-semi.com/DownLoadFile/140" H 3300 1125 50  0001 L TNN
+	1    3200 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L BF:WS2812C-2020 D?
+U 1 1 5FD4E5C6
+P 4000 1500
+AR Path="/5FD4E5C6" Ref="D?"  Part="1" 
+AR Path="/5FD4400D/5FD4E5C6" Ref="D204"  Part="1" 
+AR Path="/6042312B/5FD4E5C6" Ref="D?"  Part="1" 
+AR Path="/6046D3EE/5FD4E5C6" Ref="D304"  Part="1" 
+AR Path="/6046D63C/5FD4E5C6" Ref="D404"  Part="1" 
+F 0 "D204" H 3700 1750 50  0000 L CNN
+F 1 "WS2812C-2020" H 4050 1250 50  0000 L CNN
+F 2 "bf:BF@WS2812C-2020" H 4050 1200 50  0001 L TNN
+F 3 "http://www.world-semi.com/DownLoadFile/140" H 4100 1125 50  0001 L TNN
+	1    4000 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L BF:WS2812C-2020 D?
+U 1 1 5FD4FFD4
+P 4800 1500
+AR Path="/5FD4FFD4" Ref="D?"  Part="1" 
+AR Path="/5FD4400D/5FD4FFD4" Ref="D205"  Part="1" 
+AR Path="/6042312B/5FD4FFD4" Ref="D?"  Part="1" 
+AR Path="/6046D3EE/5FD4FFD4" Ref="D305"  Part="1" 
+AR Path="/6046D63C/5FD4FFD4" Ref="D405"  Part="1" 
+F 0 "D205" H 4500 1750 50  0000 L CNN
+F 1 "WS2812C-2020" H 4850 1250 50  0000 L CNN
+F 2 "bf:BF@WS2812C-2020" H 4850 1200 50  0001 L TNN
+F 3 "http://www.world-semi.com/DownLoadFile/140" H 4900 1125 50  0001 L TNN
+	1    4800 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L BF:WS2812C-2020 D?
+U 1 1 5FD4FFDE
+P 5600 1500
+AR Path="/5FD4FFDE" Ref="D?"  Part="1" 
+AR Path="/5FD4400D/5FD4FFDE" Ref="D206"  Part="1" 
+AR Path="/6042312B/5FD4FFDE" Ref="D?"  Part="1" 
+AR Path="/6046D3EE/5FD4FFDE" Ref="D306"  Part="1" 
+AR Path="/6046D63C/5FD4FFDE" Ref="D406"  Part="1" 
+F 0 "D206" H 5300 1750 50  0000 L CNN
+F 1 "WS2812C-2020" H 5650 1250 50  0000 L CNN
+F 2 "bf:BF@WS2812C-2020" H 5650 1200 50  0001 L TNN
+F 3 "http://www.world-semi.com/DownLoadFile/140" H 5700 1125 50  0001 L TNN
+	1    5600 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L BF:WS2812C-2020 D?
+U 1 1 5FD4FFE8
+P 6400 1500
+AR Path="/5FD4FFE8" Ref="D?"  Part="1" 
+AR Path="/5FD4400D/5FD4FFE8" Ref="D207"  Part="1" 
+AR Path="/6042312B/5FD4FFE8" Ref="D?"  Part="1" 
+AR Path="/6046D3EE/5FD4FFE8" Ref="D307"  Part="1" 
+AR Path="/6046D63C/5FD4FFE8" Ref="D407"  Part="1" 
+F 0 "D207" H 6100 1750 50  0000 L CNN
+F 1 "WS2812C-2020" H 6450 1250 50  0000 L CNN
+F 2 "bf:BF@WS2812C-2020" H 6450 1200 50  0001 L TNN
+F 3 "http://www.world-semi.com/DownLoadFile/140" H 6500 1125 50  0001 L TNN
+	1    6400 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L BF:WS2812C-2020 D?
+U 1 1 5FD4FFF2
+P 7200 1500
+AR Path="/5FD4FFF2" Ref="D?"  Part="1" 
+AR Path="/5FD4400D/5FD4FFF2" Ref="D208"  Part="1" 
+AR Path="/6042312B/5FD4FFF2" Ref="D?"  Part="1" 
+AR Path="/6046D3EE/5FD4FFF2" Ref="D308"  Part="1" 
+AR Path="/6046D63C/5FD4FFF2" Ref="D408"  Part="1" 
+F 0 "D208" H 6900 1750 50  0000 L CNN
+F 1 "WS2812C-2020" H 7250 1250 50  0000 L CNN
+F 2 "bf:BF@WS2812C-2020" H 7250 1200 50  0001 L TNN
+F 3 "http://www.world-semi.com/DownLoadFile/140" H 7300 1125 50  0001 L TNN
+	1    7200 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L BF:WS2812C-2020 D?
+U 1 1 5FD55C6C
+P 8000 1500
+AR Path="/5FD55C6C" Ref="D?"  Part="1" 
+AR Path="/5FD4400D/5FD55C6C" Ref="D209"  Part="1" 
+AR Path="/6042312B/5FD55C6C" Ref="D?"  Part="1" 
+AR Path="/6046D3EE/5FD55C6C" Ref="D309"  Part="1" 
+AR Path="/6046D63C/5FD55C6C" Ref="D409"  Part="1" 
+F 0 "D209" H 7700 1750 50  0000 L CNN
+F 1 "WS2812C-2020" H 8050 1250 50  0000 L CNN
+F 2 "bf:BF@WS2812C-2020" H 8050 1200 50  0001 L TNN
+F 3 "http://www.world-semi.com/DownLoadFile/140" H 8100 1125 50  0001 L TNN
+	1    8000 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L BF:WS2812C-2020 D?
+U 1 1 5FD55C94
+P 8800 1500
+AR Path="/5FD55C94" Ref="D?"  Part="1" 
+AR Path="/5FD4400D/5FD55C94" Ref="D210"  Part="1" 
+AR Path="/6042312B/5FD55C94" Ref="D?"  Part="1" 
+AR Path="/6046D3EE/5FD55C94" Ref="D310"  Part="1" 
+AR Path="/6046D63C/5FD55C94" Ref="D410"  Part="1" 
+F 0 "D210" H 8500 1750 50  0000 L CNN
+F 1 "WS2812C-2020" H 8850 1250 50  0000 L CNN
+F 2 "bf:BF@WS2812C-2020" H 8850 1200 50  0001 L TNN
+F 3 "http://www.world-semi.com/DownLoadFile/140" H 8900 1125 50  0001 L TNN
+	1    8800 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2700 1500 2900 1500
+Wire Wire Line
+	3500 1500 3700 1500
+Wire Wire Line
+	4300 1500 4500 1500
+Wire Wire Line
+	5100 1500 5300 1500
+Wire Wire Line
+	5900 1500 6100 1500
+Wire Wire Line
+	6900 1500 6700 1500
+Wire Wire Line
+	7500 1500 7700 1500
+Wire Wire Line
+	8300 1500 8500 1500
+$Comp
+L power:+5V #PWR0201
+U 1 1 5FD5B113
+P 1600 1100
+AR Path="/5FD4400D/5FD5B113" Ref="#PWR0201"  Part="1" 
+AR Path="/6042312B/5FD5B113" Ref="#PWR?"  Part="1" 
+AR Path="/6046D3EE/5FD5B113" Ref="#PWR0301"  Part="1" 
+AR Path="/6046D63C/5FD5B113" Ref="#PWR0401"  Part="1" 
+F 0 "#PWR0201" H 1600 950 50  0001 C CNN
+F 1 "+5V" H 1615 1273 50  0000 C CNN
+F 2 "" H 1600 1100 50  0001 C CNN
+F 3 "" H 1600 1100 50  0001 C CNN
+	1    1600 1100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 1200 1600 1150
+$Comp
+L power:GND #PWR0204
+U 1 1 5FD5C0E4
+P 8800 1900
+AR Path="/5FD4400D/5FD5C0E4" Ref="#PWR0204"  Part="1" 
+AR Path="/6042312B/5FD5C0E4" Ref="#PWR?"  Part="1" 
+AR Path="/6046D3EE/5FD5C0E4" Ref="#PWR0304"  Part="1" 
+AR Path="/6046D63C/5FD5C0E4" Ref="#PWR0404"  Part="1" 
+F 0 "#PWR0204" H 8800 1650 50  0001 C CNN
+F 1 "GND" H 8805 1727 50  0000 C CNN
+F 2 "" H 8800 1900 50  0001 C CNN
+F 3 "" H 8800 1900 50  0001 C CNN
+	1    8800 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 1150 2400 1150
+Wire Wire Line
+	8800 1150 8800 1200
+Connection ~ 1600 1150
+Wire Wire Line
+	1600 1150 1600 1100
+Wire Wire Line
+	8000 1200 8000 1150
+Connection ~ 8000 1150
+Wire Wire Line
+	8000 1150 8800 1150
+Wire Wire Line
+	7200 1200 7200 1150
+Connection ~ 7200 1150
+Wire Wire Line
+	7200 1150 8000 1150
+Wire Wire Line
+	6400 1200 6400 1150
+Connection ~ 6400 1150
+Wire Wire Line
+	6400 1150 7200 1150
+Wire Wire Line
+	5600 1200 5600 1150
+Connection ~ 5600 1150
+Wire Wire Line
+	5600 1150 6400 1150
+Wire Wire Line
+	4800 1200 4800 1150
+Connection ~ 4800 1150
+Wire Wire Line
+	4800 1150 5600 1150
+Wire Wire Line
+	4000 1200 4000 1150
+Connection ~ 4000 1150
+Wire Wire Line
+	4000 1150 4800 1150
+Wire Wire Line
+	3200 1200 3200 1150
+Connection ~ 3200 1150
+Wire Wire Line
+	3200 1150 4000 1150
+Wire Wire Line
+	2400 1200 2400 1150
+Connection ~ 2400 1150
+Wire Wire Line
+	2400 1150 3200 1150
+Wire Wire Line
+	1600 1850 2400 1850
+Wire Wire Line
+	8800 1850 8800 1800
+Wire Wire Line
+	1600 1850 1600 1800
+Wire Wire Line
+	8000 1800 8000 1850
+Connection ~ 8000 1850
+Wire Wire Line
+	8000 1850 8800 1850
+Wire Wire Line
+	7200 1800 7200 1850
+Connection ~ 7200 1850
+Wire Wire Line
+	7200 1850 8000 1850
+Wire Wire Line
+	6400 1800 6400 1850
+Connection ~ 6400 1850
+Wire Wire Line
+	6400 1850 7200 1850
+Wire Wire Line
+	5600 1800 5600 1850
+Connection ~ 5600 1850
+Wire Wire Line
+	5600 1850 6400 1850
+Wire Wire Line
+	4800 1800 4800 1850
+Connection ~ 4800 1850
+Wire Wire Line
+	4800 1850 5600 1850
+Wire Wire Line
+	4000 1800 4000 1850
+Connection ~ 4000 1850
+Wire Wire Line
+	4000 1850 4800 1850
+Wire Wire Line
+	3200 1800 3200 1850
+Connection ~ 3200 1850
+Wire Wire Line
+	3200 1850 4000 1850
+Wire Wire Line
+	2400 1800 2400 1850
+Connection ~ 2400 1850
+Wire Wire Line
+	2400 1850 3200 1850
+Wire Wire Line
+	1900 1500 2100 1500
+Wire Wire Line
+	8800 1900 8800 1850
+Connection ~ 8800 1850
+$Comp
+L BF:WS2812C-2020 D?
+U 1 1 5FDB6A5A
+P 1600 3000
+AR Path="/5FDB6A5A" Ref="D?"  Part="1" 
+AR Path="/5FD4400D/5FDB6A5A" Ref="D211"  Part="1" 
+AR Path="/6042312B/5FDB6A5A" Ref="D?"  Part="1" 
+AR Path="/6046D3EE/5FDB6A5A" Ref="D311"  Part="1" 
+AR Path="/6046D63C/5FDB6A5A" Ref="D411"  Part="1" 
+F 0 "D211" H 1300 3250 50  0000 L CNN
+F 1 "WS2812C-2020" H 1650 2750 50  0000 L CNN
+F 2 "bf:BF@WS2812C-2020" H 1650 2700 50  0001 L TNN
+F 3 "http://www.world-semi.com/DownLoadFile/140" H 1700 2625 50  0001 L TNN
+	1    1600 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L BF:WS2812C-2020 D?
+U 1 1 5FDB6A64
+P 2400 3000
+AR Path="/5FDB6A64" Ref="D?"  Part="1" 
+AR Path="/5FD4400D/5FDB6A64" Ref="D212"  Part="1" 
+AR Path="/6042312B/5FDB6A64" Ref="D?"  Part="1" 
+AR Path="/6046D3EE/5FDB6A64" Ref="D312"  Part="1" 
+AR Path="/6046D63C/5FDB6A64" Ref="D412"  Part="1" 
+F 0 "D212" H 2100 3250 50  0000 L CNN
+F 1 "WS2812C-2020" H 2450 2750 50  0000 L CNN
+F 2 "bf:BF@WS2812C-2020" H 2450 2700 50  0001 L TNN
+F 3 "http://www.world-semi.com/DownLoadFile/140" H 2500 2625 50  0001 L TNN
+	1    2400 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L BF:WS2812C-2020 D?
+U 1 1 5FDB6A6E
+P 3200 3000
+AR Path="/5FDB6A6E" Ref="D?"  Part="1" 
+AR Path="/5FD4400D/5FDB6A6E" Ref="D213"  Part="1" 
+AR Path="/6042312B/5FDB6A6E" Ref="D?"  Part="1" 
+AR Path="/6046D3EE/5FDB6A6E" Ref="D313"  Part="1" 
+AR Path="/6046D63C/5FDB6A6E" Ref="D413"  Part="1" 
+F 0 "D213" H 2900 3250 50  0000 L CNN
+F 1 "WS2812C-2020" H 3250 2750 50  0000 L CNN
+F 2 "bf:BF@WS2812C-2020" H 3250 2700 50  0001 L TNN
+F 3 "http://www.world-semi.com/DownLoadFile/140" H 3300 2625 50  0001 L TNN
+	1    3200 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L BF:WS2812C-2020 D?
+U 1 1 5FDB6A78
+P 4000 3000
+AR Path="/5FDB6A78" Ref="D?"  Part="1" 
+AR Path="/5FD4400D/5FDB6A78" Ref="D214"  Part="1" 
+AR Path="/6042312B/5FDB6A78" Ref="D?"  Part="1" 
+AR Path="/6046D3EE/5FDB6A78" Ref="D314"  Part="1" 
+AR Path="/6046D63C/5FDB6A78" Ref="D414"  Part="1" 
+F 0 "D214" H 3700 3250 50  0000 L CNN
+F 1 "WS2812C-2020" H 4050 2750 50  0000 L CNN
+F 2 "bf:BF@WS2812C-2020" H 4050 2700 50  0001 L TNN
+F 3 "http://www.world-semi.com/DownLoadFile/140" H 4100 2625 50  0001 L TNN
+	1    4000 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L BF:WS2812C-2020 D?
+U 1 1 5FDB6A82
+P 4800 3000
+AR Path="/5FDB6A82" Ref="D?"  Part="1" 
+AR Path="/5FD4400D/5FDB6A82" Ref="D215"  Part="1" 
+AR Path="/6042312B/5FDB6A82" Ref="D?"  Part="1" 
+AR Path="/6046D3EE/5FDB6A82" Ref="D315"  Part="1" 
+AR Path="/6046D63C/5FDB6A82" Ref="D415"  Part="1" 
+F 0 "D215" H 4500 3250 50  0000 L CNN
+F 1 "WS2812C-2020" H 4850 2750 50  0000 L CNN
+F 2 "bf:BF@WS2812C-2020" H 4850 2700 50  0001 L TNN
+F 3 "http://www.world-semi.com/DownLoadFile/140" H 4900 2625 50  0001 L TNN
+	1    4800 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L BF:WS2812C-2020 D?
+U 1 1 5FDB6A8C
+P 5600 3000
+AR Path="/5FDB6A8C" Ref="D?"  Part="1" 
+AR Path="/5FD4400D/5FDB6A8C" Ref="D216"  Part="1" 
+AR Path="/6042312B/5FDB6A8C" Ref="D?"  Part="1" 
+AR Path="/6046D3EE/5FDB6A8C" Ref="D316"  Part="1" 
+AR Path="/6046D63C/5FDB6A8C" Ref="D416"  Part="1" 
+F 0 "D216" H 5300 3250 50  0000 L CNN
+F 1 "WS2812C-2020" H 5650 2750 50  0000 L CNN
+F 2 "bf:BF@WS2812C-2020" H 5650 2700 50  0001 L TNN
+F 3 "http://www.world-semi.com/DownLoadFile/140" H 5700 2625 50  0001 L TNN
+	1    5600 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L BF:WS2812C-2020 D?
+U 1 1 5FDB6A96
+P 6400 3000
+AR Path="/5FDB6A96" Ref="D?"  Part="1" 
+AR Path="/5FD4400D/5FDB6A96" Ref="D217"  Part="1" 
+AR Path="/6042312B/5FDB6A96" Ref="D?"  Part="1" 
+AR Path="/6046D3EE/5FDB6A96" Ref="D317"  Part="1" 
+AR Path="/6046D63C/5FDB6A96" Ref="D417"  Part="1" 
+F 0 "D217" H 6100 3250 50  0000 L CNN
+F 1 "WS2812C-2020" H 6450 2750 50  0000 L CNN
+F 2 "bf:BF@WS2812C-2020" H 6450 2700 50  0001 L TNN
+F 3 "http://www.world-semi.com/DownLoadFile/140" H 6500 2625 50  0001 L TNN
+	1    6400 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L BF:WS2812C-2020 D?
+U 1 1 5FDB6AA0
+P 7200 3000
+AR Path="/5FDB6AA0" Ref="D?"  Part="1" 
+AR Path="/5FD4400D/5FDB6AA0" Ref="D218"  Part="1" 
+AR Path="/6042312B/5FDB6AA0" Ref="D?"  Part="1" 
+AR Path="/6046D3EE/5FDB6AA0" Ref="D318"  Part="1" 
+AR Path="/6046D63C/5FDB6AA0" Ref="D418"  Part="1" 
+F 0 "D218" H 6900 3250 50  0000 L CNN
+F 1 "WS2812C-2020" H 7250 2750 50  0000 L CNN
+F 2 "bf:BF@WS2812C-2020" H 7250 2700 50  0001 L TNN
+F 3 "http://www.world-semi.com/DownLoadFile/140" H 7300 2625 50  0001 L TNN
+	1    7200 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L BF:WS2812C-2020 D?
+U 1 1 5FDB6AAA
+P 8000 3000
+AR Path="/5FDB6AAA" Ref="D?"  Part="1" 
+AR Path="/5FD4400D/5FDB6AAA" Ref="D219"  Part="1" 
+AR Path="/6042312B/5FDB6AAA" Ref="D?"  Part="1" 
+AR Path="/6046D3EE/5FDB6AAA" Ref="D319"  Part="1" 
+AR Path="/6046D63C/5FDB6AAA" Ref="D419"  Part="1" 
+F 0 "D219" H 7700 3250 50  0000 L CNN
+F 1 "WS2812C-2020" H 8050 2750 50  0000 L CNN
+F 2 "bf:BF@WS2812C-2020" H 8050 2700 50  0001 L TNN
+F 3 "http://www.world-semi.com/DownLoadFile/140" H 8100 2625 50  0001 L TNN
+	1    8000 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L BF:WS2812C-2020 D?
+U 1 1 5FDB6AB4
+P 8800 3000
+AR Path="/5FDB6AB4" Ref="D?"  Part="1" 
+AR Path="/5FD4400D/5FDB6AB4" Ref="D220"  Part="1" 
+AR Path="/6042312B/5FDB6AB4" Ref="D?"  Part="1" 
+AR Path="/6046D3EE/5FDB6AB4" Ref="D320"  Part="1" 
+AR Path="/6046D63C/5FDB6AB4" Ref="D420"  Part="1" 
+F 0 "D220" H 8500 3250 50  0000 L CNN
+F 1 "WS2812C-2020" H 8850 2750 50  0000 L CNN
+F 2 "bf:BF@WS2812C-2020" H 8850 2700 50  0001 L TNN
+F 3 "http://www.world-semi.com/DownLoadFile/140" H 8900 2625 50  0001 L TNN
+	1    8800 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2700 3000 2900 3000
+Wire Wire Line
+	3500 3000 3700 3000
+Wire Wire Line
+	4300 3000 4500 3000
+Wire Wire Line
+	5100 3000 5300 3000
+Wire Wire Line
+	5900 3000 6100 3000
+Wire Wire Line
+	6900 3000 6700 3000
+Wire Wire Line
+	7500 3000 7700 3000
+Wire Wire Line
+	8300 3000 8500 3000
+$Comp
+L power:+5V #PWR0205
+U 1 1 5FDB6AC6
+P 1600 2600
+AR Path="/5FD4400D/5FDB6AC6" Ref="#PWR0205"  Part="1" 
+AR Path="/6042312B/5FDB6AC6" Ref="#PWR?"  Part="1" 
+AR Path="/6046D3EE/5FDB6AC6" Ref="#PWR0305"  Part="1" 
+AR Path="/6046D63C/5FDB6AC6" Ref="#PWR0405"  Part="1" 
+F 0 "#PWR0205" H 1600 2450 50  0001 C CNN
+F 1 "+5V" H 1615 2773 50  0000 C CNN
+F 2 "" H 1600 2600 50  0001 C CNN
+F 3 "" H 1600 2600 50  0001 C CNN
+	1    1600 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 2700 1600 2650
+$Comp
+L power:GND #PWR0208
+U 1 1 5FDB6AD1
+P 8800 3400
+AR Path="/5FD4400D/5FDB6AD1" Ref="#PWR0208"  Part="1" 
+AR Path="/6042312B/5FDB6AD1" Ref="#PWR?"  Part="1" 
+AR Path="/6046D3EE/5FDB6AD1" Ref="#PWR0308"  Part="1" 
+AR Path="/6046D63C/5FDB6AD1" Ref="#PWR0408"  Part="1" 
+F 0 "#PWR0208" H 8800 3150 50  0001 C CNN
+F 1 "GND" H 8805 3227 50  0000 C CNN
+F 2 "" H 8800 3400 50  0001 C CNN
+F 3 "" H 8800 3400 50  0001 C CNN
+	1    8800 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 2650 2400 2650
+Wire Wire Line
+	8800 2650 8800 2700
+Connection ~ 1600 2650
+Wire Wire Line
+	1600 2650 1600 2600
+Wire Wire Line
+	8000 2700 8000 2650
+Connection ~ 8000 2650
+Wire Wire Line
+	8000 2650 8800 2650
+Wire Wire Line
+	7200 2700 7200 2650
+Connection ~ 7200 2650
+Wire Wire Line
+	7200 2650 8000 2650
+Wire Wire Line
+	6400 2700 6400 2650
+Connection ~ 6400 2650
+Wire Wire Line
+	6400 2650 7200 2650
+Wire Wire Line
+	5600 2700 5600 2650
+Connection ~ 5600 2650
+Wire Wire Line
+	5600 2650 6400 2650
+Wire Wire Line
+	4800 2700 4800 2650
+Connection ~ 4800 2650
+Wire Wire Line
+	4800 2650 5600 2650
+Wire Wire Line
+	4000 2700 4000 2650
+Connection ~ 4000 2650
+Wire Wire Line
+	4000 2650 4800 2650
+Wire Wire Line
+	3200 2700 3200 2650
+Connection ~ 3200 2650
+Wire Wire Line
+	3200 2650 4000 2650
+Wire Wire Line
+	2400 2700 2400 2650
+Connection ~ 2400 2650
+Wire Wire Line
+	2400 2650 3200 2650
+Wire Wire Line
+	1600 3350 2400 3350
+Wire Wire Line
+	8800 3350 8800 3300
+Wire Wire Line
+	1600 3350 1600 3300
+Wire Wire Line
+	8000 3300 8000 3350
+Connection ~ 8000 3350
+Wire Wire Line
+	8000 3350 8800 3350
+Wire Wire Line
+	7200 3300 7200 3350
+Connection ~ 7200 3350
+Wire Wire Line
+	7200 3350 8000 3350
+Wire Wire Line
+	6400 3300 6400 3350
+Connection ~ 6400 3350
+Wire Wire Line
+	6400 3350 7200 3350
+Wire Wire Line
+	5600 3300 5600 3350
+Connection ~ 5600 3350
+Wire Wire Line
+	5600 3350 6400 3350
+Wire Wire Line
+	4800 3300 4800 3350
+Connection ~ 4800 3350
+Wire Wire Line
+	4800 3350 5600 3350
+Wire Wire Line
+	4000 3300 4000 3350
+Connection ~ 4000 3350
+Wire Wire Line
+	4000 3350 4800 3350
+Wire Wire Line
+	3200 3300 3200 3350
+Connection ~ 3200 3350
+Wire Wire Line
+	3200 3350 4000 3350
+Wire Wire Line
+	2400 3300 2400 3350
+Connection ~ 2400 3350
+Wire Wire Line
+	2400 3350 3200 3350
+Wire Wire Line
+	1900 3000 2100 3000
+Wire Wire Line
+	8800 3400 8800 3350
+Connection ~ 8800 3350
+$Comp
+L BF:WS2812C-2020 D?
+U 1 1 5FE07F2C
+P 1600 4500
+AR Path="/5FE07F2C" Ref="D?"  Part="1" 
+AR Path="/5FD4400D/5FE07F2C" Ref="D221"  Part="1" 
+AR Path="/6042312B/5FE07F2C" Ref="D?"  Part="1" 
+AR Path="/6046D3EE/5FE07F2C" Ref="D321"  Part="1" 
+AR Path="/6046D63C/5FE07F2C" Ref="D421"  Part="1" 
+F 0 "D221" H 1300 4750 50  0000 L CNN
+F 1 "WS2812C-2020" H 1650 4250 50  0000 L CNN
+F 2 "bf:BF@WS2812C-2020" H 1650 4200 50  0001 L TNN
+F 3 "http://www.world-semi.com/DownLoadFile/140" H 1700 4125 50  0001 L TNN
+	1    1600 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L BF:WS2812C-2020 D?
+U 1 1 5FE07F36
+P 2400 4500
+AR Path="/5FE07F36" Ref="D?"  Part="1" 
+AR Path="/5FD4400D/5FE07F36" Ref="D222"  Part="1" 
+AR Path="/6042312B/5FE07F36" Ref="D?"  Part="1" 
+AR Path="/6046D3EE/5FE07F36" Ref="D322"  Part="1" 
+AR Path="/6046D63C/5FE07F36" Ref="D422"  Part="1" 
+F 0 "D222" H 2100 4750 50  0000 L CNN
+F 1 "WS2812C-2020" H 2450 4250 50  0000 L CNN
+F 2 "bf:BF@WS2812C-2020" H 2450 4200 50  0001 L TNN
+F 3 "http://www.world-semi.com/DownLoadFile/140" H 2500 4125 50  0001 L TNN
+	1    2400 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L BF:WS2812C-2020 D?
+U 1 1 5FE07F40
+P 3200 4500
+AR Path="/5FE07F40" Ref="D?"  Part="1" 
+AR Path="/5FD4400D/5FE07F40" Ref="D223"  Part="1" 
+AR Path="/6042312B/5FE07F40" Ref="D?"  Part="1" 
+AR Path="/6046D3EE/5FE07F40" Ref="D323"  Part="1" 
+AR Path="/6046D63C/5FE07F40" Ref="D423"  Part="1" 
+F 0 "D223" H 2900 4750 50  0000 L CNN
+F 1 "WS2812C-2020" H 3250 4250 50  0000 L CNN
+F 2 "bf:BF@WS2812C-2020" H 3250 4200 50  0001 L TNN
+F 3 "http://www.world-semi.com/DownLoadFile/140" H 3300 4125 50  0001 L TNN
+	1    3200 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L BF:WS2812C-2020 D?
+U 1 1 5FE07F4A
+P 4000 4500
+AR Path="/5FE07F4A" Ref="D?"  Part="1" 
+AR Path="/5FD4400D/5FE07F4A" Ref="D224"  Part="1" 
+AR Path="/6042312B/5FE07F4A" Ref="D?"  Part="1" 
+AR Path="/6046D3EE/5FE07F4A" Ref="D324"  Part="1" 
+AR Path="/6046D63C/5FE07F4A" Ref="D424"  Part="1" 
+F 0 "D224" H 3700 4750 50  0000 L CNN
+F 1 "WS2812C-2020" H 4050 4250 50  0000 L CNN
+F 2 "bf:BF@WS2812C-2020" H 4050 4200 50  0001 L TNN
+F 3 "http://www.world-semi.com/DownLoadFile/140" H 4100 4125 50  0001 L TNN
+	1    4000 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L BF:WS2812C-2020 D?
+U 1 1 5FE07F54
+P 4800 4500
+AR Path="/5FE07F54" Ref="D?"  Part="1" 
+AR Path="/5FD4400D/5FE07F54" Ref="D225"  Part="1" 
+AR Path="/6042312B/5FE07F54" Ref="D?"  Part="1" 
+AR Path="/6046D3EE/5FE07F54" Ref="D325"  Part="1" 
+AR Path="/6046D63C/5FE07F54" Ref="D425"  Part="1" 
+F 0 "D225" H 4500 4750 50  0000 L CNN
+F 1 "WS2812C-2020" H 4850 4250 50  0000 L CNN
+F 2 "bf:BF@WS2812C-2020" H 4850 4200 50  0001 L TNN
+F 3 "http://www.world-semi.com/DownLoadFile/140" H 4900 4125 50  0001 L TNN
+	1    4800 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L BF:WS2812C-2020 D?
+U 1 1 5FE07F5E
+P 5600 4500
+AR Path="/5FE07F5E" Ref="D?"  Part="1" 
+AR Path="/5FD4400D/5FE07F5E" Ref="D226"  Part="1" 
+AR Path="/6042312B/5FE07F5E" Ref="D?"  Part="1" 
+AR Path="/6046D3EE/5FE07F5E" Ref="D326"  Part="1" 
+AR Path="/6046D63C/5FE07F5E" Ref="D426"  Part="1" 
+F 0 "D226" H 5300 4750 50  0000 L CNN
+F 1 "WS2812C-2020" H 5650 4250 50  0000 L CNN
+F 2 "bf:BF@WS2812C-2020" H 5650 4200 50  0001 L TNN
+F 3 "http://www.world-semi.com/DownLoadFile/140" H 5700 4125 50  0001 L TNN
+	1    5600 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L BF:WS2812C-2020 D?
+U 1 1 5FE07F68
+P 6400 4500
+AR Path="/5FE07F68" Ref="D?"  Part="1" 
+AR Path="/5FD4400D/5FE07F68" Ref="D227"  Part="1" 
+AR Path="/6042312B/5FE07F68" Ref="D?"  Part="1" 
+AR Path="/6046D3EE/5FE07F68" Ref="D327"  Part="1" 
+AR Path="/6046D63C/5FE07F68" Ref="D427"  Part="1" 
+F 0 "D227" H 6100 4750 50  0000 L CNN
+F 1 "WS2812C-2020" H 6450 4250 50  0000 L CNN
+F 2 "bf:BF@WS2812C-2020" H 6450 4200 50  0001 L TNN
+F 3 "http://www.world-semi.com/DownLoadFile/140" H 6500 4125 50  0001 L TNN
+	1    6400 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L BF:WS2812C-2020 D?
+U 1 1 5FE07F72
+P 7200 4500
+AR Path="/5FE07F72" Ref="D?"  Part="1" 
+AR Path="/5FD4400D/5FE07F72" Ref="D228"  Part="1" 
+AR Path="/6042312B/5FE07F72" Ref="D?"  Part="1" 
+AR Path="/6046D3EE/5FE07F72" Ref="D328"  Part="1" 
+AR Path="/6046D63C/5FE07F72" Ref="D428"  Part="1" 
+F 0 "D228" H 6900 4750 50  0000 L CNN
+F 1 "WS2812C-2020" H 7250 4250 50  0000 L CNN
+F 2 "bf:BF@WS2812C-2020" H 7250 4200 50  0001 L TNN
+F 3 "http://www.world-semi.com/DownLoadFile/140" H 7300 4125 50  0001 L TNN
+	1    7200 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L BF:WS2812C-2020 D?
+U 1 1 5FE07F7C
+P 8000 4500
+AR Path="/5FE07F7C" Ref="D?"  Part="1" 
+AR Path="/5FD4400D/5FE07F7C" Ref="D229"  Part="1" 
+AR Path="/6042312B/5FE07F7C" Ref="D?"  Part="1" 
+AR Path="/6046D3EE/5FE07F7C" Ref="D329"  Part="1" 
+AR Path="/6046D63C/5FE07F7C" Ref="D429"  Part="1" 
+F 0 "D229" H 7700 4750 50  0000 L CNN
+F 1 "WS2812C-2020" H 8050 4250 50  0000 L CNN
+F 2 "bf:BF@WS2812C-2020" H 8050 4200 50  0001 L TNN
+F 3 "http://www.world-semi.com/DownLoadFile/140" H 8100 4125 50  0001 L TNN
+	1    8000 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L BF:WS2812C-2020 D?
+U 1 1 5FE07F86
+P 8800 4500
+AR Path="/5FE07F86" Ref="D?"  Part="1" 
+AR Path="/5FD4400D/5FE07F86" Ref="D230"  Part="1" 
+AR Path="/6042312B/5FE07F86" Ref="D?"  Part="1" 
+AR Path="/6046D3EE/5FE07F86" Ref="D330"  Part="1" 
+AR Path="/6046D63C/5FE07F86" Ref="D430"  Part="1" 
+F 0 "D230" H 8500 4750 50  0000 L CNN
+F 1 "WS2812C-2020" H 8850 4250 50  0000 L CNN
+F 2 "bf:BF@WS2812C-2020" H 8850 4200 50  0001 L TNN
+F 3 "http://www.world-semi.com/DownLoadFile/140" H 8900 4125 50  0001 L TNN
+	1    8800 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2700 4500 2900 4500
+Wire Wire Line
+	3500 4500 3700 4500
+Wire Wire Line
+	4300 4500 4500 4500
+Wire Wire Line
+	5100 4500 5300 4500
+Wire Wire Line
+	5900 4500 6100 4500
+Wire Wire Line
+	6900 4500 6700 4500
+Wire Wire Line
+	7500 4500 7700 4500
+Wire Wire Line
+	8300 4500 8500 4500
+$Comp
+L power:+5V #PWR0209
+U 1 1 5FE07F98
+P 1600 4100
+AR Path="/5FD4400D/5FE07F98" Ref="#PWR0209"  Part="1" 
+AR Path="/6042312B/5FE07F98" Ref="#PWR?"  Part="1" 
+AR Path="/6046D3EE/5FE07F98" Ref="#PWR0309"  Part="1" 
+AR Path="/6046D63C/5FE07F98" Ref="#PWR0409"  Part="1" 
+F 0 "#PWR0209" H 1600 3950 50  0001 C CNN
+F 1 "+5V" H 1615 4273 50  0000 C CNN
+F 2 "" H 1600 4100 50  0001 C CNN
+F 3 "" H 1600 4100 50  0001 C CNN
+	1    1600 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 4200 1600 4150
+$Comp
+L power:GND #PWR0212
+U 1 1 5FE07FA3
+P 8800 4900
+AR Path="/5FD4400D/5FE07FA3" Ref="#PWR0212"  Part="1" 
+AR Path="/6042312B/5FE07FA3" Ref="#PWR?"  Part="1" 
+AR Path="/6046D3EE/5FE07FA3" Ref="#PWR0312"  Part="1" 
+AR Path="/6046D63C/5FE07FA3" Ref="#PWR0412"  Part="1" 
+F 0 "#PWR0212" H 8800 4650 50  0001 C CNN
+F 1 "GND" H 8805 4727 50  0000 C CNN
+F 2 "" H 8800 4900 50  0001 C CNN
+F 3 "" H 8800 4900 50  0001 C CNN
+	1    8800 4900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 4150 2400 4150
+Wire Wire Line
+	8800 4150 8800 4200
+Connection ~ 1600 4150
+Wire Wire Line
+	1600 4150 1600 4100
+Wire Wire Line
+	8000 4200 8000 4150
+Connection ~ 8000 4150
+Wire Wire Line
+	8000 4150 8800 4150
+Wire Wire Line
+	7200 4200 7200 4150
+Connection ~ 7200 4150
+Wire Wire Line
+	7200 4150 8000 4150
+Wire Wire Line
+	6400 4200 6400 4150
+Connection ~ 6400 4150
+Wire Wire Line
+	6400 4150 7200 4150
+Wire Wire Line
+	5600 4200 5600 4150
+Connection ~ 5600 4150
+Wire Wire Line
+	5600 4150 6400 4150
+Wire Wire Line
+	4800 4200 4800 4150
+Connection ~ 4800 4150
+Wire Wire Line
+	4800 4150 5600 4150
+Wire Wire Line
+	4000 4200 4000 4150
+Connection ~ 4000 4150
+Wire Wire Line
+	4000 4150 4800 4150
+Wire Wire Line
+	3200 4200 3200 4150
+Connection ~ 3200 4150
+Wire Wire Line
+	3200 4150 4000 4150
+Wire Wire Line
+	2400 4200 2400 4150
+Connection ~ 2400 4150
+Wire Wire Line
+	2400 4150 3200 4150
+Wire Wire Line
+	1600 4850 2400 4850
+Wire Wire Line
+	8800 4850 8800 4800
+Wire Wire Line
+	1600 4850 1600 4800
+Wire Wire Line
+	8000 4800 8000 4850
+Connection ~ 8000 4850
+Wire Wire Line
+	8000 4850 8800 4850
+Wire Wire Line
+	7200 4800 7200 4850
+Connection ~ 7200 4850
+Wire Wire Line
+	7200 4850 8000 4850
+Wire Wire Line
+	6400 4800 6400 4850
+Connection ~ 6400 4850
+Wire Wire Line
+	6400 4850 7200 4850
+Wire Wire Line
+	5600 4800 5600 4850
+Connection ~ 5600 4850
+Wire Wire Line
+	5600 4850 6400 4850
+Wire Wire Line
+	4800 4800 4800 4850
+Connection ~ 4800 4850
+Wire Wire Line
+	4800 4850 5600 4850
+Wire Wire Line
+	4000 4800 4000 4850
+Connection ~ 4000 4850
+Wire Wire Line
+	4000 4850 4800 4850
+Wire Wire Line
+	3200 4800 3200 4850
+Connection ~ 3200 4850
+Wire Wire Line
+	3200 4850 4000 4850
+Wire Wire Line
+	2400 4800 2400 4850
+Connection ~ 2400 4850
+Wire Wire Line
+	2400 4850 3200 4850
+Wire Wire Line
+	1900 4500 2100 4500
+Wire Wire Line
+	8800 4900 8800 4850
+Connection ~ 8800 4850
+$Comp
+L BF:WS2812C-2020 D?
+U 1 1 5FE07FE7
+P 1600 6000
+AR Path="/5FE07FE7" Ref="D?"  Part="1" 
+AR Path="/5FD4400D/5FE07FE7" Ref="D231"  Part="1" 
+AR Path="/6042312B/5FE07FE7" Ref="D?"  Part="1" 
+AR Path="/6046D3EE/5FE07FE7" Ref="D331"  Part="1" 
+AR Path="/6046D63C/5FE07FE7" Ref="D431"  Part="1" 
+F 0 "D231" H 1300 6250 50  0000 L CNN
+F 1 "WS2812C-2020" H 1650 5750 50  0000 L CNN
+F 2 "bf:BF@WS2812C-2020" H 1650 5700 50  0001 L TNN
+F 3 "http://www.world-semi.com/DownLoadFile/140" H 1700 5625 50  0001 L TNN
+	1    1600 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L BF:WS2812C-2020 D?
+U 1 1 5FE07FF1
+P 2400 6000
+AR Path="/5FE07FF1" Ref="D?"  Part="1" 
+AR Path="/5FD4400D/5FE07FF1" Ref="D232"  Part="1" 
+AR Path="/6042312B/5FE07FF1" Ref="D?"  Part="1" 
+AR Path="/6046D3EE/5FE07FF1" Ref="D332"  Part="1" 
+AR Path="/6046D63C/5FE07FF1" Ref="D432"  Part="1" 
+F 0 "D232" H 2100 6250 50  0000 L CNN
+F 1 "WS2812C-2020" H 2450 5750 50  0000 L CNN
+F 2 "bf:BF@WS2812C-2020" H 2450 5700 50  0001 L TNN
+F 3 "http://www.world-semi.com/DownLoadFile/140" H 2500 5625 50  0001 L TNN
+	1    2400 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L BF:WS2812C-2020 D?
+U 1 1 5FE07FFB
+P 3200 6000
+AR Path="/5FE07FFB" Ref="D?"  Part="1" 
+AR Path="/5FD4400D/5FE07FFB" Ref="D233"  Part="1" 
+AR Path="/6042312B/5FE07FFB" Ref="D?"  Part="1" 
+AR Path="/6046D3EE/5FE07FFB" Ref="D333"  Part="1" 
+AR Path="/6046D63C/5FE07FFB" Ref="D433"  Part="1" 
+F 0 "D233" H 2900 6250 50  0000 L CNN
+F 1 "WS2812C-2020" H 3250 5750 50  0000 L CNN
+F 2 "bf:BF@WS2812C-2020" H 3250 5700 50  0001 L TNN
+F 3 "http://www.world-semi.com/DownLoadFile/140" H 3300 5625 50  0001 L TNN
+	1    3200 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L BF:WS2812C-2020 D?
+U 1 1 5FE08005
+P 4000 6000
+AR Path="/5FE08005" Ref="D?"  Part="1" 
+AR Path="/5FD4400D/5FE08005" Ref="D234"  Part="1" 
+AR Path="/6042312B/5FE08005" Ref="D?"  Part="1" 
+AR Path="/6046D3EE/5FE08005" Ref="D334"  Part="1" 
+AR Path="/6046D63C/5FE08005" Ref="D434"  Part="1" 
+F 0 "D234" H 3700 6250 50  0000 L CNN
+F 1 "WS2812C-2020" H 4050 5750 50  0000 L CNN
+F 2 "bf:BF@WS2812C-2020" H 4050 5700 50  0001 L TNN
+F 3 "http://www.world-semi.com/DownLoadFile/140" H 4100 5625 50  0001 L TNN
+	1    4000 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L BF:WS2812C-2020 D?
+U 1 1 5FE0800F
+P 4800 6000
+AR Path="/5FE0800F" Ref="D?"  Part="1" 
+AR Path="/5FD4400D/5FE0800F" Ref="D235"  Part="1" 
+AR Path="/6042312B/5FE0800F" Ref="D?"  Part="1" 
+AR Path="/6046D3EE/5FE0800F" Ref="D335"  Part="1" 
+AR Path="/6046D63C/5FE0800F" Ref="D435"  Part="1" 
+F 0 "D235" H 4500 6250 50  0000 L CNN
+F 1 "WS2812C-2020" H 4850 5750 50  0000 L CNN
+F 2 "bf:BF@WS2812C-2020" H 4850 5700 50  0001 L TNN
+F 3 "http://www.world-semi.com/DownLoadFile/140" H 4900 5625 50  0001 L TNN
+	1    4800 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L BF:WS2812C-2020 D?
+U 1 1 5FE08019
+P 5600 6000
+AR Path="/5FE08019" Ref="D?"  Part="1" 
+AR Path="/5FD4400D/5FE08019" Ref="D236"  Part="1" 
+AR Path="/6042312B/5FE08019" Ref="D?"  Part="1" 
+AR Path="/6046D3EE/5FE08019" Ref="D336"  Part="1" 
+AR Path="/6046D63C/5FE08019" Ref="D436"  Part="1" 
+F 0 "D236" H 5300 6250 50  0000 L CNN
+F 1 "WS2812C-2020" H 5650 5750 50  0000 L CNN
+F 2 "bf:BF@WS2812C-2020" H 5650 5700 50  0001 L TNN
+F 3 "http://www.world-semi.com/DownLoadFile/140" H 5700 5625 50  0001 L TNN
+	1    5600 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L BF:WS2812C-2020 D?
+U 1 1 5FE08023
+P 6400 6000
+AR Path="/5FE08023" Ref="D?"  Part="1" 
+AR Path="/5FD4400D/5FE08023" Ref="D237"  Part="1" 
+AR Path="/6042312B/5FE08023" Ref="D?"  Part="1" 
+AR Path="/6046D3EE/5FE08023" Ref="D337"  Part="1" 
+AR Path="/6046D63C/5FE08023" Ref="D437"  Part="1" 
+F 0 "D237" H 6100 6250 50  0000 L CNN
+F 1 "WS2812C-2020" H 6450 5750 50  0000 L CNN
+F 2 "bf:BF@WS2812C-2020" H 6450 5700 50  0001 L TNN
+F 3 "http://www.world-semi.com/DownLoadFile/140" H 6500 5625 50  0001 L TNN
+	1    6400 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L BF:WS2812C-2020 D?
+U 1 1 5FE0802D
+P 7200 6000
+AR Path="/5FE0802D" Ref="D?"  Part="1" 
+AR Path="/5FD4400D/5FE0802D" Ref="D238"  Part="1" 
+AR Path="/6042312B/5FE0802D" Ref="D?"  Part="1" 
+AR Path="/6046D3EE/5FE0802D" Ref="D338"  Part="1" 
+AR Path="/6046D63C/5FE0802D" Ref="D438"  Part="1" 
+F 0 "D238" H 6900 6250 50  0000 L CNN
+F 1 "WS2812C-2020" H 7250 5750 50  0000 L CNN
+F 2 "bf:BF@WS2812C-2020" H 7250 5700 50  0001 L TNN
+F 3 "http://www.world-semi.com/DownLoadFile/140" H 7300 5625 50  0001 L TNN
+	1    7200 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L BF:WS2812C-2020 D?
+U 1 1 5FE08037
+P 8000 6000
+AR Path="/5FE08037" Ref="D?"  Part="1" 
+AR Path="/5FD4400D/5FE08037" Ref="D239"  Part="1" 
+AR Path="/6042312B/5FE08037" Ref="D?"  Part="1" 
+AR Path="/6046D3EE/5FE08037" Ref="D339"  Part="1" 
+AR Path="/6046D63C/5FE08037" Ref="D439"  Part="1" 
+F 0 "D239" H 7700 6250 50  0000 L CNN
+F 1 "WS2812C-2020" H 8050 5750 50  0000 L CNN
+F 2 "bf:BF@WS2812C-2020" H 8050 5700 50  0001 L TNN
+F 3 "http://www.world-semi.com/DownLoadFile/140" H 8100 5625 50  0001 L TNN
+	1    8000 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L BF:WS2812C-2020 D?
+U 1 1 5FE08041
+P 8800 6000
+AR Path="/5FE08041" Ref="D?"  Part="1" 
+AR Path="/5FD4400D/5FE08041" Ref="D240"  Part="1" 
+AR Path="/6042312B/5FE08041" Ref="D?"  Part="1" 
+AR Path="/6046D3EE/5FE08041" Ref="D340"  Part="1" 
+AR Path="/6046D63C/5FE08041" Ref="D440"  Part="1" 
+F 0 "D240" H 8500 6250 50  0000 L CNN
+F 1 "WS2812C-2020" H 8850 5750 50  0000 L CNN
+F 2 "bf:BF@WS2812C-2020" H 8850 5700 50  0001 L TNN
+F 3 "http://www.world-semi.com/DownLoadFile/140" H 8900 5625 50  0001 L TNN
+	1    8800 6000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2700 6000 2900 6000
+Wire Wire Line
+	3500 6000 3700 6000
+Wire Wire Line
+	4300 6000 4500 6000
+Wire Wire Line
+	5100 6000 5300 6000
+Wire Wire Line
+	5900 6000 6100 6000
+Wire Wire Line
+	6900 6000 6700 6000
+Wire Wire Line
+	7500 6000 7700 6000
+Wire Wire Line
+	8300 6000 8500 6000
+$Comp
+L power:+5V #PWR0213
+U 1 1 5FE08053
+P 1600 5600
+AR Path="/5FD4400D/5FE08053" Ref="#PWR0213"  Part="1" 
+AR Path="/6042312B/5FE08053" Ref="#PWR?"  Part="1" 
+AR Path="/6046D3EE/5FE08053" Ref="#PWR0313"  Part="1" 
+AR Path="/6046D63C/5FE08053" Ref="#PWR0413"  Part="1" 
+F 0 "#PWR0213" H 1600 5450 50  0001 C CNN
+F 1 "+5V" H 1615 5773 50  0000 C CNN
+F 2 "" H 1600 5600 50  0001 C CNN
+F 3 "" H 1600 5600 50  0001 C CNN
+	1    1600 5600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 5700 1600 5650
+$Comp
+L power:GND #PWR0216
+U 1 1 5FE0805E
+P 8800 6400
+AR Path="/5FD4400D/5FE0805E" Ref="#PWR0216"  Part="1" 
+AR Path="/6042312B/5FE0805E" Ref="#PWR?"  Part="1" 
+AR Path="/6046D3EE/5FE0805E" Ref="#PWR0316"  Part="1" 
+AR Path="/6046D63C/5FE0805E" Ref="#PWR0416"  Part="1" 
+F 0 "#PWR0216" H 8800 6150 50  0001 C CNN
+F 1 "GND" H 8805 6227 50  0000 C CNN
+F 2 "" H 8800 6400 50  0001 C CNN
+F 3 "" H 8800 6400 50  0001 C CNN
+	1    8800 6400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 5650 2400 5650
+Wire Wire Line
+	8800 5650 8800 5700
+Connection ~ 1600 5650
+Wire Wire Line
+	1600 5650 1600 5600
+Wire Wire Line
+	8000 5700 8000 5650
+Connection ~ 8000 5650
+Wire Wire Line
+	8000 5650 8800 5650
+Wire Wire Line
+	7200 5700 7200 5650
+Connection ~ 7200 5650
+Wire Wire Line
+	7200 5650 8000 5650
+Wire Wire Line
+	6400 5700 6400 5650
+Connection ~ 6400 5650
+Wire Wire Line
+	6400 5650 7200 5650
+Wire Wire Line
+	5600 5700 5600 5650
+Connection ~ 5600 5650
+Wire Wire Line
+	5600 5650 6400 5650
+Wire Wire Line
+	4800 5700 4800 5650
+Connection ~ 4800 5650
+Wire Wire Line
+	4800 5650 5600 5650
+Wire Wire Line
+	4000 5700 4000 5650
+Connection ~ 4000 5650
+Wire Wire Line
+	4000 5650 4800 5650
+Wire Wire Line
+	3200 5700 3200 5650
+Connection ~ 3200 5650
+Wire Wire Line
+	3200 5650 4000 5650
+Wire Wire Line
+	2400 5700 2400 5650
+Connection ~ 2400 5650
+Wire Wire Line
+	2400 5650 3200 5650
+Wire Wire Line
+	1600 6350 2400 6350
+Wire Wire Line
+	8800 6350 8800 6300
+Wire Wire Line
+	1600 6350 1600 6300
+Wire Wire Line
+	8000 6300 8000 6350
+Connection ~ 8000 6350
+Wire Wire Line
+	8000 6350 8800 6350
+Wire Wire Line
+	7200 6300 7200 6350
+Connection ~ 7200 6350
+Wire Wire Line
+	7200 6350 8000 6350
+Wire Wire Line
+	6400 6300 6400 6350
+Connection ~ 6400 6350
+Wire Wire Line
+	6400 6350 7200 6350
+Wire Wire Line
+	5600 6300 5600 6350
+Connection ~ 5600 6350
+Wire Wire Line
+	5600 6350 6400 6350
+Wire Wire Line
+	4800 6300 4800 6350
+Connection ~ 4800 6350
+Wire Wire Line
+	4800 6350 5600 6350
+Wire Wire Line
+	4000 6300 4000 6350
+Connection ~ 4000 6350
+Wire Wire Line
+	4000 6350 4800 6350
+Wire Wire Line
+	3200 6300 3200 6350
+Connection ~ 3200 6350
+Wire Wire Line
+	3200 6350 4000 6350
+Wire Wire Line
+	2400 6300 2400 6350
+Connection ~ 2400 6350
+Wire Wire Line
+	2400 6350 3200 6350
+Wire Wire Line
+	1900 6000 2100 6000
+Wire Wire Line
+	8800 6400 8800 6350
+Connection ~ 8800 6350
+$Comp
+L BF:WS2812C-2020 D?
+U 1 1 5FE3D07E
+P 1600 7500
+AR Path="/5FE3D07E" Ref="D?"  Part="1" 
+AR Path="/5FD4400D/5FE3D07E" Ref="D241"  Part="1" 
+AR Path="/6042312B/5FE3D07E" Ref="D?"  Part="1" 
+AR Path="/6046D3EE/5FE3D07E" Ref="D341"  Part="1" 
+AR Path="/6046D63C/5FE3D07E" Ref="D441"  Part="1" 
+F 0 "D241" H 1300 7750 50  0000 L CNN
+F 1 "WS2812C-2020" H 1650 7250 50  0000 L CNN
+F 2 "bf:BF@WS2812C-2020" H 1650 7200 50  0001 L TNN
+F 3 "http://www.world-semi.com/DownLoadFile/140" H 1700 7125 50  0001 L TNN
+	1    1600 7500
+	1    0    0    -1  
+$EndComp
+$Comp
+L BF:WS2812C-2020 D?
+U 1 1 5FE3D0A6
+P 2400 7500
+AR Path="/5FE3D0A6" Ref="D?"  Part="1" 
+AR Path="/5FD4400D/5FE3D0A6" Ref="D242"  Part="1" 
+AR Path="/6042312B/5FE3D0A6" Ref="D?"  Part="1" 
+AR Path="/6046D3EE/5FE3D0A6" Ref="D342"  Part="1" 
+AR Path="/6046D63C/5FE3D0A6" Ref="D442"  Part="1" 
+F 0 "D242" H 2100 7750 50  0000 L CNN
+F 1 "WS2812C-2020" H 2450 7250 50  0000 L CNN
+F 2 "bf:BF@WS2812C-2020" H 2450 7200 50  0001 L TNN
+F 3 "http://www.world-semi.com/DownLoadFile/140" H 2500 7125 50  0001 L TNN
+	1    2400 7500
+	1    0    0    -1  
+$EndComp
+$Comp
+L BF:WS2812C-2020 D?
+U 1 1 5FE3D0B0
+P 3200 7500
+AR Path="/5FE3D0B0" Ref="D?"  Part="1" 
+AR Path="/5FD4400D/5FE3D0B0" Ref="D243"  Part="1" 
+AR Path="/6042312B/5FE3D0B0" Ref="D?"  Part="1" 
+AR Path="/6046D3EE/5FE3D0B0" Ref="D343"  Part="1" 
+AR Path="/6046D63C/5FE3D0B0" Ref="D443"  Part="1" 
+F 0 "D243" H 2900 7750 50  0000 L CNN
+F 1 "WS2812C-2020" H 3250 7250 50  0000 L CNN
+F 2 "bf:BF@WS2812C-2020" H 3250 7200 50  0001 L TNN
+F 3 "http://www.world-semi.com/DownLoadFile/140" H 3300 7125 50  0001 L TNN
+	1    3200 7500
+	1    0    0    -1  
+$EndComp
+$Comp
+L BF:WS2812C-2020 D?
+U 1 1 5FE3D0BA
+P 4000 7500
+AR Path="/5FE3D0BA" Ref="D?"  Part="1" 
+AR Path="/5FD4400D/5FE3D0BA" Ref="D244"  Part="1" 
+AR Path="/6042312B/5FE3D0BA" Ref="D?"  Part="1" 
+AR Path="/6046D3EE/5FE3D0BA" Ref="D344"  Part="1" 
+AR Path="/6046D63C/5FE3D0BA" Ref="D444"  Part="1" 
+F 0 "D244" H 3700 7750 50  0000 L CNN
+F 1 "WS2812C-2020" H 4050 7250 50  0000 L CNN
+F 2 "bf:BF@WS2812C-2020" H 4050 7200 50  0001 L TNN
+F 3 "http://www.world-semi.com/DownLoadFile/140" H 4100 7125 50  0001 L TNN
+	1    4000 7500
+	1    0    0    -1  
+$EndComp
+$Comp
+L BF:WS2812C-2020 D?
+U 1 1 5FE3D0C4
+P 4800 7500
+AR Path="/5FE3D0C4" Ref="D?"  Part="1" 
+AR Path="/5FD4400D/5FE3D0C4" Ref="D245"  Part="1" 
+AR Path="/6042312B/5FE3D0C4" Ref="D?"  Part="1" 
+AR Path="/6046D3EE/5FE3D0C4" Ref="D345"  Part="1" 
+AR Path="/6046D63C/5FE3D0C4" Ref="D445"  Part="1" 
+F 0 "D245" H 4500 7750 50  0000 L CNN
+F 1 "WS2812C-2020" H 4850 7250 50  0000 L CNN
+F 2 "bf:BF@WS2812C-2020" H 4850 7200 50  0001 L TNN
+F 3 "http://www.world-semi.com/DownLoadFile/140" H 4900 7125 50  0001 L TNN
+	1    4800 7500
+	1    0    0    -1  
+$EndComp
+$Comp
+L BF:WS2812C-2020 D?
+U 1 1 5FE3D0CE
+P 5600 7500
+AR Path="/5FE3D0CE" Ref="D?"  Part="1" 
+AR Path="/5FD4400D/5FE3D0CE" Ref="D246"  Part="1" 
+AR Path="/6042312B/5FE3D0CE" Ref="D?"  Part="1" 
+AR Path="/6046D3EE/5FE3D0CE" Ref="D346"  Part="1" 
+AR Path="/6046D63C/5FE3D0CE" Ref="D446"  Part="1" 
+F 0 "D246" H 5300 7750 50  0000 L CNN
+F 1 "WS2812C-2020" H 5650 7250 50  0000 L CNN
+F 2 "bf:BF@WS2812C-2020" H 5650 7200 50  0001 L TNN
+F 3 "http://www.world-semi.com/DownLoadFile/140" H 5700 7125 50  0001 L TNN
+	1    5600 7500
+	1    0    0    -1  
+$EndComp
+$Comp
+L BF:WS2812C-2020 D?
+U 1 1 5FE3D0D8
+P 6400 7500
+AR Path="/5FE3D0D8" Ref="D?"  Part="1" 
+AR Path="/5FD4400D/5FE3D0D8" Ref="D247"  Part="1" 
+AR Path="/6042312B/5FE3D0D8" Ref="D?"  Part="1" 
+AR Path="/6046D3EE/5FE3D0D8" Ref="D347"  Part="1" 
+AR Path="/6046D63C/5FE3D0D8" Ref="D447"  Part="1" 
+F 0 "D247" H 6100 7750 50  0000 L CNN
+F 1 "WS2812C-2020" H 6450 7250 50  0000 L CNN
+F 2 "bf:BF@WS2812C-2020" H 6450 7200 50  0001 L TNN
+F 3 "http://www.world-semi.com/DownLoadFile/140" H 6500 7125 50  0001 L TNN
+	1    6400 7500
+	1    0    0    -1  
+$EndComp
+$Comp
+L BF:WS2812C-2020 D?
+U 1 1 5FE3D0E2
+P 7200 7500
+AR Path="/5FE3D0E2" Ref="D?"  Part="1" 
+AR Path="/5FD4400D/5FE3D0E2" Ref="D248"  Part="1" 
+AR Path="/6042312B/5FE3D0E2" Ref="D?"  Part="1" 
+AR Path="/6046D3EE/5FE3D0E2" Ref="D348"  Part="1" 
+AR Path="/6046D63C/5FE3D0E2" Ref="D448"  Part="1" 
+F 0 "D248" H 6900 7750 50  0000 L CNN
+F 1 "WS2812C-2020" H 7250 7250 50  0000 L CNN
+F 2 "bf:BF@WS2812C-2020" H 7250 7200 50  0001 L TNN
+F 3 "http://www.world-semi.com/DownLoadFile/140" H 7300 7125 50  0001 L TNN
+	1    7200 7500
+	1    0    0    -1  
+$EndComp
+$Comp
+L BF:WS2812C-2020 D?
+U 1 1 5FE3D0EC
+P 8000 7500
+AR Path="/5FE3D0EC" Ref="D?"  Part="1" 
+AR Path="/5FD4400D/5FE3D0EC" Ref="D249"  Part="1" 
+AR Path="/6042312B/5FE3D0EC" Ref="D?"  Part="1" 
+AR Path="/6046D3EE/5FE3D0EC" Ref="D349"  Part="1" 
+AR Path="/6046D63C/5FE3D0EC" Ref="D449"  Part="1" 
+F 0 "D249" H 7700 7750 50  0000 L CNN
+F 1 "WS2812C-2020" H 8050 7250 50  0000 L CNN
+F 2 "bf:BF@WS2812C-2020" H 8050 7200 50  0001 L TNN
+F 3 "http://www.world-semi.com/DownLoadFile/140" H 8100 7125 50  0001 L TNN
+	1    8000 7500
+	1    0    0    -1  
+$EndComp
+$Comp
+L BF:WS2812C-2020 D?
+U 1 1 5FE3D0F6
+P 8800 7500
+AR Path="/5FE3D0F6" Ref="D?"  Part="1" 
+AR Path="/5FD4400D/5FE3D0F6" Ref="D250"  Part="1" 
+AR Path="/6042312B/5FE3D0F6" Ref="D?"  Part="1" 
+AR Path="/6046D3EE/5FE3D0F6" Ref="D350"  Part="1" 
+AR Path="/6046D63C/5FE3D0F6" Ref="D450"  Part="1" 
+F 0 "D250" H 8500 7750 50  0000 L CNN
+F 1 "WS2812C-2020" H 8850 7250 50  0000 L CNN
+F 2 "bf:BF@WS2812C-2020" H 8850 7200 50  0001 L TNN
+F 3 "http://www.world-semi.com/DownLoadFile/140" H 8900 7125 50  0001 L TNN
+	1    8800 7500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2700 7500 2900 7500
+Wire Wire Line
+	3500 7500 3700 7500
+Wire Wire Line
+	4300 7500 4500 7500
+Wire Wire Line
+	5100 7500 5300 7500
+Wire Wire Line
+	5900 7500 6100 7500
+Wire Wire Line
+	6900 7500 6700 7500
+Wire Wire Line
+	7500 7500 7700 7500
+Wire Wire Line
+	8300 7500 8500 7500
+$Comp
+L power:+5V #PWR0217
+U 1 1 5FE3D108
+P 1600 7100
+AR Path="/5FD4400D/5FE3D108" Ref="#PWR0217"  Part="1" 
+AR Path="/6042312B/5FE3D108" Ref="#PWR?"  Part="1" 
+AR Path="/6046D3EE/5FE3D108" Ref="#PWR0317"  Part="1" 
+AR Path="/6046D63C/5FE3D108" Ref="#PWR0417"  Part="1" 
+F 0 "#PWR0217" H 1600 6950 50  0001 C CNN
+F 1 "+5V" H 1615 7273 50  0000 C CNN
+F 2 "" H 1600 7100 50  0001 C CNN
+F 3 "" H 1600 7100 50  0001 C CNN
+	1    1600 7100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 7200 1600 7150
+$Comp
+L power:GND #PWR0220
+U 1 1 5FE3D113
+P 8800 7900
+AR Path="/5FD4400D/5FE3D113" Ref="#PWR0220"  Part="1" 
+AR Path="/6042312B/5FE3D113" Ref="#PWR?"  Part="1" 
+AR Path="/6046D3EE/5FE3D113" Ref="#PWR0320"  Part="1" 
+AR Path="/6046D63C/5FE3D113" Ref="#PWR0420"  Part="1" 
+F 0 "#PWR0220" H 8800 7650 50  0001 C CNN
+F 1 "GND" H 8805 7727 50  0000 C CNN
+F 2 "" H 8800 7900 50  0001 C CNN
+F 3 "" H 8800 7900 50  0001 C CNN
+	1    8800 7900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 7150 2400 7150
+Wire Wire Line
+	8800 7150 8800 7200
+Connection ~ 1600 7150
+Wire Wire Line
+	1600 7150 1600 7100
+Wire Wire Line
+	8000 7200 8000 7150
+Connection ~ 8000 7150
+Wire Wire Line
+	8000 7150 8800 7150
+Wire Wire Line
+	7200 7200 7200 7150
+Connection ~ 7200 7150
+Wire Wire Line
+	7200 7150 8000 7150
+Wire Wire Line
+	6400 7200 6400 7150
+Connection ~ 6400 7150
+Wire Wire Line
+	6400 7150 7200 7150
+Wire Wire Line
+	5600 7200 5600 7150
+Connection ~ 5600 7150
+Wire Wire Line
+	5600 7150 6400 7150
+Wire Wire Line
+	4800 7200 4800 7150
+Connection ~ 4800 7150
+Wire Wire Line
+	4800 7150 5600 7150
+Wire Wire Line
+	4000 7200 4000 7150
+Connection ~ 4000 7150
+Wire Wire Line
+	4000 7150 4800 7150
+Wire Wire Line
+	3200 7200 3200 7150
+Connection ~ 3200 7150
+Wire Wire Line
+	3200 7150 4000 7150
+Wire Wire Line
+	2400 7200 2400 7150
+Connection ~ 2400 7150
+Wire Wire Line
+	2400 7150 3200 7150
+Wire Wire Line
+	1600 7850 2400 7850
+Wire Wire Line
+	8800 7850 8800 7800
+Wire Wire Line
+	1600 7850 1600 7800
+Wire Wire Line
+	8000 7800 8000 7850
+Connection ~ 8000 7850
+Wire Wire Line
+	8000 7850 8800 7850
+Wire Wire Line
+	7200 7800 7200 7850
+Connection ~ 7200 7850
+Wire Wire Line
+	7200 7850 8000 7850
+Wire Wire Line
+	6400 7800 6400 7850
+Connection ~ 6400 7850
+Wire Wire Line
+	6400 7850 7200 7850
+Wire Wire Line
+	5600 7800 5600 7850
+Connection ~ 5600 7850
+Wire Wire Line
+	5600 7850 6400 7850
+Wire Wire Line
+	4800 7800 4800 7850
+Connection ~ 4800 7850
+Wire Wire Line
+	4800 7850 5600 7850
+Wire Wire Line
+	4000 7800 4000 7850
+Connection ~ 4000 7850
+Wire Wire Line
+	4000 7850 4800 7850
+Wire Wire Line
+	3200 7800 3200 7850
+Connection ~ 3200 7850
+Wire Wire Line
+	3200 7850 4000 7850
+Wire Wire Line
+	2400 7800 2400 7850
+Connection ~ 2400 7850
+Wire Wire Line
+	2400 7850 3200 7850
+Wire Wire Line
+	1900 7500 2100 7500
+Wire Wire Line
+	8800 7900 8800 7850
+Connection ~ 8800 7850
+$Comp
+L BF:WS2812C-2020 D?
+U 1 1 5FE3D157
+P 1600 9000
+AR Path="/5FE3D157" Ref="D?"  Part="1" 
+AR Path="/5FD4400D/5FE3D157" Ref="D251"  Part="1" 
+AR Path="/6042312B/5FE3D157" Ref="D?"  Part="1" 
+AR Path="/6046D3EE/5FE3D157" Ref="D351"  Part="1" 
+AR Path="/6046D63C/5FE3D157" Ref="D451"  Part="1" 
+F 0 "D251" H 1300 9250 50  0000 L CNN
+F 1 "WS2812C-2020" H 1650 8750 50  0000 L CNN
+F 2 "bf:BF@WS2812C-2020" H 1650 8700 50  0001 L TNN
+F 3 "http://www.world-semi.com/DownLoadFile/140" H 1700 8625 50  0001 L TNN
+	1    1600 9000
+	1    0    0    -1  
+$EndComp
+$Comp
+L BF:WS2812C-2020 D?
+U 1 1 5FE3D161
+P 2400 9000
+AR Path="/5FE3D161" Ref="D?"  Part="1" 
+AR Path="/5FD4400D/5FE3D161" Ref="D252"  Part="1" 
+AR Path="/6042312B/5FE3D161" Ref="D?"  Part="1" 
+AR Path="/6046D3EE/5FE3D161" Ref="D352"  Part="1" 
+AR Path="/6046D63C/5FE3D161" Ref="D452"  Part="1" 
+F 0 "D252" H 2100 9250 50  0000 L CNN
+F 1 "WS2812C-2020" H 2450 8750 50  0000 L CNN
+F 2 "bf:BF@WS2812C-2020" H 2450 8700 50  0001 L TNN
+F 3 "http://www.world-semi.com/DownLoadFile/140" H 2500 8625 50  0001 L TNN
+	1    2400 9000
+	1    0    0    -1  
+$EndComp
+$Comp
+L BF:WS2812C-2020 D?
+U 1 1 5FE3D16B
+P 3200 9000
+AR Path="/5FE3D16B" Ref="D?"  Part="1" 
+AR Path="/5FD4400D/5FE3D16B" Ref="D253"  Part="1" 
+AR Path="/6042312B/5FE3D16B" Ref="D?"  Part="1" 
+AR Path="/6046D3EE/5FE3D16B" Ref="D353"  Part="1" 
+AR Path="/6046D63C/5FE3D16B" Ref="D453"  Part="1" 
+F 0 "D253" H 2900 9250 50  0000 L CNN
+F 1 "WS2812C-2020" H 3250 8750 50  0000 L CNN
+F 2 "bf:BF@WS2812C-2020" H 3250 8700 50  0001 L TNN
+F 3 "http://www.world-semi.com/DownLoadFile/140" H 3300 8625 50  0001 L TNN
+	1    3200 9000
+	1    0    0    -1  
+$EndComp
+$Comp
+L BF:WS2812C-2020 D?
+U 1 1 5FE3D175
+P 4000 9000
+AR Path="/5FE3D175" Ref="D?"  Part="1" 
+AR Path="/5FD4400D/5FE3D175" Ref="D254"  Part="1" 
+AR Path="/6042312B/5FE3D175" Ref="D?"  Part="1" 
+AR Path="/6046D3EE/5FE3D175" Ref="D354"  Part="1" 
+AR Path="/6046D63C/5FE3D175" Ref="D454"  Part="1" 
+F 0 "D254" H 3700 9250 50  0000 L CNN
+F 1 "WS2812C-2020" H 4050 8750 50  0000 L CNN
+F 2 "bf:BF@WS2812C-2020" H 4050 8700 50  0001 L TNN
+F 3 "http://www.world-semi.com/DownLoadFile/140" H 4100 8625 50  0001 L TNN
+	1    4000 9000
+	1    0    0    -1  
+$EndComp
+$Comp
+L BF:WS2812C-2020 D?
+U 1 1 5FE3D17F
+P 4800 9000
+AR Path="/5FE3D17F" Ref="D?"  Part="1" 
+AR Path="/5FD4400D/5FE3D17F" Ref="D255"  Part="1" 
+AR Path="/6042312B/5FE3D17F" Ref="D?"  Part="1" 
+AR Path="/6046D3EE/5FE3D17F" Ref="D355"  Part="1" 
+AR Path="/6046D63C/5FE3D17F" Ref="D455"  Part="1" 
+F 0 "D255" H 4500 9250 50  0000 L CNN
+F 1 "WS2812C-2020" H 4850 8750 50  0000 L CNN
+F 2 "bf:BF@WS2812C-2020" H 4850 8700 50  0001 L TNN
+F 3 "http://www.world-semi.com/DownLoadFile/140" H 4900 8625 50  0001 L TNN
+	1    4800 9000
+	1    0    0    -1  
+$EndComp
+$Comp
+L BF:WS2812C-2020 D?
+U 1 1 5FE3D189
+P 5600 9000
+AR Path="/5FE3D189" Ref="D?"  Part="1" 
+AR Path="/5FD4400D/5FE3D189" Ref="D256"  Part="1" 
+AR Path="/6042312B/5FE3D189" Ref="D?"  Part="1" 
+AR Path="/6046D3EE/5FE3D189" Ref="D356"  Part="1" 
+AR Path="/6046D63C/5FE3D189" Ref="D456"  Part="1" 
+F 0 "D256" H 5300 9250 50  0000 L CNN
+F 1 "WS2812C-2020" H 5650 8750 50  0000 L CNN
+F 2 "bf:BF@WS2812C-2020" H 5650 8700 50  0001 L TNN
+F 3 "http://www.world-semi.com/DownLoadFile/140" H 5700 8625 50  0001 L TNN
+	1    5600 9000
+	1    0    0    -1  
+$EndComp
+$Comp
+L BF:WS2812C-2020 D?
+U 1 1 5FE3D193
+P 6400 9000
+AR Path="/5FE3D193" Ref="D?"  Part="1" 
+AR Path="/5FD4400D/5FE3D193" Ref="D257"  Part="1" 
+AR Path="/6042312B/5FE3D193" Ref="D?"  Part="1" 
+AR Path="/6046D3EE/5FE3D193" Ref="D357"  Part="1" 
+AR Path="/6046D63C/5FE3D193" Ref="D457"  Part="1" 
+F 0 "D257" H 6100 9250 50  0000 L CNN
+F 1 "WS2812C-2020" H 6450 8750 50  0000 L CNN
+F 2 "bf:BF@WS2812C-2020" H 6450 8700 50  0001 L TNN
+F 3 "http://www.world-semi.com/DownLoadFile/140" H 6500 8625 50  0001 L TNN
+	1    6400 9000
+	1    0    0    -1  
+$EndComp
+$Comp
+L BF:WS2812C-2020 D?
+U 1 1 5FE3D19D
+P 7200 9000
+AR Path="/5FE3D19D" Ref="D?"  Part="1" 
+AR Path="/5FD4400D/5FE3D19D" Ref="D258"  Part="1" 
+AR Path="/6042312B/5FE3D19D" Ref="D?"  Part="1" 
+AR Path="/6046D3EE/5FE3D19D" Ref="D358"  Part="1" 
+AR Path="/6046D63C/5FE3D19D" Ref="D458"  Part="1" 
+F 0 "D258" H 6900 9250 50  0000 L CNN
+F 1 "WS2812C-2020" H 7250 8750 50  0000 L CNN
+F 2 "bf:BF@WS2812C-2020" H 7250 8700 50  0001 L TNN
+F 3 "http://www.world-semi.com/DownLoadFile/140" H 7300 8625 50  0001 L TNN
+	1    7200 9000
+	1    0    0    -1  
+$EndComp
+$Comp
+L BF:WS2812C-2020 D?
+U 1 1 5FE3D1A7
+P 8000 9000
+AR Path="/5FE3D1A7" Ref="D?"  Part="1" 
+AR Path="/5FD4400D/5FE3D1A7" Ref="D259"  Part="1" 
+AR Path="/6042312B/5FE3D1A7" Ref="D?"  Part="1" 
+AR Path="/6046D3EE/5FE3D1A7" Ref="D359"  Part="1" 
+AR Path="/6046D63C/5FE3D1A7" Ref="D459"  Part="1" 
+F 0 "D259" H 7700 9250 50  0000 L CNN
+F 1 "WS2812C-2020" H 8050 8750 50  0000 L CNN
+F 2 "bf:BF@WS2812C-2020" H 8050 8700 50  0001 L TNN
+F 3 "http://www.world-semi.com/DownLoadFile/140" H 8100 8625 50  0001 L TNN
+	1    8000 9000
+	1    0    0    -1  
+$EndComp
+$Comp
+L BF:WS2812C-2020 D?
+U 1 1 5FE3D1B1
+P 8800 9000
+AR Path="/5FE3D1B1" Ref="D?"  Part="1" 
+AR Path="/5FD4400D/5FE3D1B1" Ref="D260"  Part="1" 
+AR Path="/6042312B/5FE3D1B1" Ref="D?"  Part="1" 
+AR Path="/6046D3EE/5FE3D1B1" Ref="D360"  Part="1" 
+AR Path="/6046D63C/5FE3D1B1" Ref="D460"  Part="1" 
+F 0 "D260" H 8500 9250 50  0000 L CNN
+F 1 "WS2812C-2020" H 8850 8750 50  0000 L CNN
+F 2 "bf:BF@WS2812C-2020" H 8850 8700 50  0001 L TNN
+F 3 "http://www.world-semi.com/DownLoadFile/140" H 8900 8625 50  0001 L TNN
+	1    8800 9000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2700 9000 2900 9000
+Wire Wire Line
+	3500 9000 3700 9000
+Wire Wire Line
+	4300 9000 4500 9000
+Wire Wire Line
+	5100 9000 5300 9000
+Wire Wire Line
+	5900 9000 6100 9000
+Wire Wire Line
+	6900 9000 6700 9000
+Wire Wire Line
+	7500 9000 7700 9000
+Wire Wire Line
+	8300 9000 8500 9000
+$Comp
+L power:+5V #PWR0221
+U 1 1 5FE3D1C3
+P 1600 8600
+AR Path="/5FD4400D/5FE3D1C3" Ref="#PWR0221"  Part="1" 
+AR Path="/6042312B/5FE3D1C3" Ref="#PWR?"  Part="1" 
+AR Path="/6046D3EE/5FE3D1C3" Ref="#PWR0321"  Part="1" 
+AR Path="/6046D63C/5FE3D1C3" Ref="#PWR0421"  Part="1" 
+F 0 "#PWR0221" H 1600 8450 50  0001 C CNN
+F 1 "+5V" H 1615 8773 50  0000 C CNN
+F 2 "" H 1600 8600 50  0001 C CNN
+F 3 "" H 1600 8600 50  0001 C CNN
+	1    1600 8600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 8700 1600 8650
+$Comp
+L power:GND #PWR0224
+U 1 1 5FE3D1CE
+P 8800 9400
+AR Path="/5FD4400D/5FE3D1CE" Ref="#PWR0224"  Part="1" 
+AR Path="/6042312B/5FE3D1CE" Ref="#PWR?"  Part="1" 
+AR Path="/6046D3EE/5FE3D1CE" Ref="#PWR0324"  Part="1" 
+AR Path="/6046D63C/5FE3D1CE" Ref="#PWR0424"  Part="1" 
+F 0 "#PWR0224" H 8800 9150 50  0001 C CNN
+F 1 "GND" H 8805 9227 50  0000 C CNN
+F 2 "" H 8800 9400 50  0001 C CNN
+F 3 "" H 8800 9400 50  0001 C CNN
+	1    8800 9400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1600 8650 2400 8650
+Wire Wire Line
+	8800 8650 8800 8700
+Connection ~ 1600 8650
+Wire Wire Line
+	1600 8650 1600 8600
+Wire Wire Line
+	8000 8700 8000 8650
+Connection ~ 8000 8650
+Wire Wire Line
+	8000 8650 8800 8650
+Wire Wire Line
+	7200 8700 7200 8650
+Connection ~ 7200 8650
+Wire Wire Line
+	7200 8650 8000 8650
+Wire Wire Line
+	6400 8700 6400 8650
+Connection ~ 6400 8650
+Wire Wire Line
+	6400 8650 7200 8650
+Wire Wire Line
+	5600 8700 5600 8650
+Connection ~ 5600 8650
+Wire Wire Line
+	5600 8650 6400 8650
+Wire Wire Line
+	4800 8700 4800 8650
+Connection ~ 4800 8650
+Wire Wire Line
+	4800 8650 5600 8650
+Wire Wire Line
+	4000 8700 4000 8650
+Connection ~ 4000 8650
+Wire Wire Line
+	4000 8650 4800 8650
+Wire Wire Line
+	3200 8700 3200 8650
+Connection ~ 3200 8650
+Wire Wire Line
+	3200 8650 4000 8650
+Wire Wire Line
+	2400 8700 2400 8650
+Connection ~ 2400 8650
+Wire Wire Line
+	2400 8650 3200 8650
+Wire Wire Line
+	1600 9350 2400 9350
+Wire Wire Line
+	8800 9350 8800 9300
+Wire Wire Line
+	1600 9350 1600 9300
+Wire Wire Line
+	8000 9300 8000 9350
+Connection ~ 8000 9350
+Wire Wire Line
+	8000 9350 8800 9350
+Wire Wire Line
+	7200 9300 7200 9350
+Connection ~ 7200 9350
+Wire Wire Line
+	7200 9350 8000 9350
+Wire Wire Line
+	6400 9300 6400 9350
+Connection ~ 6400 9350
+Wire Wire Line
+	6400 9350 7200 9350
+Wire Wire Line
+	5600 9300 5600 9350
+Connection ~ 5600 9350
+Wire Wire Line
+	5600 9350 6400 9350
+Wire Wire Line
+	4800 9300 4800 9350
+Connection ~ 4800 9350
+Wire Wire Line
+	4800 9350 5600 9350
+Wire Wire Line
+	4000 9300 4000 9350
+Connection ~ 4000 9350
+Wire Wire Line
+	4000 9350 4800 9350
+Wire Wire Line
+	3200 9300 3200 9350
+Connection ~ 3200 9350
+Wire Wire Line
+	3200 9350 4000 9350
+Wire Wire Line
+	2400 9300 2400 9350
+Connection ~ 2400 9350
+Wire Wire Line
+	2400 9350 3200 9350
+Wire Wire Line
+	1900 9000 2100 9000
+Wire Wire Line
+	8800 9400 8800 9350
+Connection ~ 8800 9350
+Wire Wire Line
+	9100 1500 9650 1500
+Wire Wire Line
+	9650 1500 9650 2200
+Wire Wire Line
+	9650 2200 1200 2200
+Wire Wire Line
+	1200 2200 1200 3000
+Wire Wire Line
+	1200 3000 1300 3000
+Wire Wire Line
+	9100 3000 9650 3000
+Wire Wire Line
+	9650 3000 9650 3700
+Wire Wire Line
+	9650 3700 1200 3700
+Wire Wire Line
+	1200 3700 1200 4500
+Wire Wire Line
+	1200 4500 1300 4500
+Wire Wire Line
+	9100 4500 9650 4500
+Wire Wire Line
+	9650 4500 9650 5200
+Wire Wire Line
+	9650 5200 1200 5200
+Wire Wire Line
+	1200 5200 1200 6000
+Wire Wire Line
+	1200 6000 1300 6000
+Wire Wire Line
+	9100 6000 9650 6000
+Wire Wire Line
+	9650 6000 9650 6700
+Wire Wire Line
+	9650 6700 1200 6700
+Wire Wire Line
+	1200 6700 1200 7500
+Wire Wire Line
+	1200 7500 1300 7500
+Wire Wire Line
+	9100 7500 9650 7500
+Wire Wire Line
+	9650 7500 9650 8200
+Wire Wire Line
+	9650 8200 1200 8200
+Wire Wire Line
+	1200 8200 1200 9000
+Wire Wire Line
+	1200 9000 1300 9000
+$Comp
+L Device:C C203
+U 1 1 6000CB2B
+P 11500 1500
+AR Path="/5FD4400D/6000CB2B" Ref="C203"  Part="1" 
+AR Path="/6042312B/6000CB2B" Ref="C?"  Part="1" 
+AR Path="/6046D3EE/6000CB2B" Ref="C303"  Part="1" 
+AR Path="/6046D63C/6000CB2B" Ref="C403"  Part="1" 
+F 0 "C203" H 11615 1546 50  0000 L CNN
+F 1 "100n" H 11615 1455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 11538 1350 50  0001 C CNN
+F 3 "~" H 11500 1500 50  0001 C CNN
+	1    11500 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C204
+U 1 1 6000CB35
+P 12000 1500
+AR Path="/5FD4400D/6000CB35" Ref="C204"  Part="1" 
+AR Path="/6042312B/6000CB35" Ref="C?"  Part="1" 
+AR Path="/6046D3EE/6000CB35" Ref="C304"  Part="1" 
+AR Path="/6046D63C/6000CB35" Ref="C404"  Part="1" 
+F 0 "C204" H 12115 1546 50  0000 L CNN
+F 1 "100n" H 12115 1455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 12038 1350 50  0001 C CNN
+F 3 "~" H 12000 1500 50  0001 C CNN
+	1    12000 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C205
+U 1 1 60029E2A
+P 12500 1500
+AR Path="/5FD4400D/60029E2A" Ref="C205"  Part="1" 
+AR Path="/6042312B/60029E2A" Ref="C?"  Part="1" 
+AR Path="/6046D3EE/60029E2A" Ref="C305"  Part="1" 
+AR Path="/6046D63C/60029E2A" Ref="C405"  Part="1" 
+F 0 "C205" H 12615 1546 50  0000 L CNN
+F 1 "100n" H 12615 1455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 12538 1350 50  0001 C CNN
+F 3 "~" H 12500 1500 50  0001 C CNN
+	1    12500 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C206
+U 1 1 60029E42
+P 13000 1500
+AR Path="/5FD4400D/60029E42" Ref="C206"  Part="1" 
+AR Path="/6042312B/60029E42" Ref="C?"  Part="1" 
+AR Path="/6046D3EE/60029E42" Ref="C306"  Part="1" 
+AR Path="/6046D63C/60029E42" Ref="C406"  Part="1" 
+F 0 "C206" H 13115 1546 50  0000 L CNN
+F 1 "100n" H 13115 1455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 13038 1350 50  0001 C CNN
+F 3 "~" H 13000 1500 50  0001 C CNN
+	1    13000 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C207
+U 1 1 60029E4C
+P 13500 1500
+AR Path="/5FD4400D/60029E4C" Ref="C207"  Part="1" 
+AR Path="/6042312B/60029E4C" Ref="C?"  Part="1" 
+AR Path="/6046D3EE/60029E4C" Ref="C307"  Part="1" 
+AR Path="/6046D63C/60029E4C" Ref="C407"  Part="1" 
+F 0 "C207" H 13615 1546 50  0000 L CNN
+F 1 "100n" H 13615 1455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 13538 1350 50  0001 C CNN
+F 3 "~" H 13500 1500 50  0001 C CNN
+	1    13500 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C208
+U 1 1 60029E56
+P 14000 1500
+AR Path="/5FD4400D/60029E56" Ref="C208"  Part="1" 
+AR Path="/6042312B/60029E56" Ref="C?"  Part="1" 
+AR Path="/6046D3EE/60029E56" Ref="C308"  Part="1" 
+AR Path="/6046D63C/60029E56" Ref="C408"  Part="1" 
+F 0 "C208" H 14115 1546 50  0000 L CNN
+F 1 "100n" H 14115 1455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 14038 1350 50  0001 C CNN
+F 3 "~" H 14000 1500 50  0001 C CNN
+	1    14000 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C209
+U 1 1 60047C89
+P 14500 1500
+AR Path="/5FD4400D/60047C89" Ref="C209"  Part="1" 
+AR Path="/6042312B/60047C89" Ref="C?"  Part="1" 
+AR Path="/6046D3EE/60047C89" Ref="C309"  Part="1" 
+AR Path="/6046D63C/60047C89" Ref="C409"  Part="1" 
+F 0 "C209" H 14615 1546 50  0000 L CNN
+F 1 "100n" H 14615 1455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 14538 1350 50  0001 C CNN
+F 3 "~" H 14500 1500 50  0001 C CNN
+	1    14500 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C210
+U 1 1 60047CA1
+P 15000 1500
+AR Path="/5FD4400D/60047CA1" Ref="C210"  Part="1" 
+AR Path="/6042312B/60047CA1" Ref="C?"  Part="1" 
+AR Path="/6046D3EE/60047CA1" Ref="C310"  Part="1" 
+AR Path="/6046D63C/60047CA1" Ref="C410"  Part="1" 
+F 0 "C210" H 15115 1546 50  0000 L CNN
+F 1 "100n" H 15115 1455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 15038 1350 50  0001 C CNN
+F 3 "~" H 15000 1500 50  0001 C CNN
+	1    15000 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0203
+U 1 1 60085979
+P 15000 1750
+AR Path="/5FD4400D/60085979" Ref="#PWR0203"  Part="1" 
+AR Path="/6042312B/60085979" Ref="#PWR?"  Part="1" 
+AR Path="/6046D3EE/60085979" Ref="#PWR0303"  Part="1" 
+AR Path="/6046D63C/60085979" Ref="#PWR0403"  Part="1" 
+F 0 "#PWR0203" H 15000 1500 50  0001 C CNN
+F 1 "GND" H 15005 1577 50  0000 C CNN
+F 2 "" H 15000 1750 50  0001 C CNN
+F 3 "" H 15000 1750 50  0001 C CNN
+	1    15000 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0202
+U 1 1 60086D66
+P 10500 1250
+AR Path="/5FD4400D/60086D66" Ref="#PWR0202"  Part="1" 
+AR Path="/6042312B/60086D66" Ref="#PWR?"  Part="1" 
+AR Path="/6046D3EE/60086D66" Ref="#PWR0302"  Part="1" 
+AR Path="/6046D63C/60086D66" Ref="#PWR0402"  Part="1" 
+F 0 "#PWR0202" H 10500 1100 50  0001 C CNN
+F 1 "+5V" H 10515 1423 50  0000 C CNN
+F 2 "" H 10500 1250 50  0001 C CNN
+F 3 "" H 10500 1250 50  0001 C CNN
+	1    10500 1250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	15000 1650 15000 1700
+Wire Wire Line
+	15000 1700 14500 1700
+Wire Wire Line
+	10500 1700 10500 1650
+Connection ~ 15000 1700
+Wire Wire Line
+	15000 1700 15000 1750
+Wire Wire Line
+	11000 1650 11000 1700
+Connection ~ 11000 1700
+Wire Wire Line
+	11000 1700 10500 1700
+Wire Wire Line
+	11500 1650 11500 1700
+Connection ~ 11500 1700
+Wire Wire Line
+	11500 1700 11000 1700
+Wire Wire Line
+	12000 1650 12000 1700
+Connection ~ 12000 1700
+Wire Wire Line
+	12000 1700 11500 1700
+Wire Wire Line
+	12500 1650 12500 1700
+Connection ~ 12500 1700
+Wire Wire Line
+	12500 1700 12000 1700
+Wire Wire Line
+	13000 1650 13000 1700
+Connection ~ 13000 1700
+Wire Wire Line
+	13000 1700 12500 1700
+Wire Wire Line
+	13500 1650 13500 1700
+Connection ~ 13500 1700
+Wire Wire Line
+	13500 1700 13000 1700
+Wire Wire Line
+	14000 1650 14000 1700
+Connection ~ 14000 1700
+Wire Wire Line
+	14000 1700 13500 1700
+Wire Wire Line
+	14500 1650 14500 1700
+Connection ~ 14500 1700
+Wire Wire Line
+	14500 1700 14000 1700
+Wire Wire Line
+	10500 1250 10500 1300
+Wire Wire Line
+	10500 1300 11000 1300
+Wire Wire Line
+	15000 1300 15000 1350
+Connection ~ 10500 1300
+Wire Wire Line
+	10500 1300 10500 1350
+Wire Wire Line
+	14500 1350 14500 1300
+Connection ~ 14500 1300
+Wire Wire Line
+	14500 1300 15000 1300
+Wire Wire Line
+	14000 1350 14000 1300
+Connection ~ 14000 1300
+Wire Wire Line
+	14000 1300 14500 1300
+Wire Wire Line
+	13500 1350 13500 1300
+Connection ~ 13500 1300
+Wire Wire Line
+	13500 1300 14000 1300
+Wire Wire Line
+	13000 1350 13000 1300
+Connection ~ 13000 1300
+Wire Wire Line
+	13000 1300 13500 1300
+Wire Wire Line
+	12500 1350 12500 1300
+Connection ~ 12500 1300
+Wire Wire Line
+	12500 1300 13000 1300
+Wire Wire Line
+	12000 1350 12000 1300
+Connection ~ 12000 1300
+Wire Wire Line
+	12000 1300 12500 1300
+Wire Wire Line
+	11500 1350 11500 1300
+Connection ~ 11500 1300
+Wire Wire Line
+	11500 1300 12000 1300
+Wire Wire Line
+	11000 1350 11000 1300
+Connection ~ 11000 1300
+Wire Wire Line
+	11000 1300 11500 1300
+$Comp
+L Device:C C211
+U 1 1 602FA0BB
+P 10500 3000
+AR Path="/5FD4400D/602FA0BB" Ref="C211"  Part="1" 
+AR Path="/6042312B/602FA0BB" Ref="C?"  Part="1" 
+AR Path="/6046D3EE/602FA0BB" Ref="C311"  Part="1" 
+AR Path="/6046D63C/602FA0BB" Ref="C411"  Part="1" 
+F 0 "C211" H 10615 3046 50  0000 L CNN
+F 1 "100n" H 10615 2955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 10538 2850 50  0001 C CNN
+F 3 "~" H 10500 3000 50  0001 C CNN
+	1    10500 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C212
+U 1 1 602FA0D3
+P 11000 3000
+AR Path="/5FD4400D/602FA0D3" Ref="C212"  Part="1" 
+AR Path="/6042312B/602FA0D3" Ref="C?"  Part="1" 
+AR Path="/6046D3EE/602FA0D3" Ref="C312"  Part="1" 
+AR Path="/6046D63C/602FA0D3" Ref="C412"  Part="1" 
+F 0 "C212" H 11115 3046 50  0000 L CNN
+F 1 "100n" H 11115 2955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 11038 2850 50  0001 C CNN
+F 3 "~" H 11000 3000 50  0001 C CNN
+	1    11000 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C213
+U 1 1 602FA0DD
+P 11500 3000
+AR Path="/5FD4400D/602FA0DD" Ref="C213"  Part="1" 
+AR Path="/6042312B/602FA0DD" Ref="C?"  Part="1" 
+AR Path="/6046D3EE/602FA0DD" Ref="C313"  Part="1" 
+AR Path="/6046D63C/602FA0DD" Ref="C413"  Part="1" 
+F 0 "C213" H 11615 3046 50  0000 L CNN
+F 1 "100n" H 11615 2955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 11538 2850 50  0001 C CNN
+F 3 "~" H 11500 3000 50  0001 C CNN
+	1    11500 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C214
+U 1 1 602FA0E7
+P 12000 3000
+AR Path="/5FD4400D/602FA0E7" Ref="C214"  Part="1" 
+AR Path="/6042312B/602FA0E7" Ref="C?"  Part="1" 
+AR Path="/6046D3EE/602FA0E7" Ref="C314"  Part="1" 
+AR Path="/6046D63C/602FA0E7" Ref="C414"  Part="1" 
+F 0 "C214" H 12115 3046 50  0000 L CNN
+F 1 "100n" H 12115 2955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 12038 2850 50  0001 C CNN
+F 3 "~" H 12000 3000 50  0001 C CNN
+	1    12000 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C215
+U 1 1 602FA0F1
+P 12500 3000
+AR Path="/5FD4400D/602FA0F1" Ref="C215"  Part="1" 
+AR Path="/6042312B/602FA0F1" Ref="C?"  Part="1" 
+AR Path="/6046D3EE/602FA0F1" Ref="C315"  Part="1" 
+AR Path="/6046D63C/602FA0F1" Ref="C415"  Part="1" 
+F 0 "C215" H 12615 3046 50  0000 L CNN
+F 1 "100n" H 12615 2955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 12538 2850 50  0001 C CNN
+F 3 "~" H 12500 3000 50  0001 C CNN
+	1    12500 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C216
+U 1 1 602FA0FB
+P 13000 3000
+AR Path="/5FD4400D/602FA0FB" Ref="C216"  Part="1" 
+AR Path="/6042312B/602FA0FB" Ref="C?"  Part="1" 
+AR Path="/6046D3EE/602FA0FB" Ref="C316"  Part="1" 
+AR Path="/6046D63C/602FA0FB" Ref="C416"  Part="1" 
+F 0 "C216" H 13115 3046 50  0000 L CNN
+F 1 "100n" H 13115 2955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 13038 2850 50  0001 C CNN
+F 3 "~" H 13000 3000 50  0001 C CNN
+	1    13000 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C217
+U 1 1 602FA105
+P 13500 3000
+AR Path="/5FD4400D/602FA105" Ref="C217"  Part="1" 
+AR Path="/6042312B/602FA105" Ref="C?"  Part="1" 
+AR Path="/6046D3EE/602FA105" Ref="C317"  Part="1" 
+AR Path="/6046D63C/602FA105" Ref="C417"  Part="1" 
+F 0 "C217" H 13615 3046 50  0000 L CNN
+F 1 "100n" H 13615 2955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 13538 2850 50  0001 C CNN
+F 3 "~" H 13500 3000 50  0001 C CNN
+	1    13500 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C218
+U 1 1 602FA10F
+P 14000 3000
+AR Path="/5FD4400D/602FA10F" Ref="C218"  Part="1" 
+AR Path="/6042312B/602FA10F" Ref="C?"  Part="1" 
+AR Path="/6046D3EE/602FA10F" Ref="C318"  Part="1" 
+AR Path="/6046D63C/602FA10F" Ref="C418"  Part="1" 
+F 0 "C218" H 14115 3046 50  0000 L CNN
+F 1 "100n" H 14115 2955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 14038 2850 50  0001 C CNN
+F 3 "~" H 14000 3000 50  0001 C CNN
+	1    14000 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C219
+U 1 1 602FA119
+P 14500 3000
+AR Path="/5FD4400D/602FA119" Ref="C219"  Part="1" 
+AR Path="/6042312B/602FA119" Ref="C?"  Part="1" 
+AR Path="/6046D3EE/602FA119" Ref="C319"  Part="1" 
+AR Path="/6046D63C/602FA119" Ref="C419"  Part="1" 
+F 0 "C219" H 14615 3046 50  0000 L CNN
+F 1 "100n" H 14615 2955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 14538 2850 50  0001 C CNN
+F 3 "~" H 14500 3000 50  0001 C CNN
+	1    14500 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C220
+U 1 1 602FA123
+P 15000 3000
+AR Path="/5FD4400D/602FA123" Ref="C220"  Part="1" 
+AR Path="/6042312B/602FA123" Ref="C?"  Part="1" 
+AR Path="/6046D3EE/602FA123" Ref="C320"  Part="1" 
+AR Path="/6046D63C/602FA123" Ref="C420"  Part="1" 
+F 0 "C220" H 15115 3046 50  0000 L CNN
+F 1 "100n" H 15115 2955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 15038 2850 50  0001 C CNN
+F 3 "~" H 15000 3000 50  0001 C CNN
+	1    15000 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0207
+U 1 1 602FA12D
+P 15000 3250
+AR Path="/5FD4400D/602FA12D" Ref="#PWR0207"  Part="1" 
+AR Path="/6042312B/602FA12D" Ref="#PWR?"  Part="1" 
+AR Path="/6046D3EE/602FA12D" Ref="#PWR0307"  Part="1" 
+AR Path="/6046D63C/602FA12D" Ref="#PWR0407"  Part="1" 
+F 0 "#PWR0207" H 15000 3000 50  0001 C CNN
+F 1 "GND" H 15005 3077 50  0000 C CNN
+F 2 "" H 15000 3250 50  0001 C CNN
+F 3 "" H 15000 3250 50  0001 C CNN
+	1    15000 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0206
+U 1 1 602FA137
+P 10500 2750
+AR Path="/5FD4400D/602FA137" Ref="#PWR0206"  Part="1" 
+AR Path="/6042312B/602FA137" Ref="#PWR?"  Part="1" 
+AR Path="/6046D3EE/602FA137" Ref="#PWR0306"  Part="1" 
+AR Path="/6046D63C/602FA137" Ref="#PWR0406"  Part="1" 
+F 0 "#PWR0206" H 10500 2600 50  0001 C CNN
+F 1 "+5V" H 10515 2923 50  0000 C CNN
+F 2 "" H 10500 2750 50  0001 C CNN
+F 3 "" H 10500 2750 50  0001 C CNN
+	1    10500 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	15000 3150 15000 3200
+Wire Wire Line
+	15000 3200 14500 3200
+Wire Wire Line
+	10500 3200 10500 3150
+Connection ~ 15000 3200
+Wire Wire Line
+	15000 3200 15000 3250
+Wire Wire Line
+	11000 3150 11000 3200
+Connection ~ 11000 3200
+Wire Wire Line
+	11000 3200 10500 3200
+Wire Wire Line
+	11500 3150 11500 3200
+Connection ~ 11500 3200
+Wire Wire Line
+	11500 3200 11000 3200
+Wire Wire Line
+	12000 3150 12000 3200
+Connection ~ 12000 3200
+Wire Wire Line
+	12000 3200 11500 3200
+Wire Wire Line
+	12500 3150 12500 3200
+Connection ~ 12500 3200
+Wire Wire Line
+	12500 3200 12000 3200
+Wire Wire Line
+	13000 3150 13000 3200
+Connection ~ 13000 3200
+Wire Wire Line
+	13000 3200 12500 3200
+Wire Wire Line
+	13500 3150 13500 3200
+Connection ~ 13500 3200
+Wire Wire Line
+	13500 3200 13000 3200
+Wire Wire Line
+	14000 3150 14000 3200
+Connection ~ 14000 3200
+Wire Wire Line
+	14000 3200 13500 3200
+Wire Wire Line
+	14500 3150 14500 3200
+Connection ~ 14500 3200
+Wire Wire Line
+	14500 3200 14000 3200
+Wire Wire Line
+	10500 2750 10500 2800
+Wire Wire Line
+	10500 2800 11000 2800
+Wire Wire Line
+	15000 2800 15000 2850
+Connection ~ 10500 2800
+Wire Wire Line
+	10500 2800 10500 2850
+Wire Wire Line
+	14500 2850 14500 2800
+Connection ~ 14500 2800
+Wire Wire Line
+	14500 2800 15000 2800
+Wire Wire Line
+	14000 2850 14000 2800
+Connection ~ 14000 2800
+Wire Wire Line
+	14000 2800 14500 2800
+Wire Wire Line
+	13500 2850 13500 2800
+Connection ~ 13500 2800
+Wire Wire Line
+	13500 2800 14000 2800
+Wire Wire Line
+	13000 2850 13000 2800
+Connection ~ 13000 2800
+Wire Wire Line
+	13000 2800 13500 2800
+Wire Wire Line
+	12500 2850 12500 2800
+Connection ~ 12500 2800
+Wire Wire Line
+	12500 2800 13000 2800
+Wire Wire Line
+	12000 2850 12000 2800
+Connection ~ 12000 2800
+Wire Wire Line
+	12000 2800 12500 2800
+Wire Wire Line
+	11500 2850 11500 2800
+Connection ~ 11500 2800
+Wire Wire Line
+	11500 2800 12000 2800
+Wire Wire Line
+	11000 2850 11000 2800
+Connection ~ 11000 2800
+Wire Wire Line
+	11000 2800 11500 2800
+$Comp
+L Device:C C221
+U 1 1 6036DF4E
+P 10500 4500
+AR Path="/5FD4400D/6036DF4E" Ref="C221"  Part="1" 
+AR Path="/6042312B/6036DF4E" Ref="C?"  Part="1" 
+AR Path="/6046D3EE/6036DF4E" Ref="C321"  Part="1" 
+AR Path="/6046D63C/6036DF4E" Ref="C421"  Part="1" 
+F 0 "C221" H 10615 4546 50  0000 L CNN
+F 1 "100n" H 10615 4455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 10538 4350 50  0001 C CNN
+F 3 "~" H 10500 4500 50  0001 C CNN
+	1    10500 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C222
+U 1 1 6036DF66
+P 11000 4500
+AR Path="/5FD4400D/6036DF66" Ref="C222"  Part="1" 
+AR Path="/6042312B/6036DF66" Ref="C?"  Part="1" 
+AR Path="/6046D3EE/6036DF66" Ref="C322"  Part="1" 
+AR Path="/6046D63C/6036DF66" Ref="C422"  Part="1" 
+F 0 "C222" H 11115 4546 50  0000 L CNN
+F 1 "100n" H 11115 4455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 11038 4350 50  0001 C CNN
+F 3 "~" H 11000 4500 50  0001 C CNN
+	1    11000 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C223
+U 1 1 6036DF70
+P 11500 4500
+AR Path="/5FD4400D/6036DF70" Ref="C223"  Part="1" 
+AR Path="/6042312B/6036DF70" Ref="C?"  Part="1" 
+AR Path="/6046D3EE/6036DF70" Ref="C323"  Part="1" 
+AR Path="/6046D63C/6036DF70" Ref="C423"  Part="1" 
+F 0 "C223" H 11615 4546 50  0000 L CNN
+F 1 "100n" H 11615 4455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 11538 4350 50  0001 C CNN
+F 3 "~" H 11500 4500 50  0001 C CNN
+	1    11500 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C224
+U 1 1 6036DF7A
+P 12000 4500
+AR Path="/5FD4400D/6036DF7A" Ref="C224"  Part="1" 
+AR Path="/6042312B/6036DF7A" Ref="C?"  Part="1" 
+AR Path="/6046D3EE/6036DF7A" Ref="C324"  Part="1" 
+AR Path="/6046D63C/6036DF7A" Ref="C424"  Part="1" 
+F 0 "C224" H 12115 4546 50  0000 L CNN
+F 1 "100n" H 12115 4455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 12038 4350 50  0001 C CNN
+F 3 "~" H 12000 4500 50  0001 C CNN
+	1    12000 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C225
+U 1 1 6036DF84
+P 12500 4500
+AR Path="/5FD4400D/6036DF84" Ref="C225"  Part="1" 
+AR Path="/6042312B/6036DF84" Ref="C?"  Part="1" 
+AR Path="/6046D3EE/6036DF84" Ref="C325"  Part="1" 
+AR Path="/6046D63C/6036DF84" Ref="C425"  Part="1" 
+F 0 "C225" H 12615 4546 50  0000 L CNN
+F 1 "100n" H 12615 4455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 12538 4350 50  0001 C CNN
+F 3 "~" H 12500 4500 50  0001 C CNN
+	1    12500 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C226
+U 1 1 6036DF8E
+P 13000 4500
+AR Path="/5FD4400D/6036DF8E" Ref="C226"  Part="1" 
+AR Path="/6042312B/6036DF8E" Ref="C?"  Part="1" 
+AR Path="/6046D3EE/6036DF8E" Ref="C326"  Part="1" 
+AR Path="/6046D63C/6036DF8E" Ref="C426"  Part="1" 
+F 0 "C226" H 13115 4546 50  0000 L CNN
+F 1 "100n" H 13115 4455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 13038 4350 50  0001 C CNN
+F 3 "~" H 13000 4500 50  0001 C CNN
+	1    13000 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C227
+U 1 1 6036DF98
+P 13500 4500
+AR Path="/5FD4400D/6036DF98" Ref="C227"  Part="1" 
+AR Path="/6042312B/6036DF98" Ref="C?"  Part="1" 
+AR Path="/6046D3EE/6036DF98" Ref="C327"  Part="1" 
+AR Path="/6046D63C/6036DF98" Ref="C427"  Part="1" 
+F 0 "C227" H 13615 4546 50  0000 L CNN
+F 1 "100n" H 13615 4455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 13538 4350 50  0001 C CNN
+F 3 "~" H 13500 4500 50  0001 C CNN
+	1    13500 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C228
+U 1 1 6036DFA2
+P 14000 4500
+AR Path="/5FD4400D/6036DFA2" Ref="C228"  Part="1" 
+AR Path="/6042312B/6036DFA2" Ref="C?"  Part="1" 
+AR Path="/6046D3EE/6036DFA2" Ref="C328"  Part="1" 
+AR Path="/6046D63C/6036DFA2" Ref="C428"  Part="1" 
+F 0 "C228" H 14115 4546 50  0000 L CNN
+F 1 "100n" H 14115 4455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 14038 4350 50  0001 C CNN
+F 3 "~" H 14000 4500 50  0001 C CNN
+	1    14000 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C229
+U 1 1 6036DFAC
+P 14500 4500
+AR Path="/5FD4400D/6036DFAC" Ref="C229"  Part="1" 
+AR Path="/6042312B/6036DFAC" Ref="C?"  Part="1" 
+AR Path="/6046D3EE/6036DFAC" Ref="C329"  Part="1" 
+AR Path="/6046D63C/6036DFAC" Ref="C429"  Part="1" 
+F 0 "C229" H 14615 4546 50  0000 L CNN
+F 1 "100n" H 14615 4455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 14538 4350 50  0001 C CNN
+F 3 "~" H 14500 4500 50  0001 C CNN
+	1    14500 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C230
+U 1 1 6036DFB6
+P 15000 4500
+AR Path="/5FD4400D/6036DFB6" Ref="C230"  Part="1" 
+AR Path="/6042312B/6036DFB6" Ref="C?"  Part="1" 
+AR Path="/6046D3EE/6036DFB6" Ref="C330"  Part="1" 
+AR Path="/6046D63C/6036DFB6" Ref="C430"  Part="1" 
+F 0 "C230" H 15115 4546 50  0000 L CNN
+F 1 "100n" H 15115 4455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 15038 4350 50  0001 C CNN
+F 3 "~" H 15000 4500 50  0001 C CNN
+	1    15000 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0211
+U 1 1 6036DFC0
+P 15000 4750
+AR Path="/5FD4400D/6036DFC0" Ref="#PWR0211"  Part="1" 
+AR Path="/6042312B/6036DFC0" Ref="#PWR?"  Part="1" 
+AR Path="/6046D3EE/6036DFC0" Ref="#PWR0311"  Part="1" 
+AR Path="/6046D63C/6036DFC0" Ref="#PWR0411"  Part="1" 
+F 0 "#PWR0211" H 15000 4500 50  0001 C CNN
+F 1 "GND" H 15005 4577 50  0000 C CNN
+F 2 "" H 15000 4750 50  0001 C CNN
+F 3 "" H 15000 4750 50  0001 C CNN
+	1    15000 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0210
+U 1 1 6036DFCA
+P 10500 4250
+AR Path="/5FD4400D/6036DFCA" Ref="#PWR0210"  Part="1" 
+AR Path="/6042312B/6036DFCA" Ref="#PWR?"  Part="1" 
+AR Path="/6046D3EE/6036DFCA" Ref="#PWR0310"  Part="1" 
+AR Path="/6046D63C/6036DFCA" Ref="#PWR0410"  Part="1" 
+F 0 "#PWR0210" H 10500 4100 50  0001 C CNN
+F 1 "+5V" H 10515 4423 50  0000 C CNN
+F 2 "" H 10500 4250 50  0001 C CNN
+F 3 "" H 10500 4250 50  0001 C CNN
+	1    10500 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	15000 4650 15000 4700
+Wire Wire Line
+	15000 4700 14500 4700
+Wire Wire Line
+	10500 4700 10500 4650
+Connection ~ 15000 4700
+Wire Wire Line
+	15000 4700 15000 4750
+Wire Wire Line
+	11000 4650 11000 4700
+Connection ~ 11000 4700
+Wire Wire Line
+	11000 4700 10500 4700
+Wire Wire Line
+	11500 4650 11500 4700
+Connection ~ 11500 4700
+Wire Wire Line
+	11500 4700 11000 4700
+Wire Wire Line
+	12000 4650 12000 4700
+Connection ~ 12000 4700
+Wire Wire Line
+	12000 4700 11500 4700
+Wire Wire Line
+	12500 4650 12500 4700
+Connection ~ 12500 4700
+Wire Wire Line
+	12500 4700 12000 4700
+Wire Wire Line
+	13000 4650 13000 4700
+Connection ~ 13000 4700
+Wire Wire Line
+	13000 4700 12500 4700
+Wire Wire Line
+	13500 4650 13500 4700
+Connection ~ 13500 4700
+Wire Wire Line
+	13500 4700 13000 4700
+Wire Wire Line
+	14000 4650 14000 4700
+Connection ~ 14000 4700
+Wire Wire Line
+	14000 4700 13500 4700
+Wire Wire Line
+	14500 4650 14500 4700
+Connection ~ 14500 4700
+Wire Wire Line
+	14500 4700 14000 4700
+Wire Wire Line
+	10500 4250 10500 4300
+Wire Wire Line
+	10500 4300 11000 4300
+Wire Wire Line
+	15000 4300 15000 4350
+Connection ~ 10500 4300
+Wire Wire Line
+	10500 4300 10500 4350
+Wire Wire Line
+	14500 4350 14500 4300
+Connection ~ 14500 4300
+Wire Wire Line
+	14500 4300 15000 4300
+Wire Wire Line
+	14000 4350 14000 4300
+Connection ~ 14000 4300
+Wire Wire Line
+	14000 4300 14500 4300
+Wire Wire Line
+	13500 4350 13500 4300
+Connection ~ 13500 4300
+Wire Wire Line
+	13500 4300 14000 4300
+Wire Wire Line
+	13000 4350 13000 4300
+Connection ~ 13000 4300
+Wire Wire Line
+	13000 4300 13500 4300
+Wire Wire Line
+	12500 4350 12500 4300
+Connection ~ 12500 4300
+Wire Wire Line
+	12500 4300 13000 4300
+Wire Wire Line
+	12000 4350 12000 4300
+Connection ~ 12000 4300
+Wire Wire Line
+	12000 4300 12500 4300
+Wire Wire Line
+	11500 4350 11500 4300
+Connection ~ 11500 4300
+Wire Wire Line
+	11500 4300 12000 4300
+Wire Wire Line
+	11000 4350 11000 4300
+Connection ~ 11000 4300
+Wire Wire Line
+	11000 4300 11500 4300
+$Comp
+L Device:C C231
+U 1 1 6036E00E
+P 10500 6000
+AR Path="/5FD4400D/6036E00E" Ref="C231"  Part="1" 
+AR Path="/6042312B/6036E00E" Ref="C?"  Part="1" 
+AR Path="/6046D3EE/6036E00E" Ref="C331"  Part="1" 
+AR Path="/6046D63C/6036E00E" Ref="C431"  Part="1" 
+F 0 "C231" H 10615 6046 50  0000 L CNN
+F 1 "100n" H 10615 5955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 10538 5850 50  0001 C CNN
+F 3 "~" H 10500 6000 50  0001 C CNN
+	1    10500 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C232
+U 1 1 6036E018
+P 11000 6000
+AR Path="/5FD4400D/6036E018" Ref="C232"  Part="1" 
+AR Path="/6042312B/6036E018" Ref="C?"  Part="1" 
+AR Path="/6046D3EE/6036E018" Ref="C332"  Part="1" 
+AR Path="/6046D63C/6036E018" Ref="C432"  Part="1" 
+F 0 "C232" H 11115 6046 50  0000 L CNN
+F 1 "100n" H 11115 5955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 11038 5850 50  0001 C CNN
+F 3 "~" H 11000 6000 50  0001 C CNN
+	1    11000 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C233
+U 1 1 6036E022
+P 11500 6000
+AR Path="/5FD4400D/6036E022" Ref="C233"  Part="1" 
+AR Path="/6042312B/6036E022" Ref="C?"  Part="1" 
+AR Path="/6046D3EE/6036E022" Ref="C333"  Part="1" 
+AR Path="/6046D63C/6036E022" Ref="C433"  Part="1" 
+F 0 "C233" H 11615 6046 50  0000 L CNN
+F 1 "100n" H 11615 5955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 11538 5850 50  0001 C CNN
+F 3 "~" H 11500 6000 50  0001 C CNN
+	1    11500 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C234
+U 1 1 6036E02C
+P 12000 6000
+AR Path="/5FD4400D/6036E02C" Ref="C234"  Part="1" 
+AR Path="/6042312B/6036E02C" Ref="C?"  Part="1" 
+AR Path="/6046D3EE/6036E02C" Ref="C334"  Part="1" 
+AR Path="/6046D63C/6036E02C" Ref="C434"  Part="1" 
+F 0 "C234" H 12115 6046 50  0000 L CNN
+F 1 "100n" H 12115 5955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 12038 5850 50  0001 C CNN
+F 3 "~" H 12000 6000 50  0001 C CNN
+	1    12000 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C235
+U 1 1 6036E036
+P 12500 6000
+AR Path="/5FD4400D/6036E036" Ref="C235"  Part="1" 
+AR Path="/6042312B/6036E036" Ref="C?"  Part="1" 
+AR Path="/6046D3EE/6036E036" Ref="C335"  Part="1" 
+AR Path="/6046D63C/6036E036" Ref="C435"  Part="1" 
+F 0 "C235" H 12615 6046 50  0000 L CNN
+F 1 "100n" H 12615 5955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 12538 5850 50  0001 C CNN
+F 3 "~" H 12500 6000 50  0001 C CNN
+	1    12500 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C236
+U 1 1 6036E040
+P 13000 6000
+AR Path="/5FD4400D/6036E040" Ref="C236"  Part="1" 
+AR Path="/6042312B/6036E040" Ref="C?"  Part="1" 
+AR Path="/6046D3EE/6036E040" Ref="C336"  Part="1" 
+AR Path="/6046D63C/6036E040" Ref="C436"  Part="1" 
+F 0 "C236" H 13115 6046 50  0000 L CNN
+F 1 "100n" H 13115 5955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 13038 5850 50  0001 C CNN
+F 3 "~" H 13000 6000 50  0001 C CNN
+	1    13000 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C237
+U 1 1 6036E04A
+P 13500 6000
+AR Path="/5FD4400D/6036E04A" Ref="C237"  Part="1" 
+AR Path="/6042312B/6036E04A" Ref="C?"  Part="1" 
+AR Path="/6046D3EE/6036E04A" Ref="C337"  Part="1" 
+AR Path="/6046D63C/6036E04A" Ref="C437"  Part="1" 
+F 0 "C237" H 13615 6046 50  0000 L CNN
+F 1 "100n" H 13615 5955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 13538 5850 50  0001 C CNN
+F 3 "~" H 13500 6000 50  0001 C CNN
+	1    13500 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C238
+U 1 1 6036E054
+P 14000 6000
+AR Path="/5FD4400D/6036E054" Ref="C238"  Part="1" 
+AR Path="/6042312B/6036E054" Ref="C?"  Part="1" 
+AR Path="/6046D3EE/6036E054" Ref="C338"  Part="1" 
+AR Path="/6046D63C/6036E054" Ref="C438"  Part="1" 
+F 0 "C238" H 14115 6046 50  0000 L CNN
+F 1 "100n" H 14115 5955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 14038 5850 50  0001 C CNN
+F 3 "~" H 14000 6000 50  0001 C CNN
+	1    14000 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C239
+U 1 1 6036E05E
+P 14500 6000
+AR Path="/5FD4400D/6036E05E" Ref="C239"  Part="1" 
+AR Path="/6042312B/6036E05E" Ref="C?"  Part="1" 
+AR Path="/6046D3EE/6036E05E" Ref="C339"  Part="1" 
+AR Path="/6046D63C/6036E05E" Ref="C439"  Part="1" 
+F 0 "C239" H 14615 6046 50  0000 L CNN
+F 1 "100n" H 14615 5955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 14538 5850 50  0001 C CNN
+F 3 "~" H 14500 6000 50  0001 C CNN
+	1    14500 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C240
+U 1 1 6036E068
+P 15000 6000
+AR Path="/5FD4400D/6036E068" Ref="C240"  Part="1" 
+AR Path="/6042312B/6036E068" Ref="C?"  Part="1" 
+AR Path="/6046D3EE/6036E068" Ref="C340"  Part="1" 
+AR Path="/6046D63C/6036E068" Ref="C440"  Part="1" 
+F 0 "C240" H 15115 6046 50  0000 L CNN
+F 1 "100n" H 15115 5955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 15038 5850 50  0001 C CNN
+F 3 "~" H 15000 6000 50  0001 C CNN
+	1    15000 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0215
+U 1 1 6036E072
+P 15000 6250
+AR Path="/5FD4400D/6036E072" Ref="#PWR0215"  Part="1" 
+AR Path="/6042312B/6036E072" Ref="#PWR?"  Part="1" 
+AR Path="/6046D3EE/6036E072" Ref="#PWR0315"  Part="1" 
+AR Path="/6046D63C/6036E072" Ref="#PWR0415"  Part="1" 
+F 0 "#PWR0215" H 15000 6000 50  0001 C CNN
+F 1 "GND" H 15005 6077 50  0000 C CNN
+F 2 "" H 15000 6250 50  0001 C CNN
+F 3 "" H 15000 6250 50  0001 C CNN
+	1    15000 6250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0214
+U 1 1 6036E07C
+P 10500 5750
+AR Path="/5FD4400D/6036E07C" Ref="#PWR0214"  Part="1" 
+AR Path="/6042312B/6036E07C" Ref="#PWR?"  Part="1" 
+AR Path="/6046D3EE/6036E07C" Ref="#PWR0314"  Part="1" 
+AR Path="/6046D63C/6036E07C" Ref="#PWR0414"  Part="1" 
+F 0 "#PWR0214" H 10500 5600 50  0001 C CNN
+F 1 "+5V" H 10515 5923 50  0000 C CNN
+F 2 "" H 10500 5750 50  0001 C CNN
+F 3 "" H 10500 5750 50  0001 C CNN
+	1    10500 5750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	15000 6150 15000 6200
+Wire Wire Line
+	15000 6200 14500 6200
+Wire Wire Line
+	10500 6200 10500 6150
+Connection ~ 15000 6200
+Wire Wire Line
+	15000 6200 15000 6250
+Wire Wire Line
+	11000 6150 11000 6200
+Connection ~ 11000 6200
+Wire Wire Line
+	11000 6200 10500 6200
+Wire Wire Line
+	11500 6150 11500 6200
+Connection ~ 11500 6200
+Wire Wire Line
+	11500 6200 11000 6200
+Wire Wire Line
+	12000 6150 12000 6200
+Connection ~ 12000 6200
+Wire Wire Line
+	12000 6200 11500 6200
+Wire Wire Line
+	12500 6150 12500 6200
+Connection ~ 12500 6200
+Wire Wire Line
+	12500 6200 12000 6200
+Wire Wire Line
+	13000 6150 13000 6200
+Connection ~ 13000 6200
+Wire Wire Line
+	13000 6200 12500 6200
+Wire Wire Line
+	13500 6150 13500 6200
+Connection ~ 13500 6200
+Wire Wire Line
+	13500 6200 13000 6200
+Wire Wire Line
+	14000 6150 14000 6200
+Connection ~ 14000 6200
+Wire Wire Line
+	14000 6200 13500 6200
+Wire Wire Line
+	14500 6150 14500 6200
+Connection ~ 14500 6200
+Wire Wire Line
+	14500 6200 14000 6200
+Wire Wire Line
+	10500 5750 10500 5800
+Wire Wire Line
+	10500 5800 11000 5800
+Wire Wire Line
+	15000 5800 15000 5850
+Connection ~ 10500 5800
+Wire Wire Line
+	10500 5800 10500 5850
+Wire Wire Line
+	14500 5850 14500 5800
+Connection ~ 14500 5800
+Wire Wire Line
+	14500 5800 15000 5800
+Wire Wire Line
+	14000 5850 14000 5800
+Connection ~ 14000 5800
+Wire Wire Line
+	14000 5800 14500 5800
+Wire Wire Line
+	13500 5850 13500 5800
+Connection ~ 13500 5800
+Wire Wire Line
+	13500 5800 14000 5800
+Wire Wire Line
+	13000 5850 13000 5800
+Connection ~ 13000 5800
+Wire Wire Line
+	13000 5800 13500 5800
+Wire Wire Line
+	12500 5850 12500 5800
+Connection ~ 12500 5800
+Wire Wire Line
+	12500 5800 13000 5800
+Wire Wire Line
+	12000 5850 12000 5800
+Connection ~ 12000 5800
+Wire Wire Line
+	12000 5800 12500 5800
+Wire Wire Line
+	11500 5850 11500 5800
+Connection ~ 11500 5800
+Wire Wire Line
+	11500 5800 12000 5800
+Wire Wire Line
+	11000 5850 11000 5800
+Connection ~ 11000 5800
+Wire Wire Line
+	11000 5800 11500 5800
+$Comp
+L Device:C C241
+U 1 1 603B7095
+P 10500 7500
+AR Path="/5FD4400D/603B7095" Ref="C241"  Part="1" 
+AR Path="/6042312B/603B7095" Ref="C?"  Part="1" 
+AR Path="/6046D3EE/603B7095" Ref="C341"  Part="1" 
+AR Path="/6046D63C/603B7095" Ref="C441"  Part="1" 
+F 0 "C241" H 10615 7546 50  0000 L CNN
+F 1 "100n" H 10615 7455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 10538 7350 50  0001 C CNN
+F 3 "~" H 10500 7500 50  0001 C CNN
+	1    10500 7500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C242
+U 1 1 603B709F
+P 11000 7500
+AR Path="/5FD4400D/603B709F" Ref="C242"  Part="1" 
+AR Path="/6042312B/603B709F" Ref="C?"  Part="1" 
+AR Path="/6046D3EE/603B709F" Ref="C342"  Part="1" 
+AR Path="/6046D63C/603B709F" Ref="C442"  Part="1" 
+F 0 "C242" H 11115 7546 50  0000 L CNN
+F 1 "100n" H 11115 7455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 11038 7350 50  0001 C CNN
+F 3 "~" H 11000 7500 50  0001 C CNN
+	1    11000 7500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C243
+U 1 1 603B70A9
+P 11500 7500
+AR Path="/5FD4400D/603B70A9" Ref="C243"  Part="1" 
+AR Path="/6042312B/603B70A9" Ref="C?"  Part="1" 
+AR Path="/6046D3EE/603B70A9" Ref="C343"  Part="1" 
+AR Path="/6046D63C/603B70A9" Ref="C443"  Part="1" 
+F 0 "C243" H 11615 7546 50  0000 L CNN
+F 1 "100n" H 11615 7455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 11538 7350 50  0001 C CNN
+F 3 "~" H 11500 7500 50  0001 C CNN
+	1    11500 7500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C244
+U 1 1 603B70B3
+P 12000 7500
+AR Path="/5FD4400D/603B70B3" Ref="C244"  Part="1" 
+AR Path="/6042312B/603B70B3" Ref="C?"  Part="1" 
+AR Path="/6046D3EE/603B70B3" Ref="C344"  Part="1" 
+AR Path="/6046D63C/603B70B3" Ref="C444"  Part="1" 
+F 0 "C244" H 12115 7546 50  0000 L CNN
+F 1 "100n" H 12115 7455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 12038 7350 50  0001 C CNN
+F 3 "~" H 12000 7500 50  0001 C CNN
+	1    12000 7500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C245
+U 1 1 603B70BD
+P 12500 7500
+AR Path="/5FD4400D/603B70BD" Ref="C245"  Part="1" 
+AR Path="/6042312B/603B70BD" Ref="C?"  Part="1" 
+AR Path="/6046D3EE/603B70BD" Ref="C345"  Part="1" 
+AR Path="/6046D63C/603B70BD" Ref="C445"  Part="1" 
+F 0 "C245" H 12615 7546 50  0000 L CNN
+F 1 "100n" H 12615 7455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 12538 7350 50  0001 C CNN
+F 3 "~" H 12500 7500 50  0001 C CNN
+	1    12500 7500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C246
+U 1 1 603B70C7
+P 13000 7500
+AR Path="/5FD4400D/603B70C7" Ref="C246"  Part="1" 
+AR Path="/6042312B/603B70C7" Ref="C?"  Part="1" 
+AR Path="/6046D3EE/603B70C7" Ref="C346"  Part="1" 
+AR Path="/6046D63C/603B70C7" Ref="C446"  Part="1" 
+F 0 "C246" H 13115 7546 50  0000 L CNN
+F 1 "100n" H 13115 7455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 13038 7350 50  0001 C CNN
+F 3 "~" H 13000 7500 50  0001 C CNN
+	1    13000 7500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C247
+U 1 1 603B70D1
+P 13500 7500
+AR Path="/5FD4400D/603B70D1" Ref="C247"  Part="1" 
+AR Path="/6042312B/603B70D1" Ref="C?"  Part="1" 
+AR Path="/6046D3EE/603B70D1" Ref="C347"  Part="1" 
+AR Path="/6046D63C/603B70D1" Ref="C447"  Part="1" 
+F 0 "C247" H 13615 7546 50  0000 L CNN
+F 1 "100n" H 13615 7455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 13538 7350 50  0001 C CNN
+F 3 "~" H 13500 7500 50  0001 C CNN
+	1    13500 7500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C248
+U 1 1 603B70DB
+P 14000 7500
+AR Path="/5FD4400D/603B70DB" Ref="C248"  Part="1" 
+AR Path="/6042312B/603B70DB" Ref="C?"  Part="1" 
+AR Path="/6046D3EE/603B70DB" Ref="C348"  Part="1" 
+AR Path="/6046D63C/603B70DB" Ref="C448"  Part="1" 
+F 0 "C248" H 14115 7546 50  0000 L CNN
+F 1 "100n" H 14115 7455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 14038 7350 50  0001 C CNN
+F 3 "~" H 14000 7500 50  0001 C CNN
+	1    14000 7500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C249
+U 1 1 603B70E5
+P 14500 7500
+AR Path="/5FD4400D/603B70E5" Ref="C249"  Part="1" 
+AR Path="/6042312B/603B70E5" Ref="C?"  Part="1" 
+AR Path="/6046D3EE/603B70E5" Ref="C349"  Part="1" 
+AR Path="/6046D63C/603B70E5" Ref="C449"  Part="1" 
+F 0 "C249" H 14615 7546 50  0000 L CNN
+F 1 "100n" H 14615 7455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 14538 7350 50  0001 C CNN
+F 3 "~" H 14500 7500 50  0001 C CNN
+	1    14500 7500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C250
+U 1 1 603B70EF
+P 15000 7500
+AR Path="/5FD4400D/603B70EF" Ref="C250"  Part="1" 
+AR Path="/6042312B/603B70EF" Ref="C?"  Part="1" 
+AR Path="/6046D3EE/603B70EF" Ref="C350"  Part="1" 
+AR Path="/6046D63C/603B70EF" Ref="C450"  Part="1" 
+F 0 "C250" H 15115 7546 50  0000 L CNN
+F 1 "100n" H 15115 7455 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 15038 7350 50  0001 C CNN
+F 3 "~" H 15000 7500 50  0001 C CNN
+	1    15000 7500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0219
+U 1 1 603B70F9
+P 15000 7750
+AR Path="/5FD4400D/603B70F9" Ref="#PWR0219"  Part="1" 
+AR Path="/6042312B/603B70F9" Ref="#PWR?"  Part="1" 
+AR Path="/6046D3EE/603B70F9" Ref="#PWR0319"  Part="1" 
+AR Path="/6046D63C/603B70F9" Ref="#PWR0419"  Part="1" 
+F 0 "#PWR0219" H 15000 7500 50  0001 C CNN
+F 1 "GND" H 15005 7577 50  0000 C CNN
+F 2 "" H 15000 7750 50  0001 C CNN
+F 3 "" H 15000 7750 50  0001 C CNN
+	1    15000 7750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0218
+U 1 1 603B7103
+P 10500 7250
+AR Path="/5FD4400D/603B7103" Ref="#PWR0218"  Part="1" 
+AR Path="/6042312B/603B7103" Ref="#PWR?"  Part="1" 
+AR Path="/6046D3EE/603B7103" Ref="#PWR0318"  Part="1" 
+AR Path="/6046D63C/603B7103" Ref="#PWR0418"  Part="1" 
+F 0 "#PWR0218" H 10500 7100 50  0001 C CNN
+F 1 "+5V" H 10515 7423 50  0000 C CNN
+F 2 "" H 10500 7250 50  0001 C CNN
+F 3 "" H 10500 7250 50  0001 C CNN
+	1    10500 7250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	15000 7650 15000 7700
+Wire Wire Line
+	15000 7700 14500 7700
+Wire Wire Line
+	10500 7700 10500 7650
+Connection ~ 15000 7700
+Wire Wire Line
+	15000 7700 15000 7750
+Wire Wire Line
+	11000 7650 11000 7700
+Connection ~ 11000 7700
+Wire Wire Line
+	11000 7700 10500 7700
+Wire Wire Line
+	11500 7650 11500 7700
+Connection ~ 11500 7700
+Wire Wire Line
+	11500 7700 11000 7700
+Wire Wire Line
+	12000 7650 12000 7700
+Connection ~ 12000 7700
+Wire Wire Line
+	12000 7700 11500 7700
+Wire Wire Line
+	12500 7650 12500 7700
+Connection ~ 12500 7700
+Wire Wire Line
+	12500 7700 12000 7700
+Wire Wire Line
+	13000 7650 13000 7700
+Connection ~ 13000 7700
+Wire Wire Line
+	13000 7700 12500 7700
+Wire Wire Line
+	13500 7650 13500 7700
+Connection ~ 13500 7700
+Wire Wire Line
+	13500 7700 13000 7700
+Wire Wire Line
+	14000 7650 14000 7700
+Connection ~ 14000 7700
+Wire Wire Line
+	14000 7700 13500 7700
+Wire Wire Line
+	14500 7650 14500 7700
+Connection ~ 14500 7700
+Wire Wire Line
+	14500 7700 14000 7700
+Wire Wire Line
+	10500 7250 10500 7300
+Wire Wire Line
+	10500 7300 11000 7300
+Wire Wire Line
+	15000 7300 15000 7350
+Connection ~ 10500 7300
+Wire Wire Line
+	10500 7300 10500 7350
+Wire Wire Line
+	14500 7350 14500 7300
+Connection ~ 14500 7300
+Wire Wire Line
+	14500 7300 15000 7300
+Wire Wire Line
+	14000 7350 14000 7300
+Connection ~ 14000 7300
+Wire Wire Line
+	14000 7300 14500 7300
+Wire Wire Line
+	13500 7350 13500 7300
+Connection ~ 13500 7300
+Wire Wire Line
+	13500 7300 14000 7300
+Wire Wire Line
+	13000 7350 13000 7300
+Connection ~ 13000 7300
+Wire Wire Line
+	13000 7300 13500 7300
+Wire Wire Line
+	12500 7350 12500 7300
+Connection ~ 12500 7300
+Wire Wire Line
+	12500 7300 13000 7300
+Wire Wire Line
+	12000 7350 12000 7300
+Connection ~ 12000 7300
+Wire Wire Line
+	12000 7300 12500 7300
+Wire Wire Line
+	11500 7350 11500 7300
+Connection ~ 11500 7300
+Wire Wire Line
+	11500 7300 12000 7300
+Wire Wire Line
+	11000 7350 11000 7300
+Connection ~ 11000 7300
+Wire Wire Line
+	11000 7300 11500 7300
+$Comp
+L Device:C C251
+U 1 1 603B7147
+P 10500 9000
+AR Path="/5FD4400D/603B7147" Ref="C251"  Part="1" 
+AR Path="/6042312B/603B7147" Ref="C?"  Part="1" 
+AR Path="/6046D3EE/603B7147" Ref="C351"  Part="1" 
+AR Path="/6046D63C/603B7147" Ref="C451"  Part="1" 
+F 0 "C251" H 10615 9046 50  0000 L CNN
+F 1 "100n" H 10615 8955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 10538 8850 50  0001 C CNN
+F 3 "~" H 10500 9000 50  0001 C CNN
+	1    10500 9000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C252
+U 1 1 603B7151
+P 11000 9000
+AR Path="/5FD4400D/603B7151" Ref="C252"  Part="1" 
+AR Path="/6042312B/603B7151" Ref="C?"  Part="1" 
+AR Path="/6046D3EE/603B7151" Ref="C352"  Part="1" 
+AR Path="/6046D63C/603B7151" Ref="C452"  Part="1" 
+F 0 "C252" H 11115 9046 50  0000 L CNN
+F 1 "100n" H 11115 8955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 11038 8850 50  0001 C CNN
+F 3 "~" H 11000 9000 50  0001 C CNN
+	1    11000 9000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C253
+U 1 1 603B715B
+P 11500 9000
+AR Path="/5FD4400D/603B715B" Ref="C253"  Part="1" 
+AR Path="/6042312B/603B715B" Ref="C?"  Part="1" 
+AR Path="/6046D3EE/603B715B" Ref="C353"  Part="1" 
+AR Path="/6046D63C/603B715B" Ref="C453"  Part="1" 
+F 0 "C253" H 11615 9046 50  0000 L CNN
+F 1 "100n" H 11615 8955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 11538 8850 50  0001 C CNN
+F 3 "~" H 11500 9000 50  0001 C CNN
+	1    11500 9000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C254
+U 1 1 603B7165
+P 12000 9000
+AR Path="/5FD4400D/603B7165" Ref="C254"  Part="1" 
+AR Path="/6042312B/603B7165" Ref="C?"  Part="1" 
+AR Path="/6046D3EE/603B7165" Ref="C354"  Part="1" 
+AR Path="/6046D63C/603B7165" Ref="C454"  Part="1" 
+F 0 "C254" H 12115 9046 50  0000 L CNN
+F 1 "100n" H 12115 8955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 12038 8850 50  0001 C CNN
+F 3 "~" H 12000 9000 50  0001 C CNN
+	1    12000 9000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C255
+U 1 1 603B716F
+P 12500 9000
+AR Path="/5FD4400D/603B716F" Ref="C255"  Part="1" 
+AR Path="/6042312B/603B716F" Ref="C?"  Part="1" 
+AR Path="/6046D3EE/603B716F" Ref="C355"  Part="1" 
+AR Path="/6046D63C/603B716F" Ref="C455"  Part="1" 
+F 0 "C255" H 12615 9046 50  0000 L CNN
+F 1 "100n" H 12615 8955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 12538 8850 50  0001 C CNN
+F 3 "~" H 12500 9000 50  0001 C CNN
+	1    12500 9000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C256
+U 1 1 603B7179
+P 13000 9000
+AR Path="/5FD4400D/603B7179" Ref="C256"  Part="1" 
+AR Path="/6042312B/603B7179" Ref="C?"  Part="1" 
+AR Path="/6046D3EE/603B7179" Ref="C356"  Part="1" 
+AR Path="/6046D63C/603B7179" Ref="C456"  Part="1" 
+F 0 "C256" H 13115 9046 50  0000 L CNN
+F 1 "100n" H 13115 8955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 13038 8850 50  0001 C CNN
+F 3 "~" H 13000 9000 50  0001 C CNN
+	1    13000 9000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C257
+U 1 1 603B7183
+P 13500 9000
+AR Path="/5FD4400D/603B7183" Ref="C257"  Part="1" 
+AR Path="/6042312B/603B7183" Ref="C?"  Part="1" 
+AR Path="/6046D3EE/603B7183" Ref="C357"  Part="1" 
+AR Path="/6046D63C/603B7183" Ref="C457"  Part="1" 
+F 0 "C257" H 13615 9046 50  0000 L CNN
+F 1 "100n" H 13615 8955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 13538 8850 50  0001 C CNN
+F 3 "~" H 13500 9000 50  0001 C CNN
+	1    13500 9000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C258
+U 1 1 603B718D
+P 14000 9000
+AR Path="/5FD4400D/603B718D" Ref="C258"  Part="1" 
+AR Path="/6042312B/603B718D" Ref="C?"  Part="1" 
+AR Path="/6046D3EE/603B718D" Ref="C358"  Part="1" 
+AR Path="/6046D63C/603B718D" Ref="C458"  Part="1" 
+F 0 "C258" H 14115 9046 50  0000 L CNN
+F 1 "100n" H 14115 8955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 14038 8850 50  0001 C CNN
+F 3 "~" H 14000 9000 50  0001 C CNN
+	1    14000 9000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C259
+U 1 1 603B7197
+P 14500 9000
+AR Path="/5FD4400D/603B7197" Ref="C259"  Part="1" 
+AR Path="/6042312B/603B7197" Ref="C?"  Part="1" 
+AR Path="/6046D3EE/603B7197" Ref="C359"  Part="1" 
+AR Path="/6046D63C/603B7197" Ref="C459"  Part="1" 
+F 0 "C259" H 14615 9046 50  0000 L CNN
+F 1 "100n" H 14615 8955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 14538 8850 50  0001 C CNN
+F 3 "~" H 14500 9000 50  0001 C CNN
+	1    14500 9000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C260
+U 1 1 603B71A1
+P 15000 9000
+AR Path="/5FD4400D/603B71A1" Ref="C260"  Part="1" 
+AR Path="/6042312B/603B71A1" Ref="C?"  Part="1" 
+AR Path="/6046D3EE/603B71A1" Ref="C360"  Part="1" 
+AR Path="/6046D63C/603B71A1" Ref="C460"  Part="1" 
+F 0 "C260" H 15115 9046 50  0000 L CNN
+F 1 "100n" H 15115 8955 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 15038 8850 50  0001 C CNN
+F 3 "~" H 15000 9000 50  0001 C CNN
+	1    15000 9000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0223
+U 1 1 603B71AB
+P 15000 9250
+AR Path="/5FD4400D/603B71AB" Ref="#PWR0223"  Part="1" 
+AR Path="/6042312B/603B71AB" Ref="#PWR?"  Part="1" 
+AR Path="/6046D3EE/603B71AB" Ref="#PWR0323"  Part="1" 
+AR Path="/6046D63C/603B71AB" Ref="#PWR0423"  Part="1" 
+F 0 "#PWR0223" H 15000 9000 50  0001 C CNN
+F 1 "GND" H 15005 9077 50  0000 C CNN
+F 2 "" H 15000 9250 50  0001 C CNN
+F 3 "" H 15000 9250 50  0001 C CNN
+	1    15000 9250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0222
+U 1 1 603B71B5
+P 10500 8750
+AR Path="/5FD4400D/603B71B5" Ref="#PWR0222"  Part="1" 
+AR Path="/6042312B/603B71B5" Ref="#PWR?"  Part="1" 
+AR Path="/6046D3EE/603B71B5" Ref="#PWR0322"  Part="1" 
+AR Path="/6046D63C/603B71B5" Ref="#PWR0422"  Part="1" 
+F 0 "#PWR0222" H 10500 8600 50  0001 C CNN
+F 1 "+5V" H 10515 8923 50  0000 C CNN
+F 2 "" H 10500 8750 50  0001 C CNN
+F 3 "" H 10500 8750 50  0001 C CNN
+	1    10500 8750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	15000 9150 15000 9200
+Wire Wire Line
+	15000 9200 14500 9200
+Wire Wire Line
+	10500 9200 10500 9150
+Connection ~ 15000 9200
+Wire Wire Line
+	15000 9200 15000 9250
+Wire Wire Line
+	11000 9150 11000 9200
+Connection ~ 11000 9200
+Wire Wire Line
+	11000 9200 10500 9200
+Wire Wire Line
+	11500 9150 11500 9200
+Connection ~ 11500 9200
+Wire Wire Line
+	11500 9200 11000 9200
+Wire Wire Line
+	12000 9150 12000 9200
+Connection ~ 12000 9200
+Wire Wire Line
+	12000 9200 11500 9200
+Wire Wire Line
+	12500 9150 12500 9200
+Connection ~ 12500 9200
+Wire Wire Line
+	12500 9200 12000 9200
+Wire Wire Line
+	13000 9150 13000 9200
+Connection ~ 13000 9200
+Wire Wire Line
+	13000 9200 12500 9200
+Wire Wire Line
+	13500 9150 13500 9200
+Connection ~ 13500 9200
+Wire Wire Line
+	13500 9200 13000 9200
+Wire Wire Line
+	14000 9150 14000 9200
+Connection ~ 14000 9200
+Wire Wire Line
+	14000 9200 13500 9200
+Wire Wire Line
+	14500 9150 14500 9200
+Connection ~ 14500 9200
+Wire Wire Line
+	14500 9200 14000 9200
+Wire Wire Line
+	10500 8750 10500 8800
+Wire Wire Line
+	10500 8800 11000 8800
+Wire Wire Line
+	15000 8800 15000 8850
+Connection ~ 10500 8800
+Wire Wire Line
+	10500 8800 10500 8850
+Wire Wire Line
+	14500 8850 14500 8800
+Connection ~ 14500 8800
+Wire Wire Line
+	14500 8800 15000 8800
+Wire Wire Line
+	14000 8850 14000 8800
+Connection ~ 14000 8800
+Wire Wire Line
+	14000 8800 14500 8800
+Wire Wire Line
+	13500 8850 13500 8800
+Connection ~ 13500 8800
+Wire Wire Line
+	13500 8800 14000 8800
+Wire Wire Line
+	13000 8850 13000 8800
+Connection ~ 13000 8800
+Wire Wire Line
+	13000 8800 13500 8800
+Wire Wire Line
+	12500 8850 12500 8800
+Connection ~ 12500 8800
+Wire Wire Line
+	12500 8800 13000 8800
+Wire Wire Line
+	12000 8850 12000 8800
+Connection ~ 12000 8800
+Wire Wire Line
+	12000 8800 12500 8800
+Wire Wire Line
+	11500 8850 11500 8800
+Connection ~ 11500 8800
+Wire Wire Line
+	11500 8800 12000 8800
+Wire Wire Line
+	11000 8850 11000 8800
+Connection ~ 11000 8800
+Wire Wire Line
+	11000 8800 11500 8800
+Text HLabel 1300 1500 0    50   Input ~ 0
+DIN
+Text HLabel 9100 9000 2    50   Output ~ 0
+DOUT
+$EndSCHEMATC
