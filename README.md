@@ -1,17 +1,15 @@
 # PCB-RGB-LED-276-M5Atom
 Circle clock using 276pcs of WS2812C-2020 and an M5Atom
 
-Practical status of PCB Data
+## 3D image by KiCad:
 
-- JLCPCB
-    
-    PCB manufacturing & SMT Assembly Service: OK
+<img src="https://github.com/botanicfields/PCB-RGB-LED-276-M5Atom/blob/main/bf-025_front.png" width=500>
 
-- Seeed FusionPCB
+<img src="https://github.com/botanicfields/PCB-RGB-LED-276-M5Atom/blob/main/bf-025_back.png" width=500>
 
-    PCB manufacturing & SMT Assembly Service: trying
+## Practical status of gerbers
 
-- PCBgogo
-
-    PCB manufacturing & SMT Assembly Service: Not yet
+- JLCPCB: OK
+- Seeed FusionPCB: Trying
+- PCBgogo: Not yet
 
