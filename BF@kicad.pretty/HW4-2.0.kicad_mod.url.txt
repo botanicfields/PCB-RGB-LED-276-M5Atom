@@ -1,0 +1,1 @@
+https://github.com/Seeed-Studio/OPL_Kicad_Library/tree/master/Seeed_Fusion_PCBA_OPL_Component_Library_for_KiCad/OPL_Connector.pretty
