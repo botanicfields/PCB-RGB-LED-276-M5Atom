@@ -7,9 +7,26 @@ Circle clock using 276pcs of WS2812C-2020 and an M5Atom
 
 <img src="https://github.com/botanicfields/PCB-RGB-LED-276-M5Atom/blob/main/bf-025_back.png" width=300>
 
-## Practical status of gerbers
+## Examples
+
+[ColorPalette an example from FastLED on BF-025: RGB-LED 276 for M5Atom](https://youtu.be/OUliTGfqcDM)
+
+[DemoReel100 an example from FastLED on BF-025 RGB-LED 276 for M5Atom](https://youtu.be/VHuoHDQSU5E)
+
+[Pacifica an example from FastLED on BF-025 RGB-LED 276 for M5Atom](https://youtu.be/MY5FGuDM8ZY)
+
+[Pride2015 an example from FastLED on BF-025: RGB-LED 276 for M5Atom](https://youtu.be/uj7ePEQMkhk)
+
+[TwinkleFox an exmaple from FastLED on BF025: RGB-LED 276 for M5Atom](https://youtu.be/3NwbCFiiEbc)
+
+## Discussions
+
+[JLCPCB official user group facebook](https://www.facebook.com/groups/JLCPCB/permalink/837468943770299/)
+
+## Practical status of gerber, BOM, pick & place
 
 - JLCPCB: OK
 - Seeed FusionPCB: Trying
-- PCBgogo: Not yet
+- PCBgogo: Canceled
+- ALLPCB: Trying
 
