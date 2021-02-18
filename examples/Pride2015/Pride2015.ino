@@ -19,7 +19,7 @@
 #define NUM_LEDS    276  // BF-025
 #define BRIGHTNESS  255
 
-const CRGB correction_default = 0xA090FF;  // original for BF-025(WS2812C-2020)
+const CRGB correction_default = 0xB080FF;  // for BF-025(WS2812C-2020)
 
 CRGB leds[NUM_LEDS];
 

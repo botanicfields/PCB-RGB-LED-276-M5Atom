@@ -18,7 +18,7 @@ FASTLED_USING_NAMESPACE
 #define LED_TYPE            WS2812B
 #define COLOR_ORDER         GRB
 
-const CRGB correction_default = 0xA090FF;  // original for BF-025(WS2812C-2020)
+const CRGB correction_default = 0xB080FF;  // for BF-025(WS2812C-2020)
 
 //////////////////////////////////////////////////////////////////////////
 

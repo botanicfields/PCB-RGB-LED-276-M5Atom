@@ -30,7 +30,7 @@ CRGB leds[NUM_LEDS];
 // Some notes on the more abstract 'theory and practice' of
 // FastLED compact palettes are at the bottom of this file.
 
-const CRGB correction_default = 0xA090FF;  // original for BF-025(WS2812C-2020)
+const CRGB correction_default = 0xB080FF;  // for BF-025(WS2812C-2020)
 
 CRGBPalette16 currentPalette;
 TBlendType    currentBlending;

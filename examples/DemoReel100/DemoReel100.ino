@@ -29,7 +29,7 @@ CRGB leds[NUM_LEDS];
 #define BRIGHTNESS          96
 #define FRAMES_PER_SECOND  120
 
-const CRGB correction_default = 0xA090FF;  // original for BF-025(WS2812C-2020)
+const CRGB correction_default = 0xB080FF;  // for BF-025(WS2812C-2020)
 
 void setup() {
   delay(3000); // 3 second delay for recovery

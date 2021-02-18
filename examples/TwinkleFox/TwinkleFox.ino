@@ -117,7 +117,7 @@ CRGB gBackgroundColor = CRGB::Black;
 CRGBPalette16 gCurrentPalette;
 CRGBPalette16 gTargetPalette;
 
-const CRGB correction_default = 0xA090FF;  // original for BF-025(WS2812C-2020)
+const CRGB correction_default = 0xB080FF;  // for BF-025(WS2812C-2020)
 
 void setup() {
   delay( 3000 ); //safety startup delay
