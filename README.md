@@ -19,6 +19,12 @@ Circle clock using 276pcs of WS2812C-2020 and an M5Atom
 
 [TwinkleFox an exmaple from FastLED on BF025: RGB-LED 276 for M5Atom](https://youtu.be/3NwbCFiiEbc)
 
+## explanation
+
+in Japanese
+
+[M5Atom と FastLED で 円形 LED 時計を作る](https://qiita.com/BotanicFields/items/a1e182f418d5a07120ac)
+
 ## Discussions
 
 [JLCPCB official user group facebook](https://www.facebook.com/groups/JLCPCB/permalink/837468943770299/)

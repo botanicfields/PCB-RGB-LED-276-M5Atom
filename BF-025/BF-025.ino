@@ -32,13 +32,21 @@ void setup()
 {
   M5.begin(serial_enable, i2c_enable, display_disable);
   delay(3000);  // initialize delay for M5Atom
-  
+
+  // initialize FastLED
+  InitFastLed();
+  LampTest();
+
+  ShowPattern(pattern_wifi, 100);  // delay = 100ms
+
   // connect Wifi
   // wm.resetSettings();  // for testing
   if (!wm.autoConnect())
     Serial.println("Failed to connect");
   else
     Serial.println("connected...yeey :)");
+
+  ShowPattern(pattern_ntp, 100);  // delay = 100ms 
 
   // start NTP
   configTime(gmt_offset, daylight, ntp_server);
@@ -47,9 +55,6 @@ void setup()
     delay(100);
   }
   Serial.println(&td, "%A %B %d %Y %H:%M:%S");
-
-  // initialize FastLED
-  InitFastLed();
 }
 
 void loop()

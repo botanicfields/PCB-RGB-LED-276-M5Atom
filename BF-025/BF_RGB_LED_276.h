@@ -11,6 +11,7 @@ extern const int brightness_default;
 extern const CRGB correction_default;
 
 extern CRGB foreground_color;
+extern CRGB background_color;
 extern CRGBPalette16 palette_color;
 extern int scale_factor;
 extern int period_factor;
@@ -41,7 +42,11 @@ extern CRGB leds[];
 extern const int font_pixel_x;
 extern const int font_pixel_y;
 
+extern const uint16_t pattern_wifi[];
+extern const uint16_t pattern_ntp[];
+
 void InitFastLed();
+void LampTest();
 void ClearLeds2();
 void PutDotLeds1(int x, int y);
 void PutDotLeds2(int x, int y);
@@ -50,6 +55,7 @@ void PutString(int x, const String s);
 void PutInt(int n);
 void PutPattern(const uint16_t pattern[]);
 void PutButton(char c);
+void ShowPattern(const uint16_t pattern[], int delay_ms = 1000);
 
 int CheckButton();
 
