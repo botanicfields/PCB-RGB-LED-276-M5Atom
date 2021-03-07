@@ -54,6 +54,7 @@ extern const uint16_t pattern_btn[];
 extern const uint16_t pattern_wifi[];
 extern const uint16_t pattern_ntp[];
 extern const uint16_t pattern_time[];
+extern const uint16_t pattern_stop[];
 extern const uint16_t pattern_yen[];
 
 void InitFastLed();

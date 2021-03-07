@@ -104,11 +104,11 @@ void DemoTimeShock()
     M5.update();
     int button_check = DemoTimeShockCheckButton();
 
-    if (button_check == 2000) {  // exit
+    if (button_check == 4000) {  // exit
       Serial.println("[DemoTimeShock]exit");
       return;
     }
-    if (button_check == 1000) {  // set timer
+    if (button_check == 2000 || button_check == 1000) {  // set timer, stop
       Serial.println("[DemoTimeShock]stop and reset timer");
       mode_quiz  = false;
       count_down = false;
@@ -153,22 +153,32 @@ void DemoTimeShock()
 // button on the M5Atom
 int DemoTimeShockCheckButton()
 {
-  if      (M5.Btn.pressedFor(3000)) PutPattern(pattern_null);  // cancel and nullify 
-  else if (M5.Btn.pressedFor(2000)) PutPattern(pattern_exit);  // exit
-  else if (M5.Btn.pressedFor(1000)) PutPattern(pattern_time);  // set timer
+  if      (M5.Btn.pressedFor(5000)) PutPattern(pattern_null);  // cancel and nullify 
+  else if (M5.Btn.pressedFor(4000)) PutPattern(pattern_exit);  // exit
+  else if (M5.Btn.pressedFor(3000)) PutPattern(pattern_pale);  // palette
+  else if (M5.Btn.pressedFor(2000)) PutPattern(pattern_time);  // set timer
+  else if (M5.Btn.pressedFor(1000)) PutPattern(pattern_stop);  // stop
 
+  if (M5.Btn.wasReleasefor(5000)) {
+    Serial.println("[DemoTimeShockCheckButton]button >5s: button cancelled, nullify");
+    return 5000;
+  }
+  if (M5.Btn.wasReleasefor(4000)) {
+    Serial.println("[DemoTimeShockCheckButton]button >4s: exit");
+    return 4000;
+  }
   if (M5.Btn.wasReleasefor(3000)) {
-    Serial.println("[DemoTimeShockCheckButton]button >3s: button cancelled, nullify");
+    Serial.println("[DemoTimeShockCheckButton]button >3s: change palette");
+    SelectPalette(++palette_select);
     return 3000;
   }
   if (M5.Btn.wasReleasefor(2000)) {
-    Serial.println("[DemoTimeShockCheckButton]button >2s: exit");
+    Serial.println("[DemoTimeShockCheckButton]button >2s: set timer");
+    SelectTimer(++timer_select);
     return 2000;
   } 
   if (M5.Btn.wasReleasefor(1000)) {
-    Serial.println("[DemoTimeShockCheckButton]button >1s: set timer");
-    ++timer_select;
-    SelectTimer(timer_select);
+    Serial.println("[DemoTimeShockCheckButton]button >1s: stop, reset timer");
     return 1000;
   } 
   if (M5.Btn.wasReleased()) {
