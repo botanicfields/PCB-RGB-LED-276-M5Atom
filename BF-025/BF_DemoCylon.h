@@ -8,6 +8,6 @@
 #include "BF-025.h"
 
 void DemoCylon();
-int DemoCylonSub(int dot_head);
+int  DemoCylonSub(int dot_head);
 
 #endif //#ifndef INCLUDED_BF_DEMOCYLON_H

@@ -33,14 +33,14 @@ void DemoClock()
   Serial.println("[DemoClock]start");
   tk.attach_ms(ticker_ms, TickerHandle);
 
-  int demo_code     = 0;
-  int crawl_length  = 0;
-  int crawl_offset  = 0;
+  int demo_code    = 0;
+  int crawl_length = 0;
+  int crawl_offset = 0;
 
-  bool complete = false;
+  bool break_loop = false;
   int last_ms = millis();
 
-  while (!complete) {
+  while (!break_loop) {
 
     // update tv(time value)
     gettimeofday(&tv, NULL);
@@ -61,55 +61,53 @@ void DemoClock()
 
     // background of circle clock
     //   HUE_AQUA, HUE_YELLOW are color names at the palette: RainbowsColor_p
-    for (int i = 0; i < leds1_num_of_x; ++i) {
-        leds[i] = ColorFromPalette(palette_color, tv_msec / 1000, 24);
-        leds[i + leds1_num_of_x    ] = leds[i];
-        leds[i + leds1_num_of_x * 2] = leds[i];
-    }
-
-    for (int i = 0; i < leds1_num_of_x; i += 5) {
-      leds[i] = ColorFromPalette(palette_color, HUE_YELLOW, 64);
-      leds[i + leds1_num_of_x    ] = leds[i];
-      leds[i + leds1_num_of_x * 2] = leds[i];
-    }
+    background_color = ColorFromPalette(palette_color, tv_msec / 1000 % 256, 32);
+    ClearLeds1();
+    foreground_color = ColorFromPalette(palette_color, HUE_YELLOW, 64);
+    for (int i = 0; i < leds1_num_of_x; i += 5) 
+      for (int j = 0; j < leds1_num_of_y; ++j) 
+        PutDotLeds1(i, j);
 
     // foreground of circle clock
     //   HUE_BLUE, HUE_GREEN, HUE_RED are color names at the palette: RainbowsColor_p
     int hsv_v = 255;
     for (int i = 0; i < 20; ++i) {
-      leds[(td.tm_sec + 60 - i) % 60] = ColorFromPalette(palette_color, HUE_BLUE, hsv_v);
+      foreground_color = ColorFromPalette(palette_color, HUE_BLUE, hsv_v);
+      PutDotLeds1((td.tm_sec + 60 - i) % 60, 0);
       hsv_v = hsv_v * 7 / 8;
     }
     hsv_v = 255;
     for (int i = 0; i < 15; ++i) {
-      leds[(td.tm_min + 60 - i) % 60 + 60] = ColorFromPalette(palette_color, HUE_GREEN, hsv_v);
+      foreground_color = ColorFromPalette(palette_color, HUE_GREEN, hsv_v);
+      PutDotLeds1((td.tm_min + 60 - i) % 60, 1);
       hsv_v = hsv_v * 5 / 6;
     }
     hsv_v = 255;
     for (int i = 0; i < 10; ++i) { 
-      leds[(td.tm_hour * 5 + td.tm_min / 12 + 60 - i) % 60 + 120] = ColorFromPalette(palette_color, HUE_RED, hsv_v);
+      foreground_color = ColorFromPalette(palette_color, HUE_RED, hsv_v);
+      PutDotLeds1((td.tm_hour * 5 + td.tm_min / 12 + 60 - i) % 60, 2);
       hsv_v = hsv_v * 3 / 4;
     }
 
     // background of digital clock
-    for (int i = head_of_leds2; i < num_of_leds; ++i)
-      leds[i] = ColorFromPalette(palette_color, tv_msec / 1000, 24);
+    background_color = ColorFromPalette(palette_color, tv_msec / 1000 % 256, 32);
+    ClearLeds2();
 
     // foreground of digital clock
     switch (demo_code) {
-      case 0: foreground_color = ColorFromPalette(palette_color, HUE_AQUA);  crawl_length = CrawlTimeDate(last_ms, crawl_offset);  break; 
-      case 1: foreground_color = CRGB::DarkRed;     crawl_length = CrawlTimeDate(last_ms, crawl_offset);  break;
-      case 2: foreground_color = CRGB::DarkGreen;   crawl_length = CrawlTimeDate(last_ms, crawl_offset);  break;
-      case 3: foreground_color = CRGB::DarkBlue;    crawl_length = CrawlTimeDate(last_ms, crawl_offset);  break;
-      case 4: foreground_color = CRGB::Crimson;     crawl_length = FlowString(crawl_offset, s2x3x);       break;
-      case 5: foreground_color = CRGB::FireBrick;   crawl_length = FlowString(crawl_offset, s4x5x);       break;
-      case 6: foreground_color = CRGB::DarkOrchid;  crawl_length = FlowString(crawl_offset, s6x7x);       break;
-      case 7: foreground_color = CRGB::Coral;       crawl_length = FlowString(crawl_offset, sample1);     break;
-      case 8: foreground_color = CRGB::Amethyst;    crawl_length = FlowString(crawl_offset, sample2);     break;
-      case 9:                                       crawl_length = Invader(crawl_offset);                 break;
-      default:
-        demo_code = 0;
-        break;
+    case 0: foreground_color = ColorFromPalette(palette_color, HUE_AQUA);  crawl_length = CrawlTimeDate(last_ms, crawl_offset);  break; 
+    case 1: foreground_color = CRGB::DarkRed;     crawl_length = CrawlTimeDate(last_ms, crawl_offset);  break;
+    case 2: foreground_color = CRGB::DarkGreen;   crawl_length = CrawlTimeDate(last_ms, crawl_offset);  break;
+    case 3: foreground_color = CRGB::DarkBlue;    crawl_length = CrawlTimeDate(last_ms, crawl_offset);  break;
+    case 4: foreground_color = CRGB::Crimson;     crawl_length = FlowString(crawl_offset, s2x3x);       break;
+    case 5: foreground_color = CRGB::FireBrick;   crawl_length = FlowString(crawl_offset, s4x5x);       break;
+    case 6: foreground_color = CRGB::DarkOrchid;  crawl_length = FlowString(crawl_offset, s6x7x);       break;
+    case 7: foreground_color = CRGB::Coral;       crawl_length = FlowString(crawl_offset, sample1);     break;
+    case 8: foreground_color = CRGB::Amethyst;    crawl_length = FlowString(crawl_offset, sample2);     break;
+    case 9:                                       crawl_length = Invader(crawl_offset);                 break;
+    default:
+      demo_code = 0;
+      break;
     }
 
     // crawl
@@ -123,7 +121,7 @@ void DemoClock()
     int button_check = CheckButton();
     if (button_check == 2000) {  // exit
       Serial.println("[DemoClock]break");
-      complete = true;
+      break_loop = true;
     }
     else if (button_check == 1000) {  // go next
       Serial.printf("[DemoClock]demo_code = %d\n", ++demo_code);
@@ -275,7 +273,7 @@ int Invader(int x)
 
 void InvaderSub(int x, int kind)
 {
-   int form = (x + leds2_num_of_x) % 2;
-   PutFont(x               , 0x10 + kind * 4 + form * 2    );  // L
-   PutFont(x + font_pixel_x, 0x10 + kind * 4 + form * 2 + 1);  // R
+  int form = (x + leds2_num_of_x) % 2;
+  PutFont(x               , 0x10 + kind * 4 + form * 2    );  // L
+  PutFont(x + font_pixel_x, 0x10 + kind * 4 + form * 2 + 1);  // R
 }

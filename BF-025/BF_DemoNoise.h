@@ -7,8 +7,8 @@
 
 #include "BF-025.h"
 
-int ScaleXY(int xy);
-int ScaleZ();
+int  ScaleXY(int xy);
+int  ScaleZ();
 void DemoNoise();
 
 #endif //#ifndef INCLUDED_BF_DEMONOISE_H

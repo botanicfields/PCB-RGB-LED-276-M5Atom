@@ -18,15 +18,17 @@ void DemoHueRing()
   while (repeat_remain > 0) {
 
     // hue rings 
-    for (int i = 0; i < 60; ++i) {
+    for (int i = 0; i < leds1_num_of_x; ++i) {
       int hue = 256.0 * i / 60.0 + 0.5;
-//      leds[i] = CHSV(hue, 255, 255);  // to check hue directly
-      leds[i] = ColorFromPalette(palette_color, hue, 255);
-      leds[ 60 + i] = leds[i];
-      leds[120 + i] = leds[i];
+//      foreground_color = CHSV(hue, 255, 255);  // to check hue directly
+      foreground_color = ColorFromPalette(palette_color, hue, 255);
+      PutDotLeds1(i, 0);
+      PutDotLeds1(i, 1);
+      PutDotLeds1(i, 2);
     }
 
     // count down
+    foreground_color = CRGB::SlateGray;
     PutInt(repeat_remain * loop_ms / 1000);
 
     // check button

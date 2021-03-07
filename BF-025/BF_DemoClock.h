@@ -9,10 +9,10 @@
 
 void TickerHandle();
 void DemoClock();
-int CrawlTimeDate(int last_ms, int crawl_offset);
-int PutTimeDate(int x_offset);
-int FlowString(int x, const String s);
-int Invader(int x);
+int  CrawlTimeDate(int last_ms, int crawl_offset);
+int  PutTimeDate(int x_offset);
+int  FlowString(int x, const String s);
+int  Invader(int x);
 void InvaderSub(int x, int kind);
 
 #endif //#ifndef INCLUDED_BF_DEMOCLOCK_H

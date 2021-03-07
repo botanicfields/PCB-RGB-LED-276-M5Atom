@@ -15,12 +15,17 @@ CRGBPalette16 palette_color = RainbowColors_p;
 int scale_factor            = 1;
 int period_factor           = 1;
 
-// control by a button
-int correction_select  = 0;
-int temperature_select = 0;
-int palette_select     = 0;
-int scale_select       = 0;
-int period_select      = 0;
+// control by the button
+const int correction_select_default  = 0;
+const int temperature_select_default = 0;
+const int palette_select_default     = 0;
+const int scale_select_default       = 3;
+const int period_select_default      = 3;
+int correction_select  = correction_select_default;
+int temperature_select = temperature_select_default;
+int palette_select     = palette_select_default;
+int scale_select       = scale_select_default;
+int period_select      = period_select_default;
 
 // set color correction
 //   omitted:
@@ -29,12 +34,12 @@ int period_select      = 0;
 void SelectCorrection(int &correction_select)
 {
   switch (correction_select) {
-    case  1: FastLED.setCorrection(TypicalSMD5050);    Serial.println("[RGB276]Correction: (1)TypicalSMD5050");    break;
-    case  2: FastLED.setCorrection(Typical8mmPixel);   Serial.println("[RGB276]Correction: (2)Typical8mmPixel");   break;
-    case  3: FastLED.setCorrection(UncorrectedColor);  Serial.println("[RGB276]Correction: (3)UncorrectedColor");  break;
-    default: FastLED.setCorrection(correction_bf025);  Serial.println("[RGB276]Correction: (0)correction_bf025");
-      correction_select = 0;
-      break;
+  case  1: FastLED.setCorrection(TypicalSMD5050);    Serial.println("[RGB276]Correction: (1)TypicalSMD5050");    break;
+  case  2: FastLED.setCorrection(Typical8mmPixel);   Serial.println("[RGB276]Correction: (2)Typical8mmPixel");   break;
+  case  3: FastLED.setCorrection(UncorrectedColor);  Serial.println("[RGB276]Correction: (3)UncorrectedColor");  break;
+  default: FastLED.setCorrection(correction_bf025);  Serial.println("[RGB276]Correction: (0)correction_bf025");
+    correction_select = 0;
+    break;
   }
 }
 
@@ -42,28 +47,28 @@ void SelectCorrection(int &correction_select)
 void SelectTemperature(int &temperature_select)
 {
   switch (temperature_select) {
-    case  1: FastLED.setTemperature(Candle);                   Serial.println("[RGB276]Temperature: ( 1)Candle");                   break;
-    case  2: FastLED.setTemperature(Tungsten40W);              Serial.println("[RGB276]Temperature: ( 2)Tungsten40W");              break;
-    case  3: FastLED.setTemperature(Tungsten100W);             Serial.println("[RGB276]Temperature: ( 3)Tungsten100W");             break;
-    case  4: FastLED.setTemperature(Halogen);                  Serial.println("[RGB276]Temperature: ( 4)Halogen");                  break;
-    case  5: FastLED.setTemperature(CarbonArc);                Serial.println("[RGB276]Temperature: ( 5)CarbonArc");                break;
-    case  6: FastLED.setTemperature(HighNoonSun);              Serial.println("[RGB276]Temperature: ( 6)HighNoonSun");              break;
-    case  7: FastLED.setTemperature(DirectSunlight);           Serial.println("[RGB276]Temperature: ( 7)DirectSunlight");           break;
-    case  8: FastLED.setTemperature(OvercastSky);              Serial.println("[RGB276]Temperature: ( 8)OvercastSky");              break;
-    case  9: FastLED.setTemperature(ClearBlueSky);             Serial.println("[RGB276]Temperature: ( 9)ClearBlueSky");             break;
-    case 10: FastLED.setTemperature(WarmFluorescent);          Serial.println("[RGB276]Temperature: (10)WarmFluorescent");          break;
-    case 11: FastLED.setTemperature(StandardFluorescent);      Serial.println("[RGB276]Temperature: (11)StandardFluorescent");      break;
-    case 12: FastLED.setTemperature(CoolWhiteFluorescent);     Serial.println("[RGB276]Temperature: (12)CoolWhiteFluorescent");     break;
-    case 13: FastLED.setTemperature(FullSpectrumFluorescent);  Serial.println("[RGB276]Temperature: (13)FullSpectrumFluorescent");  break;
-    case 14: FastLED.setTemperature(GrowLightFluorescent);     Serial.println("[RGB276]Temperature: (14)GrowLightFluorescent");     break;
-    case 15: FastLED.setTemperature(BlackLightFluorescent);    Serial.println("[RGB276]Temperature: (15)BlackLightFluorescent");    break;
-    case 16: FastLED.setTemperature(MercuryVapor);             Serial.println("[RGB276]Temperature: (16)MercuryVapor");             break;
-    case 17: FastLED.setTemperature(SodiumVapor);              Serial.println("[RGB276]Temperature: (17)SodiumVapor");              break;
-    case 18: FastLED.setTemperature(MetalHalide);              Serial.println("[RGB276]Temperature: (18)MetalHalide");              break;
-    case 19: FastLED.setTemperature(HighPressureSodium);       Serial.println("[RGB276]Temperature: (19)HighPressureSodium");       break;
-    default: FastLED.setTemperature(UncorrectedTemperature);   Serial.println("[RGB276]Temperature: ( 0)UncorrectedTemperature");
-      temperature_select = 0;
-      break;
+  case  1: FastLED.setTemperature(Candle);                   Serial.println("[RGB276]Temperature: ( 1)Candle");                   break;
+  case  2: FastLED.setTemperature(Tungsten40W);              Serial.println("[RGB276]Temperature: ( 2)Tungsten40W");              break;
+  case  3: FastLED.setTemperature(Tungsten100W);             Serial.println("[RGB276]Temperature: ( 3)Tungsten100W");             break;
+  case  4: FastLED.setTemperature(Halogen);                  Serial.println("[RGB276]Temperature: ( 4)Halogen");                  break;
+  case  5: FastLED.setTemperature(CarbonArc);                Serial.println("[RGB276]Temperature: ( 5)CarbonArc");                break;
+  case  6: FastLED.setTemperature(HighNoonSun);              Serial.println("[RGB276]Temperature: ( 6)HighNoonSun");              break;
+  case  7: FastLED.setTemperature(DirectSunlight);           Serial.println("[RGB276]Temperature: ( 7)DirectSunlight");           break;
+  case  8: FastLED.setTemperature(OvercastSky);              Serial.println("[RGB276]Temperature: ( 8)OvercastSky");              break;
+  case  9: FastLED.setTemperature(ClearBlueSky);             Serial.println("[RGB276]Temperature: ( 9)ClearBlueSky");             break;
+  case 10: FastLED.setTemperature(WarmFluorescent);          Serial.println("[RGB276]Temperature: (10)WarmFluorescent");          break;
+  case 11: FastLED.setTemperature(StandardFluorescent);      Serial.println("[RGB276]Temperature: (11)StandardFluorescent");      break;
+  case 12: FastLED.setTemperature(CoolWhiteFluorescent);     Serial.println("[RGB276]Temperature: (12)CoolWhiteFluorescent");     break;
+  case 13: FastLED.setTemperature(FullSpectrumFluorescent);  Serial.println("[RGB276]Temperature: (13)FullSpectrumFluorescent");  break;
+  case 14: FastLED.setTemperature(GrowLightFluorescent);     Serial.println("[RGB276]Temperature: (14)GrowLightFluorescent");     break;
+  case 15: FastLED.setTemperature(BlackLightFluorescent);    Serial.println("[RGB276]Temperature: (15)BlackLightFluorescent");    break;
+  case 16: FastLED.setTemperature(MercuryVapor);             Serial.println("[RGB276]Temperature: (16)MercuryVapor");             break;
+  case 17: FastLED.setTemperature(SodiumVapor);              Serial.println("[RGB276]Temperature: (17)SodiumVapor");              break;
+  case 18: FastLED.setTemperature(MetalHalide);              Serial.println("[RGB276]Temperature: (18)MetalHalide");              break;
+  case 19: FastLED.setTemperature(HighPressureSodium);       Serial.println("[RGB276]Temperature: (19)HighPressureSodium");       break;
+  default: FastLED.setTemperature(UncorrectedTemperature);   Serial.println("[RGB276]Temperature: ( 0)UncorrectedTemperature");
+    temperature_select = 0;
+    break;
   }
 }
 
@@ -73,16 +78,16 @@ void SelectTemperature(int &temperature_select)
 void SelectPalette(int &palette_select)
 {
   switch (palette_select) {
-    case  1: palette_color = CloudColors_p;          Serial.println("[RGB276]palette: (1)CloudColors_p");          break;
-    case  2: palette_color = LavaColors_p;           Serial.println("[RGB276]palette: (2)LavaColors_p");           break;
-    case  3: palette_color = OceanColors_p;          Serial.println("[RGB276]palette: (3)OceanColors_p");          break;
-    case  4: palette_color = ForestColors_p;         Serial.println("[RGB276]palette: (4)ForestColors_p");         break;
-    case  5: palette_color = RainbowStripeColors_p;  Serial.println("[RGB276]palette: (5)RainbowStripeColors_p");  break;
-    case  6: palette_color = PartyColors_p;          Serial.println("[RGB276]palette: (6)PartyColors_p");          break;
-    case  7: palette_color = HeatColors_p;           Serial.println("[RGB276]palette: (7)HeatColors_p");           break;
-    default: palette_color = RainbowColors_p;        Serial.println("[RGB276]palette: (0)RainbowColors_p");
-      palette_select = 0;
-      break;
+  case  1: palette_color = CloudColors_p;          Serial.println("[RGB276]palette: (1)CloudColors_p");          break;
+  case  2: palette_color = LavaColors_p;           Serial.println("[RGB276]palette: (2)LavaColors_p");           break;
+  case  3: palette_color = OceanColors_p;          Serial.println("[RGB276]palette: (3)OceanColors_p");          break;
+  case  4: palette_color = ForestColors_p;         Serial.println("[RGB276]palette: (4)ForestColors_p");         break;
+  case  5: palette_color = RainbowStripeColors_p;  Serial.println("[RGB276]palette: (5)RainbowStripeColors_p");  break;
+  case  6: palette_color = PartyColors_p;          Serial.println("[RGB276]palette: (6)PartyColors_p");          break;
+  case  7: palette_color = HeatColors_p;           Serial.println("[RGB276]palette: (7)HeatColors_p");           break;
+  default: palette_color = RainbowColors_p;        Serial.println("[RGB276]palette: (0)RainbowColors_p");
+    palette_select = 0;
+    break;
   }
 }
 
@@ -90,13 +95,13 @@ void SelectPalette(int &palette_select)
 void SelectScale(int &scale_select)
 {
   switch (scale_select) {
-    case  1: scale_factor =  2;  break;
-    case  2: scale_factor =  5;  break;
-    case  3: scale_factor = -2;  break;
-    case  4: scale_factor = -5;  break;
-    default: scale_factor =  1;
-      scale_select = 0;
-      break;
+  case  1: scale_factor = -5;  break;
+  case  2: scale_factor = -2;  break;
+  case  3: scale_factor =  1;  break;
+  case  4: scale_factor =  2;  break;
+  default: scale_factor =  5;
+    scale_select = 0;
+    break;
   }
   Serial.printf("[RGB276]scale: (%d) %d\n", scale_select, scale_factor);
 }
@@ -105,13 +110,13 @@ void SelectScale(int &scale_select)
 void SelectPeriod(int &period_select)
 {
   switch (period_select) {
-    case  1: period_factor =   2;  break;
-    case  2: period_factor =  10;  break;
-    case  3: period_factor =  -2;  break;
-    case  4: period_factor = -10;  break;
-    default: period_factor =   1;
-      period_select = 0;
-      break;
+  case  1: period_factor = -10;  break;
+  case  2: period_factor =  -2;  break;
+  case  3: period_factor =   1;  break;
+  case  4: period_factor =   2;  break;
+  default: period_factor =  10;
+    period_select = 0;
+    break;
   }
   Serial.printf("[RGB276]period: (%d) %d\n", period_select, period_factor);
 }
@@ -123,15 +128,17 @@ void ResetParameters()
 //  FastLED.setDither(DISABLE_DITHER);  // uncomment to prevent flicker
   foreground_color = CRGB::SlateGray;
   background_color = CRGB::Black;
-  correction_select = 0;
+
+  correction_select  = correction_select_default;
+  temperature_select = temperature_select_default;
+  palette_select     = palette_select_default;
+  scale_select       = scale_select_default;
+  period_select      = period_select_default;
+
   SelectCorrection(correction_select);
-  temperature_select = 0;
   SelectTemperature(temperature_select);
-  period_select = 0;
   SelectPeriod(period_select);
-  scale_select = 0;
   SelectScale(scale_select);
-  palette_select = 0;
   SelectPalette(palette_select);
 }
 
@@ -315,6 +322,8 @@ const uint16_t pattern_peri[] = { 0xE001, 0x9328, 0x94B3, 0xE7A1, 0x8421, 0x83A1
 const uint16_t pattern_btn[]  = { 0xE200, 0x9760, 0xE250, 0x9250, 0x9250, 0xE150, };  //  Btn
 const uint16_t pattern_wifi[] = { 0x8AD0, 0x8880, 0xAA90, 0xAAD0, 0xAA90, 0x5295, };  //  Wifi..
 const uint16_t pattern_ntp[]  = { 0x8BB0, 0xC928, 0xA928, 0x9930, 0x8920, 0x8925, };  //  NTP..
+const uint16_t pattern_time[] = { 0xE800, 0x4346, 0x4AA9, 0x4AAA, 0x4AAC, 0x4AA7, };  //  Time
+const uint16_t pattern_yen[]  = { 0xA000, 0xA000, 0x4000, 0xE000, 0xE000, 0x4000, };  //  Yen
 
 // initialize FastLED
 void InitFastLed()
@@ -330,6 +339,13 @@ void LampTest()
   fill_solid(leds, num_of_leds, CRGB::Green);  FastLED.show();  delay(1000);
   fill_solid(leds, num_of_leds, CRGB::Blue);   FastLED.show();  delay(1000);
   fill_solid(leds, num_of_leds, CRGB::Olive);  FastLED.show();  delay( 100);
+}
+
+// clear circle
+void ClearLeds1()
+{
+  for (int i = 0; i < head_of_leds2; ++i)
+    leds[i] = background_color;
 }
 
 // clear rectangle
@@ -419,39 +435,39 @@ int CheckButton()
   else if (M5.Btn.pressedFor(1000)) PutPattern(pattern_next);  // go next
   else if (M5.Btn.isPressed()     ) PutPattern(pattern_pale);  // change palette
 
-  if      (M5.Btn.wasReleasefor(7000)) {
+  if (M5.Btn.wasReleasefor(7000)) {
     Serial.println("[RGB276]button >7s: cancel button, nullify");
     return 7000;
   }
-  else if (M5.Btn.wasReleasefor(6000)) {
+  if (M5.Btn.wasReleasefor(6000)) {
     Serial.println("[RGB276]button >6s: change period");
     SelectPeriod(++period_select);
     return 6000;
   }
-  else if (M5.Btn.wasReleasefor(5000)) {
+  if (M5.Btn.wasReleasefor(5000)) {
     Serial.println("[RGB276]button >5s: change scale");
     SelectScale(++scale_select);
     return 5000;
   }
-  else if (M5.Btn.wasReleasefor(4000)) {
+  if (M5.Btn.wasReleasefor(4000)) {
     Serial.println("[RGB276]button >4s: change correction");
     SelectCorrection(++correction_select);
     return 4000;
   }
-  else if (M5.Btn.wasReleasefor(3000)) {
+  if (M5.Btn.wasReleasefor(3000)) {
     Serial.println("[RGB276]button >3s: change temperature");
     SelectTemperature(++temperature_select);
     return 3000;
   }
-  else if (M5.Btn.wasReleasefor(2000)) {
+  if (M5.Btn.wasReleasefor(2000)) {
     Serial.println("[RGB276]button >2s: exit");
     return 2000;
   }
-  if      (M5.Btn.wasReleasefor(1000)) {
+  if (M5.Btn.wasReleasefor(1000)) {
     Serial.println("[RGB276]button >1s: go next");
     return 1000;
   }
-  else if (M5.Btn.wasReleased()) {
+  if (M5.Btn.wasReleased()) {
     Serial.println("[RGB276]button: change palette");
     SelectPalette(++palette_select);
     return -1;

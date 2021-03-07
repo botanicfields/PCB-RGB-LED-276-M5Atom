@@ -18,17 +18,17 @@ void DemoNoise()
 
     // circle
     for(int y = 0; y < leds1_num_of_y; ++y)
-        for(int x = 0; x < leds1_num_of_x; ++x) {
+      for(int x = 0; x < leds1_num_of_x; ++x) {
         foreground_color = ColorFromPalette(palette_color, inoise8(ScaleXY(x), ScaleXY(y), ScaleZ()));
         PutDotLeds1(x, y);
-        }
+      }
     
     // rectangle
     for(int y = leds1_num_of_y; y < leds1_num_of_y + leds2_num_of_y; ++y)
-        for(int x = 0; x < leds2_num_of_x; ++x) {
+      for(int x = 0; x < leds2_num_of_x; ++x) {
         foreground_color = ColorFromPalette(palette_color, inoise8(ScaleXY(x), ScaleXY(y), ScaleZ()));
         PutDotLeds2(x, y - leds1_num_of_y);
-        }
+      }
 
     // check button
     M5.update();

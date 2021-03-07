@@ -42,11 +42,23 @@ extern CRGB leds[];
 extern const int font_pixel_x;
 extern const int font_pixel_y;
 
+extern const uint16_t pattern_null[];
+extern const uint16_t pattern_exit[];
+extern const uint16_t pattern_next[];
+extern const uint16_t pattern_corr[];
+extern const uint16_t pattern_temp[];
+extern const uint16_t pattern_pale[];
+extern const uint16_t pattern_scal[];
+extern const uint16_t pattern_peri[];
+extern const uint16_t pattern_btn[];
 extern const uint16_t pattern_wifi[];
 extern const uint16_t pattern_ntp[];
+extern const uint16_t pattern_time[];
+extern const uint16_t pattern_yen[];
 
 void InitFastLed();
 void LampTest();
+void ClearLeds1();
 void ClearLeds2();
 void PutDotLeds1(int x, int y);
 void PutDotLeds2(int x, int y);

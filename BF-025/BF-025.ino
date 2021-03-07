@@ -9,6 +9,7 @@
 #include "BF_DemoCylon.h"
 #include "BF_DemoHueRing.h"
 #include "BF_DemoNoise.h"
+#include "BF_DemoTimeShock.h"
 
 // initialize WiFiManager
 WiFiManager wm;
@@ -61,6 +62,8 @@ void loop()
 { 
   ResetParameters();
   DemoClock();
+  ResetParameters();
+  DemoTimeShock();
   ResetParameters();
   DemoCylon();
   ResetParameters();
