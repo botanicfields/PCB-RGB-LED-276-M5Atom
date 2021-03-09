@@ -84,9 +84,11 @@ Circle clock using 276pcs of WS2812C-2020 and an M5Atom
 
 ## Practical status of gerber, BOM, pick & place
 
-### V03L01
+### V02L01
 
 - JLCPCB: OK
+
+### V03L01
+
 - ALLPCB: OK
 - Seeed FusionPCB: OK
-- PCBgogo: Cancel
