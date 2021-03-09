@@ -3,10 +3,6 @@ Circle clock using 276pcs of WS2812C-2020 and an M5Atom
 
 <img src="https://github.com/botanicfields/PCB-RGB-LED-276-M5Atom/blob/main/jpg/bf-025_example.JPG" width=300>
 
-<img src="https://github.com/botanicfields/PCB-RGB-LED-276-M5Atom/blob/main/jpg/bf-025_front.JPG" width=300>
-
-<img src="https://github.com/botanicfields/PCB-RGB-LED-276-M5Atom/blob/main/jpg/bf-025_lite.JPG" width=300>
-
 ## 置時計のデモ
 　置時計のデモを作成しました。以下の機能があります。
 
@@ -55,6 +51,10 @@ Circle clock using 276pcs of WS2812C-2020 and an M5Atom
 "Circle LED Clock by M5Atom and FastLED" in Japanese
 
 [M5Atom と FastLED で 円形 LED 時計を作る](https://qiita.com/BotanicFields/items/a1e182f418d5a07120ac)
+
+<img src="https://github.com/botanicfields/PCB-RGB-LED-276-M5Atom/blob/main/jpg/bf-025_front.JPG" width=300>
+
+<img src="https://github.com/botanicfields/PCB-RGB-LED-276-M5Atom/blob/main/jpg/bf-025_lite.JPG" width=300>
 
 ## YouTube: Clock Demonstration 
 
