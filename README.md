@@ -1,11 +1,11 @@
 # PCB-RGB-LED-276-M5Atom
 Circle clock using 276pcs of WS2812C-2020 and an M5Atom
 
-<img src="https://github.com/botanicfields/PCB-RGB-LED-276-M5Atom/blob/main/jpg/bf-025_example.jpg" width=300>
+<img src="https://github.com/botanicfields/PCB-RGB-LED-276-M5Atom/blob/main/jpg/bf-025_example.JPG" width=300>
 
-<img src="https://github.com/botanicfields/PCB-RGB-LED-276-M5Atom/blob/main/jpg/bf-025_front.jpg" width=300>
+<img src="https://github.com/botanicfields/PCB-RGB-LED-276-M5Atom/blob/main/jpg/bf-025_front.JPG" width=300>
 
-<img src="https://github.com/botanicfields/PCB-RGB-LED-276-M5Atom/blob/main/jpg/bf-025_lite.jpg" width=300>
+<img src="https://github.com/botanicfields/PCB-RGB-LED-276-M5Atom/blob/main/jpg/bf-025_lite.JPG" width=300>
 
 ## 置時計のデモ
 　置時計のデモを作成しました。以下の機能があります。
