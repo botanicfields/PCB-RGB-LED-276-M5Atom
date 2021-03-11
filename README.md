@@ -3,6 +3,10 @@ Circle clock using 276pcs of WS2812C-2020 and an M5Atom
 
 <img src="https://github.com/botanicfields/PCB-RGB-LED-276-M5Atom/blob/main/jpg/bf-025_example.JPG" width=300>
 
+## 説明書
+
+https://github.com/botanicfields/PCB-RGB-LED-276-M5Atom/blob/main/bf-025_doc.pdf
+
 ## 置時計のデモ
 　置時計のデモを作成しました。以下の機能があります。
 
@@ -37,12 +41,12 @@ Circle clock using 276pcs of WS2812C-2020 and an M5Atom
 
 　カウントダウンタイマー動作中、M5Atom のボタンで以下を操作します。
 
-|長押し時間|表示|条件|効果|
+|長押し時間|表示|状態|効果|
 |:-:|:-:|:-:|:-:|
 | - | - |カウントダウン停止中|カウントダウン開始|
 | - | - |カウントダウン中|クイズモードに移行、賞金額を表示|
-|>1 秒|Stop| - |カウントダウンを停止、初期値に戻す|
-|>2 秒|Time| - |カウントダウンを停止、初期値を変更|
+|>1 秒|Stop| - |カウントダウンを中止、初期値に戻す|
+|>2 秒|Time| - |カウントダウンを中止、初期値を変更|
 |>3 秒|Pale| - |カラーパレットを変更|
 |>4 秒|Exit| - |終了、デモを切替|
 |>5 秒|Null| - |ボタン操作を取消|
