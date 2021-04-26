@@ -100,3 +100,8 @@ https://github.com/botanicfields/PCB-RGB-LED-276-M5Atom/blob/main/bf-025_doc.pdf
 
 - ALLPCB: OK
 - Seeed FusionPCB: OK
+
+### V03L02
+
+- ALLPCB: OK
+- JLCPCB: OK
