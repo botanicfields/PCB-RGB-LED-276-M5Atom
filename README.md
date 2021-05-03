@@ -7,6 +7,8 @@ Circle clock using 276pcs of WS2812C-2020 and an M5Atom
 
 [M5Atom 用 RGB LED 276 基板](https://www.switch-science.com/catalog/7039/)
 
+[M5Atom 用 RGB LED 276 基板（丸形）](https://botanicfields.booth.pm/items/2940057)
+
 ## 説明書
 
 https://github.com/botanicfields/PCB-RGB-LED-276-M5Atom/blob/main/bf-025_doc.pdf
