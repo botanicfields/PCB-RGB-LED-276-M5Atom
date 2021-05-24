@@ -1,11 +1,9 @@
 // Copyright 2021 BotanicFields, Inc.
 // BF-025 RGB LED Clock 276 for M5Atom
-// driver using FastLED 
+// driver using FastLED
 
 #ifndef INCLUDED_BF_RGB_LED_276_H
 #define INCLUDED_BF_RGB_LED_276_H
-
-#include "BF-025.h"
 
 extern const int brightness_default;
 extern const CRGB correction_default;
@@ -30,13 +28,13 @@ void ResetParameters();
 
 extern const int leds1_num_of_x;
 extern const int leds1_num_of_y;
- 
+
 extern const int leds2_num_of_x;
 extern const int leds2_num_of_y;
 extern const int head_of_leds2;
- 
+
 extern const int pin_to_leds;
-extern const int num_of_leds; 
+extern const int num_of_leds;
 extern CRGB leds[];
 
 extern const int font_pixel_x;
@@ -51,6 +49,7 @@ extern const uint16_t pattern_pale[];
 extern const uint16_t pattern_scal[];
 extern const uint16_t pattern_peri[];
 extern const uint16_t pattern_btn[];
+extern const uint16_t pattern_rtc[];
 extern const uint16_t pattern_wifi[];
 extern const uint16_t pattern_ntp[];
 extern const uint16_t pattern_time[];

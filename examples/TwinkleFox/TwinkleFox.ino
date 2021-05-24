@@ -257,13 +257,14 @@ CRGB computeOneTwinkle( uint32_t ms, uint8_t salt)
 // This function is like 'triwave8', which produces a 
 // symmetrical up-and-down triangle sawtooth waveform, except that this
 // function produces a triangle wave with a faster attack and a slower decay:
+/*
 //
 //     / \ 
 //    /     \ 
 //   /         \ 
 //  /             \ 
 //
-
+*/
 uint8_t attackDecayWave8( uint8_t i)
 {
   if( i < 86) {

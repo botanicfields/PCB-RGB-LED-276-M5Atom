@@ -1,7 +1,9 @@
 // Copyright 2021 BotanicFields, Inc.
 // BF-025 RGB LED Clock 276 for M5Atom
-// driver using FastLED 
+// driver using FastLED
 
+#define FASTLED_ESP32_I2S true
+#include <M5Atom.h>
 #include "BF_RGB_LED_276.h"
 
 // parameters of FastLED
@@ -168,10 +170,10 @@ const int head_of_leds2 = leds1_num_of_x * leds1_num_of_y;
 
 // for fastLED
 const int pin_to_leds = 22;  // assigned to GPIO22
-const int num_of_leds = leds1_num_of_x * leds1_num_of_y + leds2_num_of_x * leds2_num_of_y; 
+const int num_of_leds = leds1_num_of_x * leds1_num_of_y + leds2_num_of_x * leds2_num_of_y;
 CRGB leds[num_of_leds];
 
-// font for leds2 
+// font for leds2
 //   0x00-0x0f: 4*6 font(actually 3*6)
 //     0x00..0x0F: 0..9, A..F
 //   0x10-0x7F: 6*6 font(actually 5*6)
@@ -320,6 +322,7 @@ const uint16_t pattern_pale[] = { 0xE060, 0x9626, 0x9129, 0xE72F, 0x8928, 0x86A7
 const uint16_t pattern_scal[] = { 0x6003, 0x9331, 0x4409, 0x2439, 0x9449, 0x6335, };  //  Scal
 const uint16_t pattern_peri[] = { 0xE001, 0x9328, 0x94B3, 0xE7A1, 0x8421, 0x83A1, };  //  Peri
 const uint16_t pattern_btn[]  = { 0xE200, 0x9760, 0xE250, 0x9250, 0x9250, 0xE150, };  //  Btn
+const uint16_t pattern_rtc[]  = { 0xE730, 0x9240, 0x9240, 0xE240, 0xA240, 0x9235, };  //  RTC
 const uint16_t pattern_wifi[] = { 0x8AD0, 0x8880, 0xAA90, 0xAAD0, 0xAA90, 0x5295, };  //  Wifi..
 const uint16_t pattern_ntp[]  = { 0x8BB0, 0xC928, 0xA928, 0x9930, 0x8920, 0x8925, };  //  NTP..
 const uint16_t pattern_time[] = { 0xE800, 0x4346, 0x4AA9, 0x4AAA, 0x4AAC, 0x4AA7, };  //  Time
@@ -366,11 +369,12 @@ void PutDotLeds1(int x, int y)
 // put a dot on leds2[x][y]
 void PutDotLeds2(int x, int y)
 {
-  if (x >= 0 && x < leds2_num_of_x && y >= 0 && y < leds2_num_of_y)
+  if (x >= 0 && x < leds2_num_of_x && y >= 0 && y < leds2_num_of_y) {
     if (x % 2 == 0)
       leds[head_of_leds2 + leds2_num_of_y * x + y] = foreground_color;
     else
       leds[head_of_leds2 + leds2_num_of_y * x + leds2_num_of_y - 1 - y] = foreground_color;
+  }
 }
 
 // put a font on leds2
@@ -378,7 +382,7 @@ void PutFont(int x, char c)
 {
   for (int j = 0; j < font_pixel_y; ++j)
     for (int i = 0; i < font_pixel_x; ++i)
-      if ((font[c][j] & 0x80 >> i) != 0)
+      if ((font[(int)c][j] & 0x80 >> i) != 0)
         PutDotLeds2(x + i, j);
 }
 
@@ -427,7 +431,7 @@ void ShowPattern(const uint16_t pattern[], int delay_ms)
 // button on the M5Atom
 int CheckButton()
 {
-  if      (M5.Btn.pressedFor(7000)) PutPattern(pattern_null);  // cancel and nullify 
+  if      (M5.Btn.pressedFor(7000)) PutPattern(pattern_null);  // cancel and nullify
   else if (M5.Btn.pressedFor(6000)) PutPattern(pattern_peri);  // change period
   else if (M5.Btn.pressedFor(5000)) PutPattern(pattern_scal);  // change scale
   else if (M5.Btn.pressedFor(4000)) PutPattern(pattern_corr);  // change correction

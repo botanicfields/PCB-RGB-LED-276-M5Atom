@@ -2,6 +2,9 @@
 // BF-025 RGB LED Clock 276 for M5Atom
 // Demonstration: Noise to check Perlin noise and color palette
 
+#define FASTLED_ESP32_I2S true
+#include <M5Atom.h>
+#include "BF_RGB_LED_276.h"
 #include "BF_DemoNoise.h"
 
 const int loop_ms = 20;          // 20ms
@@ -22,7 +25,7 @@ void DemoNoise()
         foreground_color = ColorFromPalette(palette_color, inoise8(ScaleXY(x), ScaleXY(y), ScaleZ()));
         PutDotLeds1(x, y);
       }
-    
+
     // rectangle
     for(int y = leds1_num_of_y; y < leds1_num_of_y + leds2_num_of_y; ++y)
       for(int x = 0; x < leds2_num_of_x; ++x) {
@@ -53,8 +56,8 @@ void DemoNoise()
 }
 
 // make x, y for inoise8()
-//   0xHHLL format HH: integral part, LL: fractional part   
-//   hh: leds2_num_of_y * n, LL: (1 / leds2_num_of_y) * m 
+//   0xHHLL format HH: integral part, LL: fractional part
+//   hh: leds2_num_of_y * n, LL: (1 / leds2_num_of_y) * m
 //
 //     x = 0x000       0x100       0x200
 // y = 0x000 + - - - - - + - - - - - + - - - -
@@ -73,8 +76,8 @@ int ScaleXY(int xy)
 }
 
 // make z for inoise8()
-//   0xHHLL format HH: integral part, LL: fractional part   
-//   HH: sec, LL: msec .. ms * 256 / 1000 
+//   0xHHLL format HH: integral part, LL: fractional part
+//   HH: sec, LL: msec .. ms * 256 / 1000
 int ScaleZ()
 {
   if (period_factor >= 0)

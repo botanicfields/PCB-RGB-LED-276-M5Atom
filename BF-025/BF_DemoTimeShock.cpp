@@ -2,6 +2,9 @@
 // BF-025 RGB LED Clock 276 for M5Atom
 // Demonstration: A tribute to "Quiz Time Shock" a famous TV show in Japan
 
+#define FASTLED_ESP32_I2S true
+#include <M5Atom.h>
+#include "BF_RGB_LED_276.h"
 #include "BF_DemoTimeShock.h"
 
 const int loop_ms = 20;  // 20ms
@@ -15,7 +18,7 @@ void DemoTimeShock()
 
   bool count_down = true;
   bool mode_quiz  = false;
-  bool correct_answer[12] = { false, false, false, false, false, false, 
+  bool correct_answer[12] = { false, false, false, false, false, false,
                               false, false, false, false, false, false, };
   SelectTimer(timer_select);
   int remain_ms = timer_ms;
@@ -45,7 +48,7 @@ void DemoTimeShock()
     //correct answer automatic
     if (!mode_quiz) {
       foreground_color = ColorFromPalette(palette_color, HUE_RED, 255);
-      if ((remain_ms + 3000) / 1000 % 60 > 3)  
+      if ((remain_ms + 3000) / 1000 % 60 > 3)
         for (int i = 0; i < 12 - (remain_ms + 3000) / 5000 % 12; ++i) {
           PutDotLeds1(i * 5 + 1, 0);
           PutDotLeds1(i * 5 + 2, 0);
@@ -53,7 +56,7 @@ void DemoTimeShock()
           PutDotLeds1(i * 5 + 4, 0);
         }
     }
-        
+
     // time_remaining
     background_color = ColorFromPalette(palette_color, HUE_BLUE, 16);
     ClearLeds2();
@@ -75,7 +78,7 @@ void DemoTimeShock()
           PutDotLeds1(i * 5 + 3, 0);
           PutDotLeds1(i * 5 + 4, 0);
         }
-      
+
       // prize money
       int score = 0;
       for (int i = 0; i < 12; ++i)
@@ -85,7 +88,7 @@ void DemoTimeShock()
       foreground_color = ColorFromPalette(palette_color, HUE_AQUA, 128);
       PutPattern(pattern_yen);
       switch (score) {
-      case  1: PutFont(12, 1);               break;  //     1,000 Yen  
+      case  1: PutFont(12, 1);               break;  //     1,000 Yen
       case  2: PutFont(12, 2);               break;  //     2,000 Yen
       case  3: PutFont(12, 3);               break;  //     3,000 Yen
       case  4: PutFont(12, 4);               break;  //     4,000 Yen
@@ -132,7 +135,7 @@ void DemoTimeShock()
         mode_quiz  = false;
       }
     }
-    
+
     FastLED.show();
 
     delay(loop_ms - (millis() - last_ms));
@@ -153,7 +156,7 @@ void DemoTimeShock()
 // button on the M5Atom
 int DemoTimeShockCheckButton()
 {
-  if      (M5.Btn.pressedFor(5000)) PutPattern(pattern_null);  // cancel and nullify 
+  if      (M5.Btn.pressedFor(5000)) PutPattern(pattern_null);  // cancel and nullify
   else if (M5.Btn.pressedFor(4000)) PutPattern(pattern_exit);  // exit
   else if (M5.Btn.pressedFor(3000)) PutPattern(pattern_pale);  // palette
   else if (M5.Btn.pressedFor(2000)) PutPattern(pattern_time);  // set timer
@@ -176,11 +179,11 @@ int DemoTimeShockCheckButton()
     Serial.println("[DemoTimeShockCheckButton]button >2s: set timer");
     SelectTimer(++timer_select);
     return 2000;
-  } 
+  }
   if (M5.Btn.wasReleasefor(1000)) {
     Serial.println("[DemoTimeShockCheckButton]button >1s: stop, reset timer");
     return 1000;
-  } 
+  }
   if (M5.Btn.wasReleased()) {
     Serial.println("[DemoTimeShockCheckButton]button: start, correct answer");
     return -1;

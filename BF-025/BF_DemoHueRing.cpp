@@ -2,8 +2,11 @@
 // BF-025 RGB LED Clock 276 for M5Atom
 // Demonstration: HUE-ring
 //   shows the FastLED Rainbow hue chart of yellow enhanced
-//   to check color correction, temperature 
- 
+//   to check color correction, temperature
+
+#define FASTLED_ESP32_I2S true
+#include <M5Atom.h>
+#include "BF_RGB_LED_276.h"
 #include "BF_DemoHueRing.h"
 
 const int loop_ms = 20;          // 20ms
@@ -17,7 +20,7 @@ void DemoHueRing()
 
   while (repeat_remain > 0) {
 
-    // hue rings 
+    // hue rings
     for (int i = 0; i < leds1_num_of_x; ++i) {
       int hue = 256.0 * i / 60.0 + 0.5;
 //      foreground_color = CHSV(hue, 255, 255);  // to check hue directly

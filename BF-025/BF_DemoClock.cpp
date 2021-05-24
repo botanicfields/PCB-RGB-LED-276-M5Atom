@@ -2,9 +2,12 @@
 // BF-025 RGB LED Clock 276 for M5Atom
 // Demonstration: Digital & analog clock
 
-#include "BF_DemoClock.h"
-#include <WiFi.h>
+#define FASTLED_ESP32_I2S true
+#include <M5Atom.h>
+#include <sys/time.h>  // for struct timeval
 #include <Ticker.h>
+#include "BF_RGB_LED_276.h"
+#include "BF_DemoClock.h"
 
 const int loop_ms      =   20;  // loop delay
 const int ticker_ms    =  100;  // update interval of date, time
@@ -26,6 +29,10 @@ void TickerHandle()
 {
   ticker_invoked = true;
 }
+
+// real time
+struct tm      td;  // time of day .. year, month, day, hour, minute, second
+struct timeval tv;  // time value .. second. micro-second
 
 // main of demo clock
 void DemoClock()
@@ -50,26 +57,24 @@ void DemoClock()
     if (ticker_invoked) {  // for every 100ms
       ticker_invoked = false;
       if (tv_msec % 1000 < ticker_ms) {  // every 0..99ms once in a second
-        while (!getLocalTime(&td)) {
-          Serial.print("[DemoClock]Waiting to obtain time ");
-          delay(100);
-        }
-      // Serial.printf("[DemoClock]last_ms=%d, tv_msec=%d ", last_ms, tv_msec);
-      // Serial.println(&td, "%A %B %d %Y %H:%M:%S");
+        getLocalTime(&td);
+//        Serial.printf("[DemoClock]last_ms=%d, tv_msec=%d ", last_ms, tv_msec);
+//        Serial.println(&td, "%A %B %d %Y %H:%M:%S");
       }
     }
 
-    // background of circle clock
-    //   HUE_AQUA, HUE_YELLOW are color names at the palette: RainbowsColor_p
-    background_color = ColorFromPalette(palette_color, tv_msec / 1000 % 256, 32);
+    // background
+    background_color = ColorFromPalette(palette_color, tv_msec / 1000 % 256, 24);
     ClearLeds1();
+    ClearLeds2();
+
+    // hour marks of circle clock
     foreground_color = ColorFromPalette(palette_color, HUE_YELLOW, 64);
-    for (int i = 0; i < leds1_num_of_x; i += 5) 
-      for (int j = 0; j < leds1_num_of_y; ++j) 
+    for (int i = 0; i < leds1_num_of_x; i += 5)
+      for (int j = 0; j < leds1_num_of_y; ++j)
         PutDotLeds1(i, j);
 
     // foreground of circle clock
-    //   HUE_BLUE, HUE_GREEN, HUE_RED are color names at the palette: RainbowsColor_p
     int hsv_v = 255;
     for (int i = 0; i < 20; ++i) {
       foreground_color = ColorFromPalette(palette_color, HUE_BLUE, hsv_v);
@@ -83,19 +88,15 @@ void DemoClock()
       hsv_v = hsv_v * 5 / 6;
     }
     hsv_v = 255;
-    for (int i = 0; i < 10; ++i) { 
+    for (int i = 0; i < 10; ++i) {
       foreground_color = ColorFromPalette(palette_color, HUE_RED, hsv_v);
       PutDotLeds1((td.tm_hour * 5 + td.tm_min / 12 + 60 - i) % 60, 2);
       hsv_v = hsv_v * 3 / 4;
     }
 
-    // background of digital clock
-    background_color = ColorFromPalette(palette_color, tv_msec / 1000 % 256, 32);
-    ClearLeds2();
-
     // foreground of digital clock
     switch (demo_code) {
-    case 0: foreground_color = ColorFromPalette(palette_color, HUE_AQUA);  crawl_length = CrawlTimeDate(last_ms, crawl_offset);  break; 
+    case 0: foreground_color = ColorFromPalette(palette_color, HUE_AQUA);  crawl_length = CrawlTimeDate(last_ms, crawl_offset);  break;
     case 1: foreground_color = CRGB::DarkRed;     crawl_length = CrawlTimeDate(last_ms, crawl_offset);  break;
     case 2: foreground_color = CRGB::DarkGreen;   crawl_length = CrawlTimeDate(last_ms, crawl_offset);  break;
     case 3: foreground_color = CRGB::DarkBlue;    crawl_length = CrawlTimeDate(last_ms, crawl_offset);  break;
@@ -112,7 +113,7 @@ void DemoClock()
 
     // crawl
     if (last_ms % crawl_ms < loop_ms) {  // crawl timing
-      if(++crawl_offset > crawl_length + 10) 
+      if(++crawl_offset > crawl_length + 10)
         crawl_offset = 0;
     }
 
@@ -142,12 +143,12 @@ int CrawlTimeDate(int last_ms, int crawl_offset)
   static bool during_stay   = false;
   static int  stay_start_ms = 0;
   static int  stay_offset   = 0;
-  
+
   if (crawl_offset == 0) {
     during_stay = true;
     stay_start_ms = last_ms;
   }
-  if (during_stay & last_ms - stay_start_ms > hhmm_stay_ms) {
+  if (during_stay && last_ms - stay_start_ms > hhmm_stay_ms) {
     during_stay = false;
     stay_offset = crawl_offset;
   }
@@ -172,7 +173,7 @@ int PutTimeDate(int x_offset)
     PutDotLeds2(x, 4);
   }
   x += 2;
-  
+
   // minute
   PutFont(x, td.tm_min / 10);  x += 4;
   PutFont(x, td.tm_min % 10);  x += 3;
@@ -240,19 +241,19 @@ int PutTimeDate(int x_offset)
 }
 
 // flow string
-//  string:               A quick fox jumped over the lazy brown dog. 
+//  string:               A quick fox jumped over the lazy brown dog.
 // leds2: ::::::::::::::::
 //        ^x_start - (leds2_num_of_x = 16)                           ^x_end = (string length) * (font_pixel = 6)
 //                        <-x->::::::::::::::::
 //                             ^during flow: (font_pixel = 6) * i - x
 int FlowString(int x, const String s)
-{  
+{
   PutString(leds2_num_of_x - x, s);
   return s.length() * font_pixel_x + leds2_num_of_x;
 }
 
 // invader           form 0    0    1    1
-//                        L    R    L    R       
+//                        L    R    L    R
 //   kind = 0:Crab       0x10 0x11 0x12 0x13
 //          1:Octopus    0x14 0x15 0x16 0x17
 //          2:Squid      0x18 0x19 0x1A 0x1B

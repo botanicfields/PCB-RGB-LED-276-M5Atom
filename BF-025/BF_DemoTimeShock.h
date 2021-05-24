@@ -5,8 +5,6 @@
 #ifndef INCLUDED_BF_DEMOTIMESHOCK_H
 #define INCLUDED_BF_DEMOTIMESHOCK_H
 
-#include "BF-025.h"
-
 void DemoTimeShock();
 int  DemoTimeShockCheckButton();
 void SelectTimer(int &timer_select);

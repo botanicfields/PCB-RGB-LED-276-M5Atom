@@ -2,6 +2,9 @@
 // BF-025 RGB LED Clock 276 for M5Atom
 // Demonstration: Cylon for lamp test, referred to the sample program of FastLED
 
+#define FASTLED_ESP32_I2S true
+#include <M5Atom.h>
+#include "BF_RGB_LED_276.h"
 #include "BF_DemoCylon.h"
 
 const int loop_ms = 20;  // 20ms
