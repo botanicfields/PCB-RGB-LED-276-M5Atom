@@ -18,7 +18,7 @@ https://github.com/botanicfields/PCB-RGB-LED-276-M5Atom/blob/main/bf-025_doc.pdf
 
 　GROVE コネクタ経由でリアルタイムクロック (RTC) 基板を増設できます。スペーサを用いて 2 階建てにできます。
 
-[M5Atom 用 リアルタイムクロック (RTC) 基板](https://www.switch-science.com/catalog/7170/)
+[M5 用 リアルタイムクロック (RTC) 基板](https://www.switch-science.com/catalog/7170/)
 
 <img src="https://github.com/botanicfields/PCB-RGB-LED-276-M5Atom/blob/main/jpg/bf-025_rtc.jpeg" width=300>
 
