@@ -20,7 +20,7 @@ https://github.com/botanicfields/PCB-RGB-LED-276-M5Atom/blob/main/bf-025_doc.pdf
 
 [M5Atom 用 リアルタイムクロック (RTC) 基板](https://www.switch-science.com/catalog/7170/)
 
-<img src="https://github.com/botanicfields/PCB-RGB-LED-276-M5Atom/blob/main/jpg/bf-025_rtc.JPG" width=300>
+<img src="https://github.com/botanicfields/PCB-RGB-LED-276-M5Atom/blob/main/jpg/bf-025_rtc.jpeg" width=300>
 
 
 ## 置時計のデモ
