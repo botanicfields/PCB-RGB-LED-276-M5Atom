@@ -13,8 +13,18 @@ Circle clock using 276pcs of WS2812C-2020 and an M5Atom
 
 https://github.com/botanicfields/PCB-RGB-LED-276-M5Atom/blob/main/bf-025_doc.pdf
 
+
+## RTC 基板の増設
+
+　GROVE コネクタ経由でリアルタイムクロック (RTC) 基板を増設できます。スペーサを用いて 2 階建てにできます。
+
+[M5Atom 用 リアルタイムクロック (RTC) 基板](https://www.switch-science.com/catalog/7170/)
+
+<img src="https://github.com/botanicfields/PCB-RGB-LED-276-M5Atom/blob/main/jpg/bf-025_rtc.JPG" width=300>
+
+
 ## 置時計のデモ
-　置時計のデモを作成しました。以下の機能があります。
+　置時計のデモを作成しました。RTC に対応しました。RTC がなくても動作します。以下の機能があります。
 
 - 時・分・秒・曜日・年・月・日の表示（スクロール）
 - 時・分・秒のアナログ風表示（彗星の尾）
