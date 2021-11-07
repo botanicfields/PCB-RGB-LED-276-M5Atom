@@ -43,13 +43,13 @@ int Pcf8563::ReadTime(struct tm *tm_now)
 {
   if (ReadReg(0x02, 7) != 7) return 1;  // ReadReg error
   if (m_reg[0x02] & 0x80) return 2;     // invalid time
-  tm_now->tm_sec  = Bcd2Int( m_reg[0x02] & 0x7f);
-  tm_now->tm_min  = Bcd2Int( m_reg[0x03] & 0x7f);
-  tm_now->tm_hour = Bcd2Int( m_reg[0x04] & 0x3f);
-  tm_now->tm_mday = Bcd2Int( m_reg[0x05] & 0x3f);
-  tm_now->tm_wday = Bcd2Int( m_reg[0x06] & 0x07);       // 0:Sun, 1:Mon, .. 6:Sat
-  tm_now->tm_mon  = Bcd2Int((m_reg[0x07] & 0x1f) - 1);  // tm month: 0..11
-  tm_now->tm_year = Bcd2Int( m_reg[0x08] & 0xff);
+  tm_now->tm_sec  = Bcd2Int(m_reg[0x02] & 0x7f);
+  tm_now->tm_min  = Bcd2Int(m_reg[0x03] & 0x7f);
+  tm_now->tm_hour = Bcd2Int(m_reg[0x04] & 0x3f);
+  tm_now->tm_mday = Bcd2Int(m_reg[0x05] & 0x3f);
+  tm_now->tm_wday = Bcd2Int(m_reg[0x06] & 0x07);      // 0:Sun, 1:Mon, .. 6:Sat
+  tm_now->tm_mon  = Bcd2Int(m_reg[0x07] & 0x1f) - 1;  // tm month: 0..11
+  tm_now->tm_year = Bcd2Int(m_reg[0x08] & 0xff);
   if ((m_reg[0x07] & 0x80) != 0)
     tm_now->tm_year += 100;  // century bit
   return 0;
