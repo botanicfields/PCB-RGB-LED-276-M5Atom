@@ -15,11 +15,12 @@ void SetTimeFromRtcx()
   setenv("TZ", time_zone, 1);
   tzset();  // Assign the local timezone from setenv for mktime()
   if (rtcx.ReadTime(&tm_init) == 0) {
+    Serial.print("Set time from RTCx: RTCx valid\n");
     struct timeval tv = { mktime(&tm_init), 0 };
     settimeofday(&tv, NULL);
-    Serial.print("Set time from RTCx: RTCx valid\n");
   }
   else {
+    Serial.print("Set time from RTCx: ERROR RTCx invalid\n");
     tm_init.tm_year = 120;  // 2020
     tm_init.tm_mon  = 0;    // January
     tm_init.tm_mday = 1;
@@ -28,7 +29,6 @@ void SetTimeFromRtcx()
     tm_init.tm_sec  = 0;
     struct timeval tv = { mktime(&tm_init), 0 };
     settimeofday(&tv, NULL);
-    Serial.print("Set time from RTCx: ERROR RTCx invalid\n");
   }
 
   getLocalTime(&tm_init);

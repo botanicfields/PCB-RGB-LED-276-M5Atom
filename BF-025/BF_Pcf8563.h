@@ -26,7 +26,7 @@ class Pcf8563 {
 
   int GetInterrupt();  // check interrupt and clear
 
-  int ClockOutForTrimmer();  // clock out 1Hz
+  int ClockOutForTrimmer(bool enable_clko = true);  // clock out 1Hz
 
   bool external_clock_test_mode;  // 00h Control_status_1 bit 7 TEST1
   bool source_clock_stoped;       // 00h Control_status_1 bit 5 STOP

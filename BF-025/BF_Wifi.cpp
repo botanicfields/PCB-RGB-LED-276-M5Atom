@@ -12,7 +12,7 @@ wl_status_t wifi_status_old(WL_NO_SHIELD);
 void WifiBegin()
 {
 //  wm.resetSettings();  // for testing
-  wm.setCountry(wifi_country);
+//  wm.setCountry(wifi_country);
   wm.setConfigPortalBlocking(true);  // blocking mode (default)
   wm.setConfigPortalTimeout(config_potal_timeout_sec);
   wm.setAPCallback(ConfigModeCallback);

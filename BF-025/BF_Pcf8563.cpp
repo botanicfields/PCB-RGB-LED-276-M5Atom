@@ -189,19 +189,18 @@ int Pcf8563::GetInterrupt()
   return flag_got;
 }
 
-int Pcf8563::ClockOutForTrimmer()  // clock out 1Hz
+int Pcf8563::ClockOutForTrimmer(bool enable_clko)  // clock out 1Hz
 {
-  // CLKO(clock out) to adjust trimmer
-  clock_out = Pcf8563::fco_1Hz;
-  clock_out_active = true;
-  if (WriteClockOut() != 0) return 1;
-
-  // INT(interrupt) of pulse mode for demonstration
-  const bool enable_interrupt  = true;
-  const bool enable_pulse_mode = true;
-  if (SetTimer(5.0) == 0.0) return 1;  // 5.0sec
-  if (EnableTimerInterrupt(enable_interrupt, enable_pulse_mode) != 0) return 1;
-
+  if (enable_clko) {
+    // CLKO(clock out) to adjust trimmer
+    clock_out = fco_1Hz;
+    clock_out_active = true;
+    if (WriteClockOut() != 0) return 1;
+  }
+  else {
+    clock_out_active =false;
+    if (WriteClockOut() != 0) return 1;
+  }
   return 0;
 }
 
