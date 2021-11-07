@@ -5,6 +5,7 @@
 #define INCLUDED_BF_PCF8563_H
 
 #include <Wire.h>
+#include <time.h>  // for struct tm
 
 class Pcf8563 {
  public:
