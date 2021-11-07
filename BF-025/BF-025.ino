@@ -34,7 +34,7 @@ void setup()
   const int wire_freq(100000);  // 100kHz
   Wire.begin(wire_sda, wire_scl, wire_freq);
   rtcx.Begin(Wire);
-  rtcx.ClockOutForTrimmer();
+//  rtcx.ClockOutForTrimmer();
   SetTimeFromRtcx();
 
   // Wi-Fi
