@@ -14,7 +14,7 @@ void NtpBegin()
   configTzTime(time_zone, ntp_server);
   Serial.print("NtpBegin: Config TZ time\n");
   Serial.printf("NtpBegin: SNTP sync mode = %d (0:IMMED 1:SMOOTH)\n", sntp_get_sync_mode());
-//  Serial.printf("NtpBegin: SNTP sync interval = %dms\n", sntp_get_sync_interval());  // not supported
+  Serial.printf("NtpBegin: SNTP sync interval = %dms\n", sntp_get_sync_interval());
   sntp_sync_status_complete = false;
   sntp_set_time_sync_notification_cb(SntpTimeSyncNotificationCallback);
 }
