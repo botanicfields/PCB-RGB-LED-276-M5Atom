@@ -1,5 +1,5 @@
 // Copyright 2021 BotanicFields, Inc.
-// BF-027 PCF8563 RTC for Grove I2C of M5Stack, M5Atom
+// PCF8563 RTC for M5 Series
 
 #include <Arduino.h>
 #include "BF_Pcf8563.h"
@@ -15,7 +15,7 @@ int Pcf8563::Begin(TwoWire &wire)
   if (WriteControl() != 0) return 1;
 
   clock_out_active =false;
-  clock_out = fco_32768Hz;
+  clock_out        = fco_32768Hz;
   if (WriteClockOut() != 0) return 1;
 
   alarm_minute_enable  = false;  alarm_minute  = 0;
@@ -26,7 +26,7 @@ int Pcf8563::Begin(TwoWire &wire)
 
   timer_enable = false;
   timer_source = fts_4096Hz;
-  timer = 0;
+  timer        = 0;
   if (WriteTimer() != 0) return 1;
 
   timer_interrupt_pulse_mode = false;
@@ -182,8 +182,8 @@ int Pcf8563::GetInterrupt()
 {
   if (ReadInterrupt() != 0) return 4;
   int flag_got(0);
-  if (alarm_flag_active) { flag_got |= 0x02;  alarm_flag_active = false;  }
-  if (timer_flag_active) { flag_got |= 0x01;  timer_flag_active = false;  }
+  if (alarm_flag_active) { flag_got |= 0x02;  alarm_flag_active = false; }
+  if (timer_flag_active) { flag_got |= 0x01;  timer_flag_active = false; }
   if (flag_got != 0)
     if (WriteInterrupt() != 0) return 4;
   return flag_got;
@@ -193,12 +193,12 @@ int Pcf8563::ClockOutForTrimmer(bool enable_clko)  // clock out 1Hz
 {
   if (enable_clko) {
     // CLKO(clock out) to adjust trimmer
-    clock_out = fco_1Hz;
+    clock_out        = fco_1Hz;
     clock_out_active = true;
     if (WriteClockOut() != 0) return 1;
   }
   else {
-    clock_out_active =false;
+    clock_out_active = false;
     if (WriteClockOut() != 0) return 1;
   }
   return 0;
@@ -206,12 +206,14 @@ int Pcf8563::ClockOutForTrimmer(bool enable_clko)  // clock out 1Hz
 
 Pcf8563::Pcf8563()
 {
-  for (int i = 0; i < 16; ++i)
+  m_reg = new uint8_t[m_reg_size];
+  for (int i = 0; i < m_reg_size; ++i)
     m_reg[i] = 0;
 }
 
 Pcf8563::~Pcf8563()
 {
+  delete [] m_reg;
 }
 
 int Pcf8563::ReadControl()
@@ -258,26 +260,26 @@ int Pcf8563::ReadAlarm()
 {
   if (ReadReg(0x09, 4) != 4) return 1;
   alarm_minute_enable  = (m_reg[0x09] & 0x80) == 0;
-  alarm_hour_enable    = (m_reg[0x0A] & 0x80) == 0;
-  alarm_day_enable     = (m_reg[0x0B] & 0x80) == 0;
-  alarm_weekday_enable = (m_reg[0x0C] & 0x80) == 0;
+  alarm_hour_enable    = (m_reg[0x0a] & 0x80) == 0;
+  alarm_day_enable     = (m_reg[0x0b] & 0x80) == 0;
+  alarm_weekday_enable = (m_reg[0x0c] & 0x80) == 0;
   alarm_minute  = Bcd2Int(m_reg[0x09] & 0x7f);
-  alarm_hour    = Bcd2Int(m_reg[0x0A] & 0x3f);
-  alarm_day     = Bcd2Int(m_reg[0x0B] & 0x3f);
-  alarm_weekday = Bcd2Int(m_reg[0x0C] & 0x07);
+  alarm_hour    = Bcd2Int(m_reg[0x0a] & 0x3f);
+  alarm_day     = Bcd2Int(m_reg[0x0b] & 0x3f);
+  alarm_weekday = Bcd2Int(m_reg[0x0c] & 0x07);
   return 0;
 }
 
 int Pcf8563::WriteAlarm()
 {
   m_reg[0x09] = Int2Bcd(alarm_minute );
-  m_reg[0x0A] = Int2Bcd(alarm_hour   );
-  m_reg[0x0B] = Int2Bcd(alarm_day    );
-  m_reg[0x0C] = Int2Bcd(alarm_weekday);
+  m_reg[0x0a] = Int2Bcd(alarm_hour   );
+  m_reg[0x0b] = Int2Bcd(alarm_day    );
+  m_reg[0x0c] = Int2Bcd(alarm_weekday);
   if (!alarm_minute_enable ) m_reg[0x09] |= 0x80;
-  if (!alarm_hour_enable   ) m_reg[0x0A] |= 0x80;
-  if (!alarm_day_enable    ) m_reg[0x0B] |= 0x80;
-  if (!alarm_weekday_enable) m_reg[0x0C] |= 0x80;
+  if (!alarm_hour_enable   ) m_reg[0x0a] |= 0x80;
+  if (!alarm_day_enable    ) m_reg[0x0b] |= 0x80;
+  if (!alarm_weekday_enable) m_reg[0x0c] |= 0x80;
   return WriteReg(0x09, 4);
 }
 
@@ -337,32 +339,31 @@ int Pcf8563::Bcd2Int(int bcd_num)
   return bcd_num / 16 * 10 + bcd_num % 16;
 }
 
-size_t Pcf8563::ReadReg(int reg_address, size_t read_length)
+size_t Pcf8563::ReadReg(int reg_start, size_t read_length)
 {
   const bool send_stop(true);
 
-  m_wire->beginTransmission(address_pcf8563);
-  m_wire->write(reg_address);
+  m_wire->beginTransmission(m_i2c_address);
+  m_wire->write(reg_start);
   if (m_wire->endTransmission(!send_stop) != 0) {
     Serial.print("[Pcf8563:ReadReg] ERROR write\n");
     return 0;  // command error
   }
-  m_wire->requestFrom(address_pcf8563, read_length);
+  m_wire->requestFrom(m_i2c_address, read_length);
   size_t i = 0;
   while (m_wire->available())
-    m_reg[reg_address + i++] = m_wire->read();
+    m_reg[reg_start + i++] = m_wire->read();
   if (i != read_length)
     Serial.print("[Pcf8563:ReadReg] ERROR read\n");
   return i;
 }
 
-int Pcf8563::WriteReg(int reg_address, size_t write_length)
+int Pcf8563::WriteReg(int reg_start, size_t write_length)
 {
-  m_wire->beginTransmission(address_pcf8563);
-  m_wire->write(reg_address);
-  for (int i = 0; i < write_length; ++i )
-    m_wire->write(m_reg[reg_address + i]);
-
+  m_wire->beginTransmission(m_i2c_address);
+  m_wire->write(reg_start);
+  for (int i = 0; i < write_length; ++i)
+    m_wire->write(m_reg[reg_start + i]);
   int return_code = m_wire->endTransmission();
   if (return_code != 0)
     Serial.print("[Pcf8563:WriteReg] ERROR write\n");

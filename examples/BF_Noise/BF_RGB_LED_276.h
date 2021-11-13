@@ -2,8 +2,7 @@
 // BF-025 RGB LED Clock 276 for M5Atom
 // driver using FastLED
 
-#ifndef INCLUDED_BF_RGB_LED_276_H
-#define INCLUDED_BF_RGB_LED_276_H
+#pragma once
 
 extern const int brightness_default;
 extern const CRGB correction_default;
@@ -70,5 +69,3 @@ void PutButton(char c);
 void ShowPattern(const uint16_t pattern[], int delay_ms = 1000);
 
 int CheckButton();
-
-#endif //#ifndef INCLUDED_BF_RGB_LED_276_H

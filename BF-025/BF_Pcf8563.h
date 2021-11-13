@@ -1,8 +1,7 @@
 // Copyright 2021 BotanicFields, Inc.
-// BF-027 PCF8563 RTC for Grove I2C of M5Stack, M5Atom
+// PCF8563 RTC for M5 Series
 
-#ifndef INCLUDED_BF_PCF8563_H
-#define INCLUDED_BF_PCF8563_H
+#pragma once
 
 #include <Wire.h>
 #include <time.h>  // for struct tm
@@ -19,10 +18,10 @@ class Pcf8563 {
   int DisableAlarmInterrupt();
 
   double SetTimer(double timer_sec);
-  int EnableTimer(bool enable_timer = true);
-  int DisableTimer();
-  int EnableTimerInterrupt(bool enable_interrupt = true, bool pulse_mode = false, bool keep_flag = false);
-  int DisableTimerInterrupt();
+  int    EnableTimer(bool enable_timer = true);
+  int    DisableTimer();
+  int    EnableTimerInterrupt(bool enable_interrupt = true, bool pulse_mode = false, bool keep_flag = false);
+  int    DisableTimerInterrupt();
 
   int GetInterrupt();  // check interrupt and clear
 
@@ -39,34 +38,34 @@ class Pcf8563 {
   bool timer_interrupt_enable;      // 01h Control_status_2 bit 0 TIE
 
   bool alarm_minute_enable;   // 09h Minute_alarm   bit 7 !AE_M
-  int alarm_minute;           // 09h Minute_alarm   0..59
+  int  alarm_minute;          // 09h Minute_alarm   0..59
   bool alarm_hour_enable;     // 0Ah Hour_alarm     bit 7 !AE_H
-  int alarm_hour;             // 0Ah Hour_alarm     0..23
+  int  alarm_hour;            // 0Ah Hour_alarm     0..23
   bool alarm_day_enable;      // 0Bh Day_alarm      bit 7 !AE_D
-  int alarm_day;              // 0Bh Day_alarm      1..31
+  int  alarm_day;             // 0Bh Day_alarm      1..31
   bool alarm_weekday_enable;  // 0Ch Weekday_alarm  bit 7 !AE_W
-  int alarm_weekday;          // 0Ch Weekday_alarm  0..6
+  int  alarm_weekday;         // 0Ch Weekday_alarm  0..6
 
-  enum FreqClockOut_t {      // 0Dh Clock_out_control FD  0..3
+  enum FreqClockOut_t {       // 0Dh Clock_out_control FD  0..3
     fco_32768Hz,
     fco_1024Hz,
     fco_32Hz,
     fco_1Hz,
   };
 
-  bool clock_out_active;     // 0Dh Clock_out_control bit 7 FE
-  FreqClockOut_t clock_out;  // 0Dh Clock_out_control 0..3
+  bool           clock_out_active;  // 0Dh Clock_out_control bit 7 FE
+  FreqClockOut_t clock_out;         // 0Dh Clock_out_control 0..3
 
-  enum FreqTimerSource_t {         // 0Eh Timer_control TD  0..3
+  enum FreqTimerSource_t {          // 0Eh Timer_control TD  0..3
     fts_4096Hz,
     fts_64Hz,
     fts_1Hz,
     fts_1_60th_Hz,  // (1/60)Hz
   };
 
-  bool timer_enable;               // 0Eh Timer_control bit 7 TE
+  bool              timer_enable;  // 0Eh Timer_control bit 7 TE
   FreqTimerSource_t timer_source;  // 0Eh Timer_control 0..3
-  int timer;                       // 0Fh Timer         0..255
+  int               timer;         // 0Fh Timer         0..255
 
   Pcf8563();
   ~Pcf8563();
@@ -83,19 +82,17 @@ class Pcf8563 {
   int WriteTimer();
 
  private:
-  const int address_pcf8563 = 0x51;
+  const int m_i2c_address = 0x51;
+  const int m_reg_size    = 0x10;
 
   TwoWire *m_wire;
-  uint8_t m_reg[0x10];
+  uint8_t *m_reg;
 
-  size_t ReadReg(int reg_start, size_t reg_size);
-  int WriteReg(int reg_start, size_t reg_size);
-  int Int2Bcd(int int_num);
-  int Bcd2Int(int bcd_num);
+  size_t ReadReg(int reg_start, size_t read_length);
+  int    WriteReg(int reg_start, size_t write_length);
+  int    Int2Bcd(int int_num);
+  int    Bcd2Int(int bcd_num);
 };
 
 // an instance "rtc external"
 extern Pcf8563 rtcx;
-extern struct tm tm_rtcx;
-
-#endif  // INCLUDED_BF_PCF8563_H

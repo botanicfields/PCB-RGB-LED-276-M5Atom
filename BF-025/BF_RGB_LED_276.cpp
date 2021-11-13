@@ -3,6 +3,8 @@
 // driver using FastLED
 
 #define FASTLED_ESP32_I2S true
+//#define FASTLED_ALLOW_INTERRUPTS 0
+
 #include <M5Atom.h>
 #include "BF_RGB_LED_276.h"
 

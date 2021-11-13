@@ -42,9 +42,9 @@ void setup() {
     delay( 3000 ); // power-up safety delay
     FastLED.addLeds<LED_TYPE, LED_PIN, COLOR_ORDER>(leds, NUM_LEDS).setCorrection( TypicalLEDStrip );
     FastLED.setBrightness(  BRIGHTNESS );
-    
+
     FastLED.setCorrection(correction_default);  // BF-025
-    
+
     currentPalette = RainbowColors_p;
     currentBlending = LINEARBLEND;
 }
@@ -53,12 +53,12 @@ void setup() {
 void loop()
 {
     ChangePalettePeriodically();
-    
+
     static uint8_t startIndex = 0;
     startIndex = startIndex + 1; /* motion speed */
-    
+
     FillLEDsFromPaletteColors( startIndex);
-    
+
     FastLED.show();
     FastLED.delay(1000 / UPDATES_PER_SECOND);
 }
@@ -66,7 +66,7 @@ void loop()
 void FillLEDsFromPaletteColors( uint8_t colorIndex)
 {
     uint8_t brightness = 255;
-    
+
     for( int i = 0; i < NUM_LEDS; ++i) {
         leds[i] = ColorFromPalette( currentPalette, colorIndex, brightness, currentBlending);
         colorIndex += 3;
@@ -86,7 +86,7 @@ void ChangePalettePeriodically()
 {
     uint8_t secondHand = (millis() / 1000) % 60;
     static uint8_t lastSecond = 99;
-    
+
     if( lastSecond != secondHand) {
         lastSecond = secondHand;
         if( secondHand ==  0)  { currentPalette = RainbowColors_p;         currentBlending = LINEARBLEND; }
@@ -124,7 +124,7 @@ void SetupBlackAndWhiteStripedPalette()
     currentPalette[4] = CRGB::White;
     currentPalette[8] = CRGB::White;
     currentPalette[12] = CRGB::White;
-    
+
 }
 
 // This function sets up a palette of purple and green stripes.
@@ -133,7 +133,7 @@ void SetupPurpleAndGreenPalette()
     CRGB purple = CHSV( HUE_PURPLE, 255, 255);
     CRGB green  = CHSV( HUE_GREEN, 255, 255);
     CRGB black  = CRGB::Black;
-    
+
     currentPalette = CRGBPalette16(
                                    green,  green,  black,  black,
                                    purple, purple, black,  black,
@@ -152,12 +152,12 @@ const TProgmemPalette16 myRedWhiteBluePalette_p PROGMEM =
     CRGB::Gray, // 'white' is too bright compared to red and blue
     CRGB::Blue,
     CRGB::Black,
-    
+
     CRGB::Red,
     CRGB::Gray,
     CRGB::Blue,
     CRGB::Black,
-    
+
     CRGB::Red,
     CRGB::Red,
     CRGB::Gray,
@@ -187,7 +187,7 @@ const TProgmemPalette16 myRedWhiteBluePalette_p PROGMEM =
 // between the 16 explicit entries to create fifteen intermediate palette
 // entries between each pair.
 //
-// So for example, if you set the first two explicit entries of a compact 
-// palette to Green (0,255,0) and Blue (0,0,255), and then retrieved 
+// So for example, if you set the first two explicit entries of a compact
+// palette to Green (0,255,0) and Blue (0,0,255), and then retrieved
 // the first sixteen entries from the virtual palette (of 256), you'd get
 // Green, followed by a smooth gradient from green-to-blue, and then Blue.

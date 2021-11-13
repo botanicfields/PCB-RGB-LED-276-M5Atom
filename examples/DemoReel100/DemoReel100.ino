@@ -6,11 +6,11 @@
 
 FASTLED_USING_NAMESPACE
 
-// FastLED "100-lines-of-code" demo reel, showing just a few 
-// of the kinds of animation patterns you can quickly and easily 
-// compose using FastLED.  
+// FastLED "100-lines-of-code" demo reel, showing just a few
+// of the kinds of animation patterns you can quickly and easily
+// compose using FastLED.
 //
-// This example also shows one easy way to define multiple 
+// This example also shows one easy way to define multiple
 // animations patterns and have them automatically rotate.
 //
 // -Mark Kriegsman, December 2014
@@ -33,7 +33,7 @@ const CRGB correction_default = 0xB080FF;  // for BF-025(WS2812C-2020)
 
 void setup() {
   delay(3000); // 3 second delay for recovery
-  
+
   // tell FastLED about the LED strip configuration
   FastLED.addLeds<LED_TYPE,DATA_PIN,COLOR_ORDER>(leds, NUM_LEDS).setCorrection(TypicalLEDStrip);
   //FastLED.addLeds<LED_TYPE,DATA_PIN,CLK_PIN,COLOR_ORDER>(leds, NUM_LEDS).setCorrection(TypicalLEDStrip);
@@ -51,16 +51,16 @@ SimplePatternList gPatterns = { rainbow, rainbowWithGlitter, confetti, sinelon, 
 
 uint8_t gCurrentPatternNumber = 0; // Index number of which pattern is current
 uint8_t gHue = 0; // rotating "base color" used by many of the patterns
-  
+
 void loop()
 {
   // Call the current pattern function once, updating the 'leds' array
   gPatterns[gCurrentPatternNumber]();
 
   // send the 'leds' array out to the actual LED strip
-  FastLED.show();  
+  FastLED.show();
   // insert a delay to keep the framerate modest
-  FastLED.delay(1000/FRAMES_PER_SECOND); 
+  FastLED.delay(1000/FRAMES_PER_SECOND);
 
   // do some periodic updates
   EVERY_N_MILLISECONDS( 20 ) { gHue++; } // slowly cycle the "base color" through the rainbow
@@ -75,27 +75,27 @@ void nextPattern()
   gCurrentPatternNumber = (gCurrentPatternNumber + 1) % ARRAY_SIZE( gPatterns);
 }
 
-void rainbow() 
+void rainbow()
 {
   // FastLED's built-in rainbow generator
   fill_rainbow( leds, NUM_LEDS, gHue, 7);
 }
 
-void rainbowWithGlitter() 
+void rainbowWithGlitter()
 {
   // built-in FastLED rainbow, plus some random sparkly glitter
   rainbow();
   addGlitter(80);
 }
 
-void addGlitter( fract8 chanceOfGlitter) 
+void addGlitter( fract8 chanceOfGlitter)
 {
   if( random8() < chanceOfGlitter) {
     leds[ random16(NUM_LEDS) ] += CRGB::White;
   }
 }
 
-void confetti() 
+void confetti()
 {
   // random colored speckles that blink in and fade smoothly
   fadeToBlackBy( leds, NUM_LEDS, 10);

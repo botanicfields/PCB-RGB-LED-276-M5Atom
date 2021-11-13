@@ -3,9 +3,12 @@
 // Demonstration: Digital & analog clock
 
 #define FASTLED_ESP32_I2S true
+//#define FASTLED_ALLOW_INTERRUPTS 0
+
 #include <M5Atom.h>
 #include <sys/time.h>  // for struct timeval
 #include <Ticker.h>
+#include "BF_RtcxNtp.h"
 #include "BF_RGB_LED_276.h"
 #include "BF_DemoClock.h"
 
@@ -48,6 +51,22 @@ void DemoClock()
   int last_ms = millis();
 
   while (!break_loop) {
+
+    // update RTCx
+    RtcxUpdate();
+
+    // check button
+    M5.update();
+    int button_check = CheckButton();
+    if (button_check == 2000) {  // exit
+      Serial.println("[DemoClock]break");
+      break_loop = true;
+    }
+    else if (button_check == 1000) {  // go next
+      Serial.printf("[DemoClock]demo_code = %d\n", ++demo_code);
+      crawl_offset = 0;
+    }
+
 
     // update tv(time value)
     gettimeofday(&tv, NULL);
@@ -115,18 +134,6 @@ void DemoClock()
     if (last_ms % crawl_ms < loop_ms) {  // crawl timing
       if(++crawl_offset > crawl_length + 10)
         crawl_offset = 0;
-    }
-
-    // check button
-    M5.update();
-    int button_check = CheckButton();
-    if (button_check == 2000) {  // exit
-      Serial.println("[DemoClock]break");
-      break_loop = true;
-    }
-    else if (button_check == 1000) {  // go next
-      Serial.printf("[DemoClock]demo_code = %d\n", ++demo_code);
-      crawl_offset = 0;
     }
 
     FastLED.show();
