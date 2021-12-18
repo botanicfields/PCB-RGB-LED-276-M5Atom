@@ -9,7 +9,7 @@
 
 const int loop_ms = 20;          // 20ms
 const int num_of_repeat = 1500;  // 20ms * 3000 = 30s
-static int last_ms = 0;
+static unsigned int last_ms = 0;
 
 void DemoNoise()
 {

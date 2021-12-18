@@ -18,7 +18,7 @@ void DemoHueRing()
 {
   Serial.println("[DemoHueRing]start");
   int repeat_remain = num_of_repeat;
-  int last_ms = millis();
+  unsigned int last_ms = millis();
 
   while (repeat_remain > 0) {
 

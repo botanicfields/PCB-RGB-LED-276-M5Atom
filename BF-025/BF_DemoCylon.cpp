@@ -10,7 +10,7 @@
 #include "BF_DemoCylon.h"
 
 const int loop_ms = 20;  // 20ms
-static int last_ms = 0;
+static unsigned int last_ms = 0;
 
 const int fade_rate = 250;  // 250 of 255
 

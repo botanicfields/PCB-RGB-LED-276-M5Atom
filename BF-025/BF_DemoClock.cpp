@@ -48,7 +48,7 @@ void DemoClock()
   int crawl_offset = 0;
 
   bool break_loop = false;
-  int last_ms = millis();
+  unsigned int last_ms = millis();
 
   while (!break_loop) {
 
@@ -145,7 +145,7 @@ void DemoClock()
 }
 
 // crawl of digital clock
-int CrawlTimeDate(int last_ms, int crawl_offset)
+int CrawlTimeDate(unsigned int last_ms, int crawl_offset)
 {
   static bool during_stay   = false;
   static int  stay_start_ms = 0;

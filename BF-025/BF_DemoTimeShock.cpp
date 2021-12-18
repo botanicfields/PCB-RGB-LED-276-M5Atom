@@ -24,7 +24,7 @@ void DemoTimeShock()
                               false, false, false, false, false, false, };
   SelectTimer(timer_select);
   int remain_ms = timer_ms;
-  int last_ms = millis();
+  unsigned int last_ms = millis();
 
   while (remain_ms > 0) {
 

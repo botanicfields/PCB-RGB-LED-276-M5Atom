@@ -6,7 +6,7 @@
 
 void TickerHandle();
 void DemoClock();
-int  CrawlTimeDate(int last_ms, int crawl_offset);
+int  CrawlTimeDate(unsigned int last_ms, int crawl_offset);
 int  PutTimeDate(int x_offset);
 int  FlowString(int x, const String s);
 int  Invader(int x);
